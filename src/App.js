@@ -8,12 +8,14 @@ import Machinery from "./pages/Machinery";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./lib/ScrollToTop";
 
 const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />

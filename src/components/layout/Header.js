@@ -24,14 +24,14 @@ const Header = () => {
               <span>info@greekjdeere.com</span>
             </div>
           </div>
-          <div className="flex items-center space-x-3">
+          {/* <div className="flex items-center space-x-3">
             <div className="flex items-center cursor-pointer">
               <Globe className="h-4 w-4 mr-1" />
               <span className="text-sm">EL</span>
               <span className="mx-1">|</span>
               <span className="text-sm font-medium">EN</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
