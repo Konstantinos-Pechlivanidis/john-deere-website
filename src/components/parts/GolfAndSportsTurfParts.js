@@ -1,0 +1,76 @@
+import React from "react";
+
+const GolfAndSportsTurfParts = () => {
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Ενότητα Εικόνας */}
+          <div className="order-2 lg:order-1 relative">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="/images/img6.jpg"
+                alt="Golf & Sports Turf Parts"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="hidden md:block absolute -bottom-6 -left-6 w-40 h-40 bg-jdyellow rounded-lg shadow-lg -z-10"></div>
+            <div className="hidden md:block absolute -top-6 -right-6 w-24 h-24 bg-jdgreen rounded-lg shadow-lg -z-10"></div>
+          </div>
+
+          {/* Ενότητα Περιεχομένου */}
+          <div className="order-1 lg:order-2">
+            <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
+              Ανταλλακτικά Αθλητικών Χώρων
+            </h2>
+            <div className="w-20 h-1 bg-jdyellow mb-6"></div>
+            <p className="text-gray-600 mb-4">
+              Τα ανταλλακτικά για τα μηχανήματα αθλητικών χώρων
+              παρέχουν εξαιρετική ποιότητα και απόδοση. Είτε πρόκειται για χλοοκοπτικά,
+              είτε για άλλα μηχανήματα, εξασφαλίζουμε τα αυθεντικά ανταλλακτικά για τη
+              βέλτιστη λειτουργία του εξοπλισμού σας.
+            </p>
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-charcoal-dark">
+                Τύποι Ανταλλακτικών:
+              </h3>
+              <ul className="list-disc pl-5 space-y-2">
+                <li>
+                  <strong>Λεπίδες Χλοοκοπτικών:</strong> Ανταλλακτικά λεπίδων για τη
+                  διατήρηση της ποιότητας κοπής του χλοοκοπτικού σας.
+                </li>
+                <li>
+                  <strong>Κινητήρες και Συστήματα Κίνησης:</strong> Ανταλλακτικά για τη
+                  βελτιστοποίηση της κίνησης του εξοπλισμού σας.
+                </li>
+                <li>
+                  <strong>Φίλτρα:</strong> Ανταλλακτικά φίλτρων αέρα, λαδιού και καυσίμου
+                  για την καλύτερη συντήρηση των μηχανημάτων σας.
+                </li>
+                <li>
+                  <strong>Αξεσουάρ Ασφαλείας:</strong> Αυθεντικά αξεσουάρ για την
+                  ασφάλεια και ευχρηστία των μηχανημάτων σας.
+                </li>
+                <li>
+                  <strong>Ηλεκτρονικά Συστήματα:</strong> Ανταλλακτικά για την αξιόπιστη
+                  και αποδοτική λειτουργία των συστημάτων του μηχανήματος.
+                </li>
+              </ul>
+            </div>
+            <div className="mt-4">
+              <p className="text-gray-600">
+                Τα ανταλλακτικά μας διασφαλίζουν την άριστη απόδοση των μηχανημάτων
+                γηπέδων γκολφ και αθλητικών χώρων, ενισχύοντας τη λειτουργικότητα και
+                την αποτελεσματικότητα στην καθημερινή σας εργασία. Μην διστάσετε να
+                επικοινωνήσετε μαζί μας για οποιοδήποτε ανταλλακτικό χρειάζεστε ή για
+                την προμήθεια ειδικών ανταλλακτικών κατά παραγγελία.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GolfAndSportsTurfParts;

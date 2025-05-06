@@ -17,11 +17,11 @@ const Header = () => {
           <div className="flex items-center space-x-6 text-sm">
             <div className="flex items-center">
               <Phone className="h-4 w-4 mr-1" />
-              <span>+30 210 1234567</span>
+              <span>+302310512239</span>
             </div>
             <div className="flex items-center">
               <Mail className="h-4 w-4 mr-1" />
-              <span>info@greekjdeere.com</span>
+              <span>info@psomasst.gr</span>
             </div>
           </div>
           {/* <div className="flex items-center space-x-3">
@@ -39,7 +39,7 @@ const Header = () => {
       <header className="bg-white shadow-sm py-4 px-4 sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="flex items-center flex-col sm:flex-row">
-            <span className="font-bold text-2xl text-jdgreen">JOHN DEERE</span>
+            {/* <span className="font-bold text-2xl text-jdgreen">JOHN DEERE</span> */}
             <span className="text-black font-bold text-2xl">Ι&Κ ΨΩΜΑ</span>
           </Link>
 
@@ -59,10 +59,17 @@ const Header = () => {
             </Link>
 
             <Link
-              to="/machinery-parts"
+              to="/machinery"
               className="font-medium text-charcoal hover:text-jdgreen"
             >
-              Μηχανήματα & Ανταλλακτικά
+              Μηχανήματα
+            </Link>
+
+            <Link
+              to="/parts"
+              className="font-medium text-charcoal hover:text-jdgreen"
+            >
+              Ανταλλακτικά
             </Link>
 
             <Link
@@ -122,11 +129,18 @@ const Header = () => {
                 Σχετικά με εμάς
               </Link>
               <Link
-                to="/machinery-parts"
+                to="/machinery"
                 className="font-medium text-charcoal hover:text-jdgreen"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Μηχανήματα & Ανταλλακτικά
+                Μηχανήματα
+              </Link>
+              <Link
+                to="/parts"
+                className="font-medium text-charcoal hover:text-jdgreen"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Ανταλλακτικά
               </Link>
               <Link
                 to="/services"
