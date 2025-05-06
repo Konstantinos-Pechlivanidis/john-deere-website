@@ -7,49 +7,34 @@ import {
 
 const images = [
   {
-    url: "/images/machinery/lawnCare/img4.jpeg", 
+    url: "/images/general/img18.jpg", 
     alt: "General",
     mobileUrl: "/images/general/mobile1.jpg", 
   },
   {
-    url: "/images/machinery/lawnCare/img2.jpg",
+    url: "/images/general/img4.jpg",
     alt: "General",
     mobileUrl: "/images/general/mobile2.jpg",
   },
   {
-    url: "/images/machinery/productionEquipment/img3.jpg",
+    url: "/images/general/img19.jpg",
     alt: "General",
     mobileUrl: "/images/general/mobile3.jpg",
   },
   {
-    url: "/images/machinery/productionEquipment/img7.jpg",
+    url: "/images/general/img20.jpg",
     alt: "General",
     mobileUrl: "/images/general/mobile9.jpg",
   },
   {
-    url: "/images/machinery/productionEquipment/img10.jpg",
+    url: "/images/general/img25.jpg",
     alt: "General",
     mobileUrl: "/images/general/mobile10.jpg",
   },
   {
-    url: "/images/machinery/Tractors/compact/img1.jpg",
+    url: "/images/general/img27.jpg",
     alt: "General",
     mobileUrl: "/images/general/mobile11.jpg",
-  },
-  {
-    url: "/images/machinery/Tractors/utility/img2.jpg",
-    alt: "General",
-    mobileUrl: "/images/general/mobile1.jpg",
-  },
-  {
-    url: "/images/machinery/Tractors/utility/img3.jpg",
-    alt: "General",
-    mobileUrl: "/images/general/mobile2.jpg",
-  },
-  {
-    url: "/images/machinery/Tractors/large/img1.jpg",
-    alt: "General",
-    mobileUrl: "/images/general/mobile3.jpg",
   },
 ];
 
