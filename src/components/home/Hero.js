@@ -12,7 +12,7 @@ const Hero = () => {
         <HeroCarousel />
       </div>
       
-      <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
+      <div className="container mx-auto px-4 py-20 md:py-32 lg:py-72 relative z-10">
         <div className="max-w-3xl">
           {/* Adjust the font size for mobile, tablet, and desktop */}
           <h1 
