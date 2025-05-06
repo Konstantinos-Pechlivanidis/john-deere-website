@@ -46,9 +46,10 @@ const AboutPreview = () => {
           <div className="order-1 lg:order-2 relative">
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/images/img7.jpg" 
+                src="/images/general/mobile4.jpg" 
                 alt="Η ομάδα μας" 
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div className="hidden md:block absolute -bottom-6 -left-6 w-40 h-40 bg-jdyellow rounded-lg shadow-lg -z-10"></div>

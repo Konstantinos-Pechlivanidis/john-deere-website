@@ -4,20 +4,7 @@ const CommercialMowingParts = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Ενότητα Εικόνας */}
-          <div className="order-2 lg:order-1 relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="/images/img5.jpg"
-                alt="Ανταλλακτικά Εμπορικών Χλοοκοπτικών"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="hidden md:block absolute -bottom-6 -left-6 w-40 h-40 bg-jdyellow rounded-lg shadow-lg -z-10"></div>
-            <div className="hidden md:block absolute -top-6 -right-6 w-24 h-24 bg-jdgreen rounded-lg shadow-lg -z-10"></div>
-          </div>
-
+        <div className="grid grid-cols-1 gap-12 items-center lg:p-8">
           {/* Ενότητα Περιεχομένου */}
           <div className="order-1 lg:order-2">
             <h2 className="text-3xl font-bold text-charcoal-dark mb-4">

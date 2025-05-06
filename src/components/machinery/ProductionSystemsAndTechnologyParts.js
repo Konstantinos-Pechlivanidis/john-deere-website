@@ -40,6 +40,7 @@ const ProductionSystemsAndTechnologyParts = () => {
               <img
                 src="/images/machinery/productionEquipment/img3.jpg"
                 alt="Guidance Equipment"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -52,6 +53,7 @@ const ProductionSystemsAndTechnologyParts = () => {
               <img
                 src="/images/machinery/productionEquipment/img12.jpg"
                 alt="Guidance Equipment"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -97,6 +99,7 @@ const ProductionSystemsAndTechnologyParts = () => {
               <img
                 src="/images/machinery/productionEquipment/img5.jpg"
                 alt="Application Equipment"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -109,6 +112,7 @@ const ProductionSystemsAndTechnologyParts = () => {
               <img
                 src="/images/machinery/productionEquipment/img6.jpg"
                 alt="Application Equipment"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -121,6 +125,7 @@ const ProductionSystemsAndTechnologyParts = () => {
               <img
                 src="/images/machinery/productionEquipment/img7.jpg"
                 alt="Application Equipment"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -133,6 +138,7 @@ const ProductionSystemsAndTechnologyParts = () => {
               <img
                 src="/images/machinery/productionEquipment/img8.jpg"
                 alt="Application Equipment"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -145,6 +151,7 @@ const ProductionSystemsAndTechnologyParts = () => {
               <img
                 src="/images/machinery/productionEquipment/img10.jpg"
                 alt="Application Equipment"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -229,6 +236,7 @@ const ProductionSystemsAndTechnologyParts = () => {
             <img
               src={modalImage}
               alt="Large View"
+              loading="lazy" 
               className="w-full h-auto rounded-lg shadow-lg"
             />
             <button

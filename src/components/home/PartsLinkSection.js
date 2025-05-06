@@ -1,21 +1,16 @@
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
-import Carousel from "../parts/Carousel";
+import Carousel from "../layout/Carousel";
 
 const PartsLinkSection = () => {
   const images = [
-    "/images/machinery/lawnCare/img4.jpeg",
-    "/images/machinery/lawnCare/img2.jpg",
-    "/images/machinery/productionEquipment/img3.jpg",
-    "/images/machinery/productionEquipment/img7.jpg",
-    "/images/machinery/productionEquipment/img10.jpg",
-    "/images/machinery/Tractors/compact/img1.jpg",
-    "/images/machinery/Tractors/utility/img2.jpg",
-    "/images/machinery/Tractors/utility/img3.jpg",
-    "/images/machinery/Tractors/large/img1.jpg",
-    "/images/machinery/Tractors/large/img2.jpg",
-    "/images/machinery/Tractors/large/img3.jpg",
-    // Add more images as needed
+    "/images/parts/General/webp1.webp",
+    "/images/parts/General/img1.jpg",
+    "/images/parts/General/avif1.avif",
+    "/images/parts/General/img2.jpg",
+    "/images/parts/General/img3.jpg",
+    "/images/parts/General/webp2.webp",
+    "/images/parts/General/webp3.webp",
   ];
   return (
     <section className="py-4">
@@ -24,7 +19,7 @@ const PartsLinkSection = () => {
           Ανταλλακτικά John Deere
         </h2>
         <div className="w-20 h-1 bg-jdyellow mx-auto mb-6"></div>
-        <p className="text-lg text-gray-600 mb-8">
+        <p className="md:w-1/2 m-auto text-lg text-gray-600 mb-8">
           Αναζητάτε ανταλλακτικά για το γεωργικό ή κατασκευαστικό σας μηχάνημα;
           Επισκεφτείτε τη σελίδα ανταλλακτικών και ανακαλύψτε την ποικιλία μας
           σε αυθεντικά ανταλλακτικά για κάθε ανάγκη σας.
@@ -37,7 +32,7 @@ const PartsLinkSection = () => {
           </div>
         </div>
 
-        <Link to="/machinery">
+        <Link to="/parts">
           <Button className="bg-jdgreen hover:bg-jdgreen-light text-white mb-8">
             Ανακαλύψτε τα Ανταλλακτικά μας
           </Button>

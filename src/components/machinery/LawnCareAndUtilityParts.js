@@ -36,6 +36,7 @@ const LawnCareAndUtilityParts = () => {
             <img
               src="/images/machinery/lawnCare/img4.jpeg"
               alt="Lawn Care 4"
+              loading="lazy" 
               className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
               onClick={() =>
                 handleImageClick("/images/machinery/lawnCare/img4.jpeg")
@@ -56,6 +57,7 @@ const LawnCareAndUtilityParts = () => {
             <img
               src="/images/machinery/lawnCare/img3.jpg"
               alt="Lawn Care 3"
+              loading="lazy" 
               className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
               onClick={() =>
                 handleImageClick("/images/machinery/lawnCare/img3.jpg")
@@ -66,6 +68,7 @@ const LawnCareAndUtilityParts = () => {
             <img
               src="/images/machinery/lawnCare/img5.jpg"
               alt="Lawn Care 5"
+              loading="lazy" 
               className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
               onClick={() =>
                 handleImageClick("/images/machinery/lawnCare/img5.jpg")

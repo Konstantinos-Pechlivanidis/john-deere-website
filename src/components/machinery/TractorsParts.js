@@ -40,6 +40,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/compact/img1.jpg"
                 alt="Compact Tractors 1"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -52,6 +53,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/compact/img2.jpg"
                 alt="Compact Tractors 2"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -87,6 +89,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/utility/img3.jpg"
                 alt="Utility Tractors 3"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -99,6 +102,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/utility/img1.jpg"
                 alt="Utility Tractors 1"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -111,6 +115,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/utility/img2.jpg"
                 alt="Utility Tractors 2"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -123,6 +128,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/utility/img4.jpg"
                 alt="Utility Tractors 4"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -155,6 +161,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/specialty/img3.jpg"
                 alt="Specialty Tractors 3"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -167,6 +174,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/specialty/img2.jpg"
                 alt="Specialty Tractors 2"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick(
@@ -201,6 +209,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/large/img2.jpg"
                 alt="Large Tractors 2"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick("/images/machinery/Tractors/large/img2.jpg")
@@ -211,6 +220,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/large/img3.jpg"
                 alt="Large Tractors 3"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick("/images/machinery/Tractors/large/img3.jpg")
@@ -221,6 +231,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/large/img4.jpg"
                 alt="Large Tractors 4"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick("/images/machinery/Tractors/large/img4.jpg")
@@ -231,6 +242,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/large/img5.jpg"
                 alt="Large Tractors 5"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick("/images/machinery/Tractors/large/img5.jpg")
@@ -241,6 +253,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/large/img7.jpg"
                 alt="Large Tractors 7"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick("/images/machinery/Tractors/large/img7.jpg")
@@ -251,6 +264,7 @@ const TractorsParts = () => {
               <img
                 src="/images/machinery/Tractors/large/img6.jpg"
                 alt="Large Tractors 6"
+                loading="lazy" 
                 className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
                 onClick={() =>
                   handleImageClick("/images/machinery/Tractors/large/img6.jpg")

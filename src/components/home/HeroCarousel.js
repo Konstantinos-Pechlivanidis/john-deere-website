@@ -3,31 +3,53 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "../ui/carousel";
 
-// Ορισμός των εικόνων για μεγάλες και μικρές οθόνες
 const images = [
   {
-    url: "/images/img4.jpg", // Μεγάλες οθόνες
-    alt: "Τρακτέρ John Deere",
-    mobileUrl: "/images/img6.jpg", // Μικρές οθόνες
+    url: "/images/machinery/lawnCare/img4.jpeg", 
+    alt: "General",
+    mobileUrl: "/images/general/mobile1.jpg", 
   },
   {
-    url: "/images/img3.jpg",
-    alt: "Τρακτέρ John Deere",
-    mobileUrl: "/images/img11.jpg",
+    url: "/images/machinery/lawnCare/img2.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile2.jpg",
   },
   {
-    url: "/images/img2.jpg",
-    alt: "Τρακτέρ John Deere",
-    mobileUrl: "/images/img12.jpg",
+    url: "/images/machinery/productionEquipment/img3.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile3.jpg",
   },
   {
-    url: "/images/img1.jpg",
-    alt: "Τρακτέρ John Deere",
-    mobileUrl: "/images/img10.jpg",
+    url: "/images/machinery/productionEquipment/img7.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile9.jpg",
+  },
+  {
+    url: "/images/machinery/productionEquipment/img10.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile10.jpg",
+  },
+  {
+    url: "/images/machinery/Tractors/compact/img1.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile11.jpg",
+  },
+  {
+    url: "/images/machinery/Tractors/utility/img2.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile1.jpg",
+  },
+  {
+    url: "/images/machinery/Tractors/utility/img3.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile2.jpg",
+  },
+  {
+    url: "/images/machinery/Tractors/large/img1.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile3.jpg",
   },
 ];
 
@@ -36,7 +58,6 @@ const HeroCarousel = () => {
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
 
-  // Εντοπισμός μεγέθους οθόνης
   const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
 
   React.useEffect(() => {
@@ -59,7 +80,6 @@ const HeroCarousel = () => {
     });
   }, [api]);
 
-  // Auto-advance carousel every 5 seconds
   React.useEffect(() => {
     if (!api) return;
 
@@ -76,28 +96,28 @@ const HeroCarousel = () => {
         {images.map((image, index) => (
           <CarouselItem key={index} className="h-full relative">
             <div className="h-full w-full relative">
-              {/* Χρήση διαφορετικής εικόνας ανάλογα με το μέγεθος της οθόνης */}
+              {/* Use different images for mobile and desktop */}
               <img
                 src={isMobile ? image.mobileUrl : image.url}
                 alt={image.alt}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover" // Ensures the image covers the space
               />
               <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center z-10">
+              <div className="absolute top-3/4 left-3/4 transform -translate-x-1/2 -translate-y-1/2 text-white text-center z-10">
                 {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">{image.alt}</h2> */}
               </div>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious
-        className="absolute left-4 bg-white/70 hover:bg-white border-none z-20"
-        aria-label="Προηγούμενη διαφάνεια"
+      {/* <CarouselPrevious
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg"
+        aria-label="Previous Slide"
       />
       <CarouselNext
-        className="absolute right-4 bg-white/70 hover:bg-white border-none z-20"
-        aria-label="Επόμενη διαφάνεια"
-      />
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg"
+        aria-label="Next Slide"
+      /> */}
 
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
         {Array.from({ length: count }).map((_, index) => (
@@ -107,7 +127,7 @@ const HeroCarousel = () => {
               index === current ? "bg-white scale-125" : "bg-white/50"
             }`}
             onClick={() => api?.scrollTo(index)}
-            aria-label={`Μετάβαση στη διαφάνεια ${index + 1}`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>

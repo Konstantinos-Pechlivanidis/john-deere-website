@@ -14,28 +14,26 @@ import CommercialMowingParts from "../components/parts/CommercialMowingParts";
 import GolfAndSportsTurfParts from "../components/parts/GolfAndSportsTurfParts";
 import EngineParts from "../components/parts/EngineParts";
 import MaintenanceParts from "../components/parts/MaintenanceParts";
-import Carousel from "../components/parts/Carousel";
 
 const PartsPage = () => {
-  const [openRequestForm, setOpenRequestForm] = useState(false); // Modal state for the quote form
+  const [openRequestForm, setOpenRequestForm] = useState(false); // Κατάσταση για το Modal του αιτήματος προσφοράς
 
   const handleRequestQuote = () => {
-    setOpenRequestForm(true); // Open the quote form modal
+    setOpenRequestForm(true); // Άνοιγμα του modal για το αίτημα προσφοράς
   };
 
-  const images = [
-    "/images/img1.jpg",
-    "/images/img2.jpg",
-    "/images/img3.jpg",
-    "/images/img4.jpg",
-    "/images/img5.jpg",
-    "/images/img6.jpg",
-    "/images/img7.jpg",
-    "/images/img8.jpg",
-    "/images/img9.jpg",
-    "/images/img10.jpg",
-    // Add more images as needed
-  ];
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
+
+  const handleImageClick = (imageSrc) => {
+    setModalImage(imageSrc);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setModalImage("");
+  };
 
   return (
     <Layout>
@@ -55,12 +53,127 @@ const PartsPage = () => {
         </div>
       </div>
 
-      {/* Carousel Section */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <Carousel images={images} />
+      <div className="flex flex-wrap gap-6 m-8">
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/General/webp1.webp"
+            alt="General 1"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/General/webp1.webp")
+            }
+          />
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/General/webp2.webp"
+            alt="General 2"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/General/webp2.webp")
+            }
+          />
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/General/img1.jpg"
+            alt="General 3"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/General/img1.jpg")
+            }
+          />
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/General/avif1.avif"
+            alt="General 4"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/General/avif1.avif")
+            }
+          />
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/General/img2.jpg"
+            alt="General 5"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/General/img2.jpg")
+            }
+          />
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/Cultivators/img2.jpg"
+            alt="Cultivators 2"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/Cultivators/img2.jpg")
+            }
+          />
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/Cultivators/img1.jpg"
+            alt="Cultivators 1"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/Cultivators/img1.jpg")
+            }
+          />
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/Harvesters/avif1.avif"
+            alt="Harvesters 1"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/Harvesters/avif1.avif")
+            }
+          />
+        </div>
+        <div className="w-full sm:w-1/2 md:w-1/6">
+          <img
+            src="/images/parts/Harvesters/avif2.avif"
+            alt="Harvesters 2"
+            loading="lazy" 
+            className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform"
+            onClick={() =>
+              handleImageClick("/images/parts/Harvesters/avif2.avif")
+            }
+          />
         </div>
       </div>
+
+      {/* Modal for Image Zoom */}
+      {isModalOpen && (
+        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+          <div className="bg-white rounded-lg p-6 max-w-lg w-full">
+            <img
+              src={modalImage}
+              alt="Large View"
+              loading="lazy" 
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+            <button
+              className="bg-jdyellow hover:bg-jdyellow-dark mt-4 p-2 rounded text-white"
+              onClick={handleCloseModal}
+            >
+              Κλείσιμο
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -71,13 +184,13 @@ const PartsPage = () => {
                   value="lawn-garden"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Lawn & Garden
+                  Γκαζόν & Κήπος
                 </TabsTrigger>
                 <TabsTrigger
                   value="agriculture"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Agriculture
+                  Γεωργία
                 </TabsTrigger>
                 {/* <TabsTrigger
                   value="construction"
@@ -89,19 +202,19 @@ const PartsPage = () => {
                   value="commercial-mowing"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Commercial Mowing
+                 Επαγγελματικά Χλοοκοπτικά
                 </TabsTrigger>
                 <TabsTrigger
                   value="golf-sports-turf"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Golf & Sports Turf
+                  Αθλητικές Εγκαταστάσεις
                 </TabsTrigger>
                 <TabsTrigger
                   value="engine"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Engine
+                  Κινητήρες
                 </TabsTrigger>
                 {/* <TabsTrigger
                   value="remanufactured"
@@ -113,7 +226,7 @@ const PartsPage = () => {
                   value="maintenance"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Maintenance Parts
+                  Ανταλλακτικά Συντήρησης
                 </TabsTrigger>
               </TabsList>
             </div>

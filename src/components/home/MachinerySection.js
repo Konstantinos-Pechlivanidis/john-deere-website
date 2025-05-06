@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
-import Carousel from "../parts/Carousel";
+import Carousel from "../layout/Carousel";
 
 const MachinerySection = () => {
   const images = [
@@ -24,7 +24,7 @@ const MachinerySection = () => {
           Μηχανήματα και Εξοπλισμός
         </h2>
         <div className="w-20 h-1 bg-jdyellow mx-auto mb-6"></div>
-        <p className="text-lg text-gray-600 mb-8">
+        <p className="md:w-1/2 m-auto text-lg text-gray-600 mb-8">
           Εξερευνήστε τα αυθεντικά μηχανήματα John Deere για γεωργία, κατασκευές και άλλα.
           Ανάλογα με τις ανάγκες σας, μπορείτε να βρείτε τα κατάλληλα μηχανήματα και εξοπλισμό
           για να αυξήσετε την αποδοτικότητα και την παραγωγικότητά σας.

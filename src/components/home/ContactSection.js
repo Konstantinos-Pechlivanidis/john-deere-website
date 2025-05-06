@@ -53,11 +53,11 @@ const ContactSection = () => {
               <ul className="space-y-2">
                 <li className="flex justify-between">
                   <span className="text-gray-600">Δευτέρα - Παρασκευή:</span>
-                  <span className="font-medium">8:00 ΠΜ - 6:00 ΜΜ</span>
+                  <span className="font-medium">9:00 ΠΜ - 17:00 ΜΜ</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-gray-600">Σάββατο:</span>
-                  <span className="font-medium">9:00 ΠΜ - 2:00 ΜΜ</span>
+                  <span className="font-medium">9:00 ΠΜ - 14:00 ΜΜ</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-gray-600">Κυριακή:</span>
@@ -71,11 +71,15 @@ const ContactSection = () => {
                 Κεντρικά Γραφεία
               </h3>
               <address className="not-italic text-gray-600">
-                <p>123 Οδός Αγροτικών Μηχανημάτων</p>
-                <p>Αθήνα, 12345</p>
+                <p>Μοναστηρίου 92</p>
+                <p>Θεσσαλονίκη,</p>
                 <p>Ελλάδα</p>
-                <p className="mt-4">Τηλέφωνο: +30 210 1234567</p>
-                <p>Ηλεκτρονικό Ταχυδρομείο: info@greekjdeere.com</p>
+                <p className="mt-4">Τηλέφωνο:</p>
+                <p className="mt-2">+30 2310 512239</p>
+                <p className="mt-2">+30 2310 552678</p>
+                <p className="mt-2">+30 6948506485</p>
+                <p className="mt-2">+30 6948506486</p>
+                <p className="mt-2">Ηλεκτρονικό Ταχυδρομείο: info@psomasst.gr</p>
               </address>
             </div>
           </div>

@@ -10,6 +10,7 @@ const ConstructionParts = () => {
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <img
                 src="/images/img4.jpg"
+                loading="lazy" 
                 alt="Ανταλλακτικά Κατασκευαστικών Μηχανημάτων"
                 className="w-full h-full object-cover"
               />

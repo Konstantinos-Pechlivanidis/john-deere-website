@@ -9,8 +9,9 @@ const MaintenanceParts = () => {
           <div className="order-2 lg:order-1 relative">
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/images/img7.jpg"
+                src="/images/parts/General/webp2.webp"
                 alt="Maintenance Parts"
+                loading="lazy" 
                 className="w-full h-full object-cover"
               />
             </div>

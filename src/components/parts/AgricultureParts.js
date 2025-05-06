@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../ui/tabs";
 
 const AgricultureParts = () => {
@@ -16,39 +16,39 @@ const AgricultureParts = () => {
         </p>
       </div>
       <div className="container mx-auto px-4">
-  <Tabs defaultValue="tractors-cultivators">
-    {/* Tabs for navigation */}
-    <div className="flex flex-col sm:flex-row sm:flex-nowrap overflow-x-auto sm:overflow-visible space-x-4 mb-8 justify-center items-center">
-      <TabsList className="flex flex-col sm:flex-row w-full sm:w-auto sm:flex-nowrap space-x-0 sm:space-x-4 sm:mb-8 sm:space-y-0 h-auto overflow-y-auto">
-        <TabsTrigger
+        <Tabs defaultValue="tractors-cultivators">
+          {/* Tabs for navigation */}
+          <div className="flex flex-col sm:flex-row sm:flex-nowrap overflow-x-auto sm:overflow-visible space-x-4 mb-8 justify-center items-center">
+            <TabsList className="flex flex-col sm:flex-row w-full sm:w-auto sm:flex-nowrap space-x-0 sm:space-x-4 sm:mb-8 sm:space-y-0 h-auto overflow-y-auto">
+              <TabsTrigger
                 value="tractors-cultivators"
                 className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
               >
-                Tractors & Cultivators
+                Τρακτέρ & Καλλιεργητικά
               </TabsTrigger>
               <TabsTrigger
                 value="harvesters"
                 className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
               >
-                Harvesters
+                Θεριστικά
               </TabsTrigger>
               <TabsTrigger
-                value="sowing-machines"
+                value="mowing-machines"
                 className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
               >
-                Sowing Machines
+                Μηχανήματα Σποράς
               </TabsTrigger>
               <TabsTrigger
                 value="hydraulic-systems"
                 className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
               >
-                Hydraulic Systems
+                Υδραυλικά Συστήματα
               </TabsTrigger>
               <TabsTrigger
                 value="wheels-sweepers"
                 className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
               >
-                Wheels & Sweepers
+                Τροχοί & Σαρώθρα
               </TabsTrigger>
             </TabsList>
           </div>
@@ -57,7 +57,7 @@ const AgricultureParts = () => {
           <TabsContent value="tractors-cultivators">
             <div className="text-gray-600">
               <h3 className="text-xl font-semibold text-charcoal-dark mb-4">
-                Tractors and Cultivators
+                Τρακτέρ και Καλλιεργητικά
               </h3>
               <p className="mb-4">
                 Ανταλλακτικά για τρακτέρ και καλλιεργητικά εργαλεία που
@@ -82,7 +82,7 @@ const AgricultureParts = () => {
           <TabsContent value="harvesters">
             <div className="text-gray-600">
               <h3 className="text-xl font-semibold text-charcoal-dark mb-4">
-                Harvesters
+                Θεριστικά
               </h3>
               <p className="mb-4">
                 Εξειδικευμένα ανταλλακτικά για θεριστικά μηχανήματα, για
@@ -103,10 +103,10 @@ const AgricultureParts = () => {
           </TabsContent>
 
           {/* Sowing Machines Content */}
-          <TabsContent value="sowing-machines">
+          <TabsContent value="mowing-machines">
             <div className="text-gray-600">
               <h3 className="text-xl font-semibold text-charcoal-dark mb-4">
-                Sowing Machines
+                Μηχανήματα Σποράς
               </h3>
               <p className="mb-4">
                 Ανταλλακτικά για μηχανήματα σποράς για ακριβή και αποτελεσματική
@@ -129,7 +129,7 @@ const AgricultureParts = () => {
           <TabsContent value="hydraulic-systems">
             <div className="text-gray-600">
               <h3 className="text-xl font-semibold text-charcoal-dark mb-4">
-                Hydraulic and Mechanical Systems
+                Υδραυλικά και Μηχανικά Συστήματα
               </h3>
               <p className="mb-4">
                 Ανταλλακτικά για υδραυλικά και μηχανικά συστήματα για βελτιωμένη
@@ -152,7 +152,7 @@ const AgricultureParts = () => {
           <TabsContent value="wheels-sweepers">
             <div className="text-gray-600">
               <h3 className="text-xl font-semibold text-charcoal-dark mb-4">
-                Wheels and Sweepers
+                Τροχοί και Σαρώθρα
               </h3>
               <p className="mb-4">
                 Ανταλλακτικά για τροχούς και σαρώθρα, για βελτίωση της

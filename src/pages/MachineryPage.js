@@ -1,4 +1,3 @@
-import Layout from "../components/layout/Layout";
 import { useState } from "react";
 import { Button } from "../components/ui/button";
 import {
@@ -11,12 +10,13 @@ import RequestQuoteButton from "../components/home/RequestQuoteButton";
 import LawnCareAndUtilityParts from "../components/machinery/LawnCareAndUtilityParts";
 import TractorsParts from "../components/machinery/TractorsParts";
 import ProductionSystemsAndTechnologyParts from "../components/machinery/ProductionSystemsAndTechnologyParts";
+import Layout from "../components/layout/Layout";
 
 const MachineryPage = () => {
-  const [openRequestForm, setOpenRequestForm] = useState(false); // Modal state for the quote form
+  const [openRequestForm, setOpenRequestForm] = useState(false); // Κατάσταση για το Modal του αιτήματος προσφοράς
 
   const handleRequestQuote = () => {
-    setOpenRequestForm(true); // Open the quote form modal
+    setOpenRequestForm(true); // Άνοιγμα του modal για το αίτημα προσφοράς
   };
 
   return (
@@ -44,19 +44,19 @@ const MachineryPage = () => {
                   value="lawn-care-utility"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Lawn Care & Utility Vehicles
+                  Φροντίδα Χλοοτάπητα - Οχήματα
                 </TabsTrigger>
                 <TabsTrigger
                   value="tractors"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Tractors
+                  Τρακτέρ
                 </TabsTrigger>
                 <TabsTrigger
                   value="production-systems"
                   className="w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-700 rounded-md sm:border-b-2 sm:border-transparent hover:text-jdgreen focus:outline-none focus:ring-2 focus:ring-jdgreen focus:ring-opacity-50"
                 >
-                  Production Systems & Technology
+                  Συστήματα Παραγωγής & Τεχνολογία
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -85,14 +85,14 @@ const MachineryPage = () => {
         </div>
       </div>
 
-      {/* Conditional rendering of the Request Quote Form */}
+      {/* Εμφάνιση Modal για Αίτημα Προσφοράς */}
       {openRequestForm && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg p-6 max-w-lg w-full">
             <h2 className="text-2xl font-bold text-charcoal-dark mb-4 mt-8">
               Αίτημα Προσφοράς
             </h2>
-            <RequestQuoteButton />{" "}
+            <RequestQuoteButton />
             <Button
               className="bg-jdyellow hover:bg-jdyellow-dark mt-4"
               onClick={() => setOpenRequestForm(false)}

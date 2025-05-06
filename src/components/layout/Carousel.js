@@ -59,6 +59,7 @@ const CarouselComponent = ({ images }) => {
             <img
               src={modalImage}
               alt="Modal View"
+              loading="lazy" 
               className="w-full h-auto rounded-lg shadow-lg"
             />
             <button

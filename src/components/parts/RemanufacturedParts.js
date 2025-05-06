@@ -10,6 +10,7 @@ const RemanufacturedParts = () => {
             <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
               <img
                 src="/images/img8.jpg"
+                loading="lazy" 
                 alt="Remanufactured Parts"
                 className="w-full h-full object-cover"
               />

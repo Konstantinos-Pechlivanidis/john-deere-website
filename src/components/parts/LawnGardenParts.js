@@ -7,10 +7,11 @@ const LawnGardenParts = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
           <div className="order-2 lg:order-1 relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <div className="aspect-[4/4] rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/images/img3.jpg"
+                src="/images/parts/lawnMower/webp1.webp"
                 alt="Lawn & Garden Parts"
+                loading="lazy" 
                 className="w-full h-full object-cover"
               />
             </div>
@@ -20,7 +21,7 @@ const LawnGardenParts = () => {
 
           {/* Content Section */}
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl font-bold text-charcoal-dark mb-4">Lawn & Garden Parts</h2>
+            <h2 className="text-3xl font-bold text-charcoal-dark mb-4">Φροντίδα Χλοοτάπητα - Οχήματα</h2>
             <div className="w-20 h-1 bg-jdyellow mb-6"></div>
             <p className="text-gray-600 mb-4">
               Τα ανταλλακτικά για τον κήπο και την αυλή σας προσφέρουν εξαιρετική ποιότητα και απόδοση.

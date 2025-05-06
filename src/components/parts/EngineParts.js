@@ -7,9 +7,17 @@ const EngineParts = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Ενότητα Εικόνας */}
           <div className="order-2 lg:order-1 relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+            <div className="aspect-[4/2] rounded-lg overflow-hidden shadow-xl mb-6">
               <img
-                src="/images/img11.jpg"
+                src="/images/parts/General/img2.jpg"
+                loading="lazy" 
+                alt="Engine Parts"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-[4/2] rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="/images/parts/General/avif1.avif"
                 alt="Engine Parts"
                 className="w-full h-full object-cover"
               />
