@@ -14,14 +14,16 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 py-20 md:py-32 relative z-10">
         <div className="max-w-3xl">
+          {/* Adjust the font size for mobile, tablet, and desktop */}
           <h1 
             id="hero-heading"
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
             Αξιόπιστες Λύσεις στη Γεωργική Μηχανολογία John Deere
           </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            Εισαγωγέας & Διανομέας Εξοπλισμού John Deere στην Ελλάδα
+          {/* Adjust the paragraph font size */}
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8">
+            Εισαγωγέας & Διανομέας Εξοπλισμού John Deere
           </p>
           <div className="flex flex-wrap gap-4">
             <Button 
@@ -29,7 +31,7 @@ const Hero = () => {
               size="lg" 
               className="bg-jdyellow hover:bg-jdyellow-light text-charcoal-dark font-semibold px-8"
             >
-              <Link to="/machinery-parts">Δείτε Προϊόντα</Link>
+              <Link to="/parts">Δείτε Προϊόντα</Link>
             </Button>
             <Button 
               asChild

@@ -143,8 +143,9 @@ const Services = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="/images/img11.jpg" 
+                  src="/images/general/img4.jpg" 
                   alt="Agricultural machinery" 
+                  loading="lazy" 
                   className="w-full h-full object-cover"
                 />
               </div>
