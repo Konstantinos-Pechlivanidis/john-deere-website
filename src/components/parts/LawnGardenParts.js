@@ -9,7 +9,7 @@ const LawnGardenParts = () => {
           <div className="order-2 lg:order-1 relative">
             <div className="aspect-[4/4] rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/images/parts/lawnMower/webp1.webp"
+                src="/images/parts/LawnMower/webp1.webp"
                 alt="Lawn & Garden Parts"
                 loading="lazy" 
                 className="w-full h-full object-cover"
