@@ -26,11 +26,11 @@ const images = [
     alt: "General",
     mobileUrl: "/images/general/mobile9.jpg",
   },
-  {
-    url: "/images/general/img25.jpg",
-    alt: "General",
-    mobileUrl: "/images/general/mobile10.jpg",
-  },
+  // {
+  //   url: "/images/general/img25.jpg",
+  //   alt: "General",
+  //   mobileUrl: "/images/general/mobile10.jpg",
+  // },
   {
     url: "/images/general/img27.jpg",
     alt: "General",

@@ -21,19 +21,19 @@ const AboutPreview = () => {
             
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
               <div className="bg-white p-4 rounded shadow-sm">
-                <div className="text-jdgreen font-bold text-2xl">500+</div>
+                <div className="text-jdgreen font-bold text-2xl">3.000+</div>
                 <div className="text-gray-600 text-sm">Πελάτες σε όλη την Ελλάδα & Εξωτερικό</div>
               </div>
               <div className="bg-white p-4 rounded shadow-sm">
-                <div className="text-jdgreen font-bold text-2xl">35+</div>
+                <div className="text-jdgreen font-bold text-2xl">40+</div>
                 <div className="text-gray-600 text-sm">Χρόνια Εμπειρίας</div>
               </div>
-              <div className="bg-white p-4 rounded shadow-sm">
+              {/* <div className="bg-white p-4 rounded shadow-sm">
                 <div className="text-jdgreen font-bold text-2xl">20+</div>
                 <div className="text-gray-600 text-sm">Διεθνείς Προμηθευτές</div>
-              </div>
+              </div> */}
               <div className="bg-white p-4 rounded shadow-sm">
-                <div className="text-jdgreen font-bold text-2xl">1000+</div>
+                <div className="text-jdgreen font-bold text-2xl">10.000+</div>
                 <div className="text-gray-600 text-sm">Διαθέσιμα Προϊόντα</div>
               </div>
             </div>
