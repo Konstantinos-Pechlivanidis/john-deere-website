@@ -85,8 +85,7 @@ const HeroCarousel = () => {
               <img
                 src={isMobile ? image.mobileUrl : image.url}
                 alt={image.alt}
-                loading="eager"
-                fetchpriority="high"
+                loading="lazy"
                 className="w-full h-full object-cover" // Ensures the image covers the space
               />
               <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay */}
