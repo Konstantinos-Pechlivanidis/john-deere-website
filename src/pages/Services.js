@@ -71,7 +71,7 @@ const Services = () => {
             ))}
           </div>
           
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <h2 className="text-3xl font-bold mb-4 text-charcoal-dark">Εξατομικευμένες Λύσεις</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
               Κάθε γεωργική επιχείρηση έχει μοναδικές ανάγκες. Συνεργαζόμαστε στενά με τους πελάτες μας
@@ -81,7 +81,7 @@ const Services = () => {
             <Button asChild className="bg-jdgreen hover:bg-jdgreen-light">
               <Link to="/contact">Επικοινωνήστε Μαζί Μας για Εξατομικευμένες Λύσεις</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
       

@@ -40,7 +40,7 @@ const Contact = () => {
       </div>
       
       {/* Call to Action for contacting the company */}
-      <div className="py-12 bg-gray-50">
+      {/* <div className="py-12 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4 text-charcoal-dark">Μην Διστάσετε να Επικοινωνήσετε</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -50,7 +50,7 @@ const Contact = () => {
             <Link to="/contact">Στείλτε μας Μήνυμα</Link>
           </Button>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

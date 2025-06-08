@@ -7,32 +7,32 @@ import {
 
 const images = [
   {
-    url: "/images/general/img18.jpg", 
+    url: "/images/general/img4.jpg", 
     alt: "General",
     mobileUrl: "/images/general/mobile1.jpg", 
   },
   {
-    url: "/images/general/img4.jpg",
+    url: "/images/general/img27.jpg",
     alt: "General",
     mobileUrl: "/images/general/mobile2.jpg",
   },
   {
-    url: "/images/general/img19.jpg",
+    url: "/images/general/img28.webp",
     alt: "General",
     mobileUrl: "/images/general/mobile3.jpg",
   },
   {
-    url: "/images/general/img20.jpg",
+    url: "/images/general/img29.jpg",
     alt: "General",
     mobileUrl: "/images/general/mobile9.jpg",
   },
-  // {
-  //   url: "/images/general/img25.jpg",
-  //   alt: "General",
-  //   mobileUrl: "/images/general/mobile10.jpg",
-  // },
   {
-    url: "/images/general/img27.jpg",
+    url: "/images/general/img20.jpg",
+    alt: "General",
+    mobileUrl: "/images/general/mobile10.jpg",
+  },
+  {
+    url: "/images/general/img21.jpg",
     alt: "General",
     mobileUrl: "/images/general/mobile11.jpg",
   },
