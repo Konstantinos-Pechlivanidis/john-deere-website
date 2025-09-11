@@ -16,7 +16,7 @@ const Footer = () => {
                 alt="Λογότυπο"
                 className="h-8 w-auto"
               />
-              <h3 className="text-xl font-bold text-jdyellow">Ι&Κ ΨΩΜΑ</h3>
+              <h3 className="text-xl font-bold text-jdyellow">Ι. & Κ. ΨΩΜΑ</h3>
             </div>
             <p className="text-gray-300 mb-4 text-sm leading-relaxed">
               Ο αξιόπιστος συνεργάτης σας για αυθεντικά ανταλλακτικά και γεωργικά μηχανήματα John Deere στην Ελλάδα.
@@ -85,7 +85,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="pt-8 mt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-          <p>© {currentYear} Ι&Κ ΨΩΜΑ — All rights reserved.</p>
+          <p>© {currentYear} Ι. & Κ. ΨΩΜΑ — All rights reserved.</p>
           <p className="mt-1">
             Εισαγωγέας Γεωργικών Ανταλλακτικών
           </p>

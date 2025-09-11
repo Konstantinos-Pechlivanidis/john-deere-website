@@ -48,7 +48,7 @@ const Header = () => {
               alt="Logo"
               className="h-10 w-auto object-contain"
             />
-            <span className="text-black font-bold text-2xl">Ι&Κ ΨΩΜΑ Ο.Ε.</span>
+            <span className="text-black font-bold text-2xl">Ι. & Κ. ΨΩΜΑ Ο.Ε.</span>
           </Link>
 
           {/* Desktop Navigation */}

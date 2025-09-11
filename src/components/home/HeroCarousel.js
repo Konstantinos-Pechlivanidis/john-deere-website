@@ -11,11 +11,11 @@ const images = [
     alt: "General",
     mobileUrl: "/images/general/mobile1.jpg", 
   },
-  {
-    url: "/images/general/img27.jpg",
-    alt: "General",
-    mobileUrl: "/images/general/mobile2.jpg",
-  },
+  // {
+  //   url: "/images/general/img27.jpg",
+  //   alt: "General",
+  //   mobileUrl: "/images/general/mobile2.jpg",
+  // },
   {
     url: "/images/general/img28.webp",
     alt: "General",
@@ -31,11 +31,11 @@ const images = [
     alt: "General",
     mobileUrl: "/images/general/mobile10.jpg",
   },
-  {
-    url: "/images/general/img21.jpg",
-    alt: "General",
-    mobileUrl: "/images/general/mobile11.jpg",
-  },
+  // {
+  //   url: "/images/general/img21.jpg",
+  //   alt: "General",
+  //   mobileUrl: "/images/general/mobile11.jpg",
+  // },
 ];
 
 const HeroCarousel = () => {
