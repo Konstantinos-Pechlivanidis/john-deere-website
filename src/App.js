@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./lib/ScrollToTop";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { JohnDeerePageLoader } from "./components/ui/john-deere-loader";
+import CookieConsent from "./components/CookieConsent";
 import "./i18n/config"; // Initialize i18n
 
 // Lazy load pages for better performance
@@ -16,6 +17,9 @@ const Services = lazy(() => import("./pages/Services"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const PartsPage = lazy(() => import("./pages/PartsPage"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Error500 = lazy(() => import("./pages/500"));
 
 const App = () => (
     <ErrorBoundary>
@@ -52,6 +56,21 @@ const App = () => (
                     <Contact />
                   </Suspense>
                 } />
+                <Route path="/terms" element={
+                  <Suspense fallback={<JohnDeerePageLoader size="xl" label="Loading terms..." showBranding={false} />}>
+                    <Terms />
+                  </Suspense>
+                } />
+                <Route path="/privacy" element={
+                  <Suspense fallback={<JohnDeerePageLoader size="xl" label="Loading privacy policy..." showBranding={false} />}>
+                    <Privacy />
+                  </Suspense>
+                } />
+                <Route path="/500" element={
+                  <Suspense fallback={<JohnDeerePageLoader size="xl" label="Loading..." showBranding={false} />}>
+                    <Error500 />
+                  </Suspense>
+                } />
                 <Route path="*" element={
                   <Suspense fallback={<JohnDeerePageLoader size="xl" label="Loading..." showBranding={false} />}>
                     <NotFound />
@@ -59,6 +78,7 @@ const App = () => (
                 } />
               </Routes>
             </BrowserRouter>
+            <CookieConsent />
           </TooltipProvider>
         </Suspense>
       </HelmetProvider>

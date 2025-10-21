@@ -40,7 +40,7 @@ const Services = () => {
         title={t('title')}
         description={t('subtitle')}
         canonical="/services"
-        ogImage="/images/general/general1.jpg"
+        ogImage="/images/general/DSC_2523.webp"
         structuredData={[breadcrumbData, serviceSchema]}
       />
       <div className="py-12 bg-gray-100">

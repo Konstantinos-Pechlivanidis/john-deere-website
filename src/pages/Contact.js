@@ -18,7 +18,7 @@ const Contact = () => {
         title={t('title')}
         description={t('subtitle')}
         canonical="/contact"
-        ogImage="/images/general/mobile4.jpg"
+        ogImage="/images/general/DSC_2523.webp"
         structuredData={breadcrumbData}
       />
       <div className="py-12 bg-gray-100">

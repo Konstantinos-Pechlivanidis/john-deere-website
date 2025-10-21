@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
-const BASE_URL = 'https://psomasst.gr'; // Update with your production URL
+const BASE_URL = process.env.SITE_URL || 'https://i-k-psoma.gr';
 
 const SEO = ({
   title,

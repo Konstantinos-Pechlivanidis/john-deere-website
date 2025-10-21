@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const { t } = useTranslation(['common', 'layout']);
+  const { t } = useTranslation('layout');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -15,13 +15,13 @@ const Footer = () => {
             <div className="flex items-center mb-4 space-x-2">
               <img
                 src="/images/logos/tractorLogo.png"
-                alt={t('common:alt_texts.logo')}
+                alt="Logo"
                 className="h-8 w-auto"
               />
-              <h3 className="text-xl font-bold text-jdyellow">{t('common:company_name')}</h3>
+              <h3 className="text-xl font-bold text-jdyellow">Ι. & Κ. ΨΩΜΑ Ο.Ε.</h3>
             </div>
             <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-              Ο αξιόπιστος συνεργάτης σας για αυθεντικά ανταλλακτικά και γεωργικά μηχανήματα John Deere στην Ελλάδα.
+              {t('footer.company_description') || 'Ο αξιόπιστος συνεργάτης σας για αυθεντικά ανταλλακτικά και γεωργικά μηχανήματα John Deere στην Ελλάδα.'}
             </p>
 
             <div className="space-y-3 text-sm text-gray-300">
@@ -46,51 +46,63 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">{t('layout:footer.quick_links')}</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('footer.quick_links') || 'Γρήγοροι Σύνδεσμοι'}</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.home')}</Link></li>
-              <li><Link to="/about" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.about')}</Link></li>
-              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.parts')}</Link></li>
-              <li><Link to="/services" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.services')}</Link></li>
-              <li><Link to="/contact" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.contact')}</Link></li>
+              <li><Link to="/" className="hover:text-jdyellow text-gray-300">{t('navigation.home') || 'Αρχική'}</Link></li>
+              <li><Link to="/about" className="hover:text-jdyellow text-gray-300">{t('navigation.about') || 'Σχετικά με Εμάς'}</Link></li>
+              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">{t('navigation.parts') || 'Ανταλλακτικά'}</Link></li>
+              <li><Link to="/services" className="hover:text-jdyellow text-gray-300">{t('navigation.services') || 'Υπηρεσίες'}</Link></li>
+              <li><Link to="/contact" className="hover:text-jdyellow text-gray-300">{t('navigation.contact') || 'Επικοινωνία'}</Link></li>
             </ul>
           </div>
 
           {/* Products */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Κατηγορίες</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('footer.categories') || 'Κατηγορίες'}</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">Κινητήρας</Link></li>
-              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">Υδραυλικά</Link></li>
-              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">Ηλεκτρικά</Link></li>
-              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">Καμπίνα / Πλαίσιο</Link></li>
-              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">Φρένα & Σασμάν</Link></li>
+              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">{t('footer.engine') || 'Κινητήρας'}</Link></li>
+              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">{t('footer.hydraulic') || 'Υδραυλικά'}</Link></li>
+              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">{t('footer.electrical') || 'Ηλεκτρικά'}</Link></li>
+              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">{t('footer.cabin_frame') || 'Καμπίνα / Πλαίσιο'}</Link></li>
+              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">{t('footer.brake_clutch') || 'Φρένα & Σασμάν'}</Link></li>
             </ul>
           </div>
 
           {/* Hours */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Ώρες Λειτουργίας</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('footer.operating_hours') || 'Ώρες Λειτουργίας'}</h4>
             <ul className="text-sm text-gray-300 space-y-2">
               <li className="flex justify-between">
-                <span>Δευτέρα - Παρασκευή:</span> <span className="text-white">09:00 - 17:00</span>
+                <span>{t('footer.monday_friday') || 'Δευτέρα - Παρασκευή:'}</span> <span className="text-white">{t('footer.hours_weekdays') || '09:00 - 17:00'}</span>
               </li>
               <li className="flex justify-between">
-                <span>Σάββατο:</span> <span className="text-white">09:00 - 14:00</span>
+                <span>{t('footer.saturday') || 'Σάββατο:'}</span> <span className="text-white">{t('footer.hours_saturday') || '09:00 - 14:00'}</span>
               </li>
               <li className="flex justify-between">
-                <span>Κυριακή:</span> <span className="text-white">Κλειστά</span>
+                <span>{t('footer.sunday') || 'Κυριακή:'}</span> <span className="text-white">{t('footer.closed') || 'Κλειστά'}</span>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-8 mt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-          <p>© {currentYear} {t('common:company_name')} — {t('layout:footer.all_rights_reserved')}.</p>
-          <p className="mt-1">
-            Εισαγωγέας Γεωργικών Ανταλλακτικών
-          </p>
+        <div className="pt-8 mt-8 border-t border-gray-700">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+            <div className="text-center md:text-left mb-4 md:mb-0">
+              <p>© {currentYear} Ι. & Κ. ΨΩΜΑ Ο.Ε. — {t('footer.all_rights_reserved') || 'Όλα τα δικαιώματα διατηρούνται'}.</p>
+              <p className="mt-1">
+                {t('footer.business_description') || 'Εισαγωγέας Γεωργικών Ανταλλακτικών'}
+              </p>
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <Link to="/terms" className="hover:text-jdyellow text-gray-400 transition-colors">
+                {t('footer.terms_of_use') || 'Όροι Χρήσης'}
+              </Link>
+              <Link to="/privacy" className="hover:text-jdyellow text-gray-400 transition-colors">
+                {t('footer.privacy_policy') || 'Πολιτική Απορρήτου'}
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

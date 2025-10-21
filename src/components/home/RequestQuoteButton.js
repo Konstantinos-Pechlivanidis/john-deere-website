@@ -39,7 +39,6 @@ const RequestQuoteButton = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(t('home:requestQuote.form_submitted_message'));
-    console.log(formState);
   };
 
   return (

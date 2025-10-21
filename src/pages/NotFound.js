@@ -1,9 +1,8 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { Button } from "../components/ui/button";
-import { Link } from "react-router-dom";
 
 const NotFound = () => {
   const location = useLocation();

@@ -1,70 +1,165 @@
-# Getting Started with Create React App
+# Ι. & Κ. ΨΩΜΑ Ο.Ε. - John Deere Parts Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website for Ι. & Κ. ΨΩΜΑ Ο.Ε., specializing in authentic John Deere agricultural machinery parts and equipment in Greece.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Multilingual Support**: Greek and English with i18next
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **SEO Optimized**: Meta tags, structured data, sitemap generation
+- **Performance**: Lazy loading, code splitting, optimized images
+- **Accessibility**: WCAG compliant with skip links and semantic HTML
+- **Security**: CSP headers, HTTPS enforcement, GDPR compliance
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 19** with Create React App
+- **Tailwind CSS** for styling
+- **Shadcn/ui** for components
+- **React Router** for navigation
+- **i18next** for internationalization
+- **React Helmet** for SEO
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Installation
 
-### `npm test`
+```bash
+# Install dependencies
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Start development server
+npm start
 
-### `npm run build`
+# Build for production
+npm run build
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Run tests
+npm test
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Lint code
+npm run lint
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Format code
+npm run format
+```
 
-### `npm run eject`
+## 🌐 Deployment & DNS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Environment Variables
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a `.env.production` file:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```env
+SITE_URL=https://i-k-psoma.gr
+NODE_ENV=production
+GENERATE_SOURCEMAP=false
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### DNS Configuration
 
-## Learn More
+Configure the following DNS records for `i-k-psoma.gr`:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+Type: A
+Name: @
+Value: [Your hosting provider's IP]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Type: CNAME  
+Name: www
+Value: i-k-psoma.gr
+```
 
-### Code Splitting
+### Redirect Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Set up a redirect from `www.i-k-psoma.gr` to `i-k-psoma.gr` (no trailing slash) to avoid duplicate content issues.
 
-### Analyzing the Bundle Size
+### Hosting Providers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is compatible with:
 
-### Making a Progressive Web App
+- **Vercel**: Zero-config deployment
+- **Netlify**: Drag & drop the `build` folder
+- **Render**: Static site deployment
+- **GitHub Pages**: Deploy from `build` folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Build Artifacts
 
-### Advanced Configuration
+The production build creates a `build/` directory containing:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Optimized HTML, CSS, and JavaScript
+- Compressed images and assets
+- Generated sitemap.xml
+- Security headers configuration
+- PWA manifest and service worker
 
-### Deployment
+## 🔧 Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Available Scripts
 
-### `npm run build` fails to minify
+- `npm start` - Development server
+- `npm run build` - Production build
+- `npm test` - Run tests
+- `npm run lint` - Lint code
+- `npm run format` - Format code
+- `npm run analyze` - Bundle analysis
+- `npm run lighthouse` - Performance audit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Project Structure
+
+```
+src/
+├── components/          # Reusable components
+├── pages/              # Page components
+├── i18n/              # Internationalization
+├── lib/               # Utilities
+└── config/            # Configuration
+```
+
+## 📊 Performance
+
+Target Lighthouse scores:
+- Performance: ≥ 90
+- Accessibility: ≥ 95
+- Best Practices: ≥ 95
+- SEO: ≥ 95
+
+## 🔒 Security
+
+- Content Security Policy (CSP)
+- HTTPS enforcement
+- XSS protection
+- Clickjacking prevention
+- Secure headers
+
+## 📱 PWA Features
+
+- Service worker for offline functionality
+- Web app manifest
+- Installable on mobile devices
+- Responsive design
+
+## 🌍 Internationalization
+
+Supports Greek (el) and English (en) with:
+- Automatic language detection
+- URL-based language switching
+- SEO-friendly hreflang tags
+- Localized content and metadata
+
+## 📈 Analytics
+
+GDPR-compliant analytics with cookie consent:
+- Privacy-friendly tracking
+- User consent management
+- Cookie banner implementation
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and linting
+5. Submit a pull request
+
+## 📄 License
+
+© 2025 Ι. & Κ. ΨΩΜΑ Ο.Ε. All rights reserved.

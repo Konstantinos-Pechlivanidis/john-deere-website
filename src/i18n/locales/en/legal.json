@@ -1,0 +1,273 @@
+{
+  "terms": {
+    "title": "Terms and Conditions",
+    "description": "Terms and Conditions for I. & K. PSOMA O.E. agricultural machinery parts website",
+    "last_updated": "Last Updated",
+    "section_1": {
+      "title": "1. Introduction",
+      "content": "Welcome to the website of I. & K. PSOMA O.E. (hereinafter \"we,\" \"us,\" \"our,\" or \"the Company\"). These Terms and Conditions (\"Terms\") govern your use of our website located at https://psomasst.gr (the \"Website\") and the services we provide. By accessing or using our Website, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Website."
+    },
+    "section_2": {
+      "title": "2. About Our Company",
+      "content": "I. & K. PSOMA O.E. is a Greek company specializing in the import and distribution of agricultural machinery parts, particularly John Deere parts. We have been serving customers since 1980.",
+      "company_details": "Company Details",
+      "business_name": "Business Name",
+      "address": "Address",
+      "phone": "Phone",
+      "website": "Website"
+    },
+    "section_3": {
+      "title": "3. Website Purpose and Scope",
+      "content": "Our Website serves as an informational platform to:",
+      "point_1": "Showcase our agricultural machinery parts and services",
+      "point_2": "Provide contact information and business details",
+      "point_3": "Allow customers to request quotes and inquiries",
+      "point_4": "Display product information and categories"
+    },
+    "section_4": {
+      "title": "4. Acceptable Use",
+      "permitted_use": "4.1 Permitted Use",
+      "permitted_content": "You may use our Website for:",
+      "prohibited_activities": "4.2 Prohibited Activities",
+      "prohibited_content": "You agree not to:"
+    },
+    "section_5": {
+      "title": "5. Intellectual Property Rights",
+      "content": "All content on this Website, including but not limited to text, images, graphics, logos, and designs, product descriptions and specifications, website layout and structure, and trademarks and brand elements is owned by I. & K. PSOMA O.E. or our licensors and is protected by Greek and international copyright and trademark laws.",
+      "john_deere_notice": "John Deere Trademarks:",
+      "john_deere_content": "John Deere is a registered trademark of Deere & Company. We are an independent distributor and are not affiliated with, endorsed by, or sponsored by Deere & Company. All John Deere trademarks, logos, and product names are the property of Deere & Company."
+    },
+    "section_6": {
+      "title": "6. Product Information and Availability",
+      "content": "Product information on our Website is for informational purposes only. We strive for accuracy but cannot guarantee that all information is complete or current. Product availability is subject to change without notice. Images may not reflect the exact appearance of products."
+    },
+    "section_7": {
+      "title": "7. Contact Forms and Inquiries",
+      "content": "When you submit contact forms or quote requests, you provide accurate and complete information, you consent to us using your information to respond to your inquiry, we may contact you using the provided contact details, and your information will be handled according to our Privacy Policy."
+    },
+    "section_8": {
+      "title": "8. Disclaimers and Limitations",
+      "content": "We do not guarantee uninterrupted access to the Website. The Website may be temporarily unavailable for maintenance. We are not liable for any downtime or technical issues."
+    },
+    "section_9": {
+      "title": "9. Limitation of Liability",
+      "content": "THE WEBSITE IS PROVIDED \"AS IS\" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND ACCURACY OR RELIABILITY."
+    },
+    "section_10": {
+      "title": "10. Indemnification",
+      "content": "You agree to indemnify and hold harmless I. & K. PSOMA O.E., its officers, directors, employees, and agents from any claims, damages, or expenses arising from your use of the Website, your violation of these Terms, or your violation of any third-party rights."
+    },
+    "section_11": {
+      "title": "11. Privacy and Data Protection",
+      "content": "Your privacy is important to us. Please review our Privacy Policy, which explains how we collect, use, and protect your information."
+    },
+    "section_12": {
+      "title": "12. Modifications to Terms",
+      "content": "We reserve the right to modify these Terms at any time. Changes will be effective immediately upon posting on the Website. Your continued use of the Website constitutes acceptance of the modified Terms."
+    },
+    "section_13": {
+      "title": "13. Termination",
+      "content": "We may terminate or suspend your access to the Website at any time, with or without cause, with or without notice."
+    },
+    "section_14": {
+      "title": "14. Governing Law and Jurisdiction",
+      "content": "These Terms are governed by Greek law. Any disputes arising from these Terms or your use of the Website will be subject to the exclusive jurisdiction of the courts of Thessaloniki, Greece."
+    },
+    "section_15": {
+      "title": "15. Severability",
+      "content": "If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions will continue to be valid and enforceable."
+    },
+    "section_16": {
+      "title": "16. Entire Agreement",
+      "content": "These Terms, together with our Privacy Policy, constitute the entire agreement between you and I. & K. PSOMA O.E. regarding your use of the Website."
+    },
+    "section_17": {
+      "title": "17. Contact Information",
+      "content": "For questions about these Terms, please contact us:",
+      "contact_info": "Contact Information",
+      "company": "Company",
+      "address": "Address",
+      "phone": "Phone",
+      "website": "Website"
+    },
+    "footer_note": "These Terms and Conditions are effective as of October 21, 2025, and may be updated from time to time. Please check this page regularly for any changes."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy for I. & K. PSOMA O.E. agricultural machinery parts website",
+    "last_updated": "Last Updated",
+    "section_1": {
+      "title": "1. Introduction",
+      "content": "I. & K. PSOMA O.E. (\"we,\" \"us,\" \"our,\" or \"the Company\") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect your information when you visit our website at https://psomasst.gr (the \"Website\"). This Privacy Policy complies with the General Data Protection Regulation (GDPR) and Greek data protection laws."
+    },
+    "section_2": {
+      "title": "2. Data Controller",
+      "content": "I. & K. PSOMA O.E.",
+      "company_details": "Company Details",
+      "business_name": "Business Name",
+      "address": "Address",
+      "phone": "Phone",
+      "website": "Website"
+    },
+    "section_3": {
+      "title": "3. Information We Collect",
+      "direct_info": "3.1 Information You Provide Directly",
+      "direct_content": "When you use our contact forms or request quotes, we may collect:",
+      "field_1": "Name (required for contact forms)",
+      "field_2": "Email address (required for contact forms)",
+      "field_3": "Phone number (optional)",
+      "field_4": "Inquiry type (machinery, parts, partnership, support, other)",
+      "field_5": "Message content (your specific inquiry or request)",
+      "automatic_info": "3.2 Information Collected Automatically",
+      "automatic_content": "When you visit our Website, we may automatically collect:",
+      "auto_field_1": "IP address and location data",
+      "auto_field_2": "Browser type and version",
+      "auto_field_3": "Operating system",
+      "auto_field_4": "Pages visited and time spent on pages",
+      "auto_field_5": "Referring website",
+      "auto_field_6": "Device information",
+      "cookies": "3.3 Cookies and Similar Technologies",
+      "cookies_content": "Our Website may use cookies and similar technologies to remember your language preferences, improve website functionality, and analyze website usage (if analytics are implemented)."
+    },
+    "section_4": {
+      "title": "4. How We Use Your Information",
+      "content": "We use your personal data for the following purposes:",
+      "business_communications": "4.1 Business Communications",
+      "business_1": "Respond to your inquiries and quote requests",
+      "business_2": "Provide customer support",
+      "business_3": "Send business-related communications",
+      "business_4": "Process your requests for information",
+      "website_improvement": "4.2 Website Improvement",
+      "website_1": "Analyze website usage to improve functionality",
+      "website_2": "Optimize user experience",
+      "website_3": "Ensure website security",
+      "legal_compliance": "4.3 Legal Compliance",
+      "legal_1": "Comply with legal obligations",
+      "legal_2": "Protect our rights and interests",
+      "legal_3": "Prevent fraud and abuse"
+    },
+    "section_5": {
+      "title": "5. Legal Basis for Processing",
+      "content": "Under GDPR, we process your personal data based on:",
+      "legitimate_interest": "Legitimate Interest:",
+      "legitimate_content": "For business communications and website improvement",
+      "consent": "Consent:",
+      "consent_content": "When you voluntarily provide information through contact forms",
+      "contract": "Contract Performance:",
+      "contract_content": "To fulfill your requests for quotes and information"
+    },
+    "section_6": {
+      "title": "6. Data Storage and Security",
+      "data_storage": "6.1 Data Storage",
+      "storage_1": "Your data is stored securely on our systems",
+      "storage_2": "We implement appropriate technical and organizational measures",
+      "storage_3": "Data is stored only as long as necessary for the purposes outlined",
+      "security_measures": "6.2 Security Measures",
+      "security_content": "We protect your data through:",
+      "security_1": "Secure servers and hosting",
+      "security_2": "Regular security updates",
+      "security_3": "Access controls and authentication",
+      "security_4": "Data encryption where appropriate"
+    },
+    "section_7": {
+      "title": "7. Data Sharing and Third Parties",
+      "no_selling": "7.1 We Do Not Sell Your Data",
+      "no_selling_content": "We do not sell, trade, or rent your personal information to third parties.",
+      "limited_sharing": "7.2 Limited Sharing",
+      "limited_content": "We may share your information only in the following circumstances:",
+      "service_providers": "Service Providers:",
+      "service_content": "With trusted third parties who assist in website operation (hosting, email services)",
+      "legal_requirements": "Legal Requirements:",
+      "legal_content": "When required by law or to protect our rights",
+      "business_transfers": "Business Transfers:",
+      "business_content": "In case of merger or acquisition (with notice)",
+      "third_party_services": "7.3 Third-Party Services",
+      "third_party_content": "Our Website may use third-party services that have their own privacy policies:",
+      "hosting": "Hosting Services:",
+      "hosting_content": "Website hosting and security",
+      "email": "Email Services:",
+      "email_content": "For sending responses to your inquiries",
+      "analytics": "Analytics Services:",
+      "analytics_content": "(If implemented) Website usage analysis"
+    },
+    "section_8": {
+      "title": "8. Data Retention",
+      "content": "We retain your personal data for:",
+      "contact_data": "Contact Form Data:",
+      "contact_content": "Up to 3 years from last contact",
+      "analytics_data": "Website Analytics:",
+      "analytics_content": "Up to 2 years (if collected)",
+      "legal_requirements": "Legal Requirements:",
+      "legal_content": "As required by applicable law"
+    },
+    "section_9": {
+      "title": "9. Your Rights Under GDPR",
+      "content": "You have the following rights regarding your personal data:",
+      "right_1": "Right of Access",
+      "right_1_content": "Request copies of your personal data and know how we process your data",
+      "right_2": "Right to Rectification",
+      "right_2_content": "Correct inaccurate personal data and complete incomplete data",
+      "right_3": "Right to Erasure (\"Right to be Forgotten\")",
+      "right_3_content": "Request deletion of your personal data, subject to legal obligations and legitimate interests",
+      "right_4": "Right to Restrict Processing",
+      "right_4_content": "Limit how we use your data in certain circumstances",
+      "right_5": "Right to Data Portability",
+      "right_5_content": "Receive your data in a structured format and transfer data to another controller",
+      "right_6": "Right to Object",
+      "right_6_content": "Object to processing based on legitimate interests and withdraw consent at any time"
+    },
+    "section_10": {
+      "title": "10. Exercising Your Rights",
+      "content": "To exercise your rights, contact us:",
+      "contact_info": "Contact Information",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "section_11": {
+      "title": "11. International Data Transfers",
+      "content": "Your data is primarily processed within Greece and the European Union. If we transfer data outside the EU, we ensure adequate protection through adequacy decisions by the European Commission, standard contractual clauses, and appropriate safeguards."
+    },
+    "section_12": {
+      "title": "12. Children's Privacy",
+      "content": "Our Website is not directed to children under 16. We do not knowingly collect personal information from children under 16. If you believe we have collected such information, please contact us immediately."
+    },
+    "section_13": {
+      "title": "13. Cookies Policy",
+      "cookie_types": "13.1 Types of Cookies We Use",
+      "essential": "Essential Cookies:",
+      "essential_content": "Required for website functionality",
+      "preference": "Preference Cookies:",
+      "preference_content": "Remember your language and settings",
+      "analytics": "Analytics Cookies:",
+      "analytics_content": "(If implemented) Website usage analysis",
+      "managing_cookies": "13.2 Managing Cookies",
+      "managing_content": "You can control cookies through your browser settings:",
+      "managing_1": "Block or delete cookies",
+      "managing_2": "Set preferences for cookie acceptance",
+      "managing_3": "Receive notifications before cookies are set"
+    },
+    "section_14": {
+      "title": "14. Changes to This Privacy Policy",
+      "content": "We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated \"Last Updated\" date. We encourage you to review this policy periodically."
+    },
+    "section_15": {
+      "title": "15. Contact Information",
+      "content": "For questions about this Privacy Policy or your personal data, contact us:",
+      "contact_info": "Contact Information",
+      "company": "Company",
+      "address": "Address",
+      "phone": "Phone",
+      "website": "Website"
+    },
+    "section_16": {
+      "title": "16. Data Protection Authority",
+      "content": "You have the right to lodge a complaint with the Hellenic Data Protection Authority (HDPA):",
+      "authority": "Hellenic Data Protection Authority (HDPA)",
+      "website": "Website",
+      "address": "Address",
+      "phone": "Phone"
+    },
+    "footer_note": "This Privacy Policy is effective as of October 21, 2025, and may be updated from time to time. Please check this page regularly for any changes."
+  }
+}

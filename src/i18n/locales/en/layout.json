@@ -13,6 +13,23 @@
     "all_rights_reserved": "All rights reserved",
     "phone_label": "Phone",
     "email_label": "Email",
-    "address_label": "Address"
+    "address_label": "Address",
+    "company_description": "Your trusted partner for authentic John Deere agricultural machinery parts and equipment in Greece.",
+    "categories": "Categories",
+    "engine": "Engine",
+    "hydraulic": "Hydraulic",
+    "electrical": "Electrical",
+    "cabin_frame": "Cabin / Frame",
+    "brake_clutch": "Brake & Clutch",
+    "operating_hours": "Operating Hours",
+    "monday_friday": "Monday - Friday:",
+    "saturday": "Saturday:",
+    "sunday": "Sunday:",
+    "closed": "Closed",
+    "hours_weekdays": "09:00 - 17:00",
+    "hours_saturday": "09:00 - 14:00",
+    "business_description": "Agricultural Parts Importer",
+    "terms_of_use": "Terms of Use",
+    "privacy_policy": "Privacy Policy"
   }
 }

@@ -61,7 +61,7 @@ const PartsPage = () => {
         title={t('title')}
         description={t('subtitle')}
         canonical="/parts"
-        ogImage="/images/general/general1.jpg"
+        ogImage="/images/general/DSC_2519.webp"
         structuredData={[breadcrumbData, productSchema]}
       />
       <section className="py-20 bg-white">

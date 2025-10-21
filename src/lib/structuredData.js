@@ -1,6 +1,6 @@
 // Structured Data (JSON-LD) utilities for SEO
 
-const BASE_URL = 'https://psomasst.gr';
+const BASE_URL = process.env.SITE_URL || 'https://i-k-psoma.gr';
 
 export const getWebsiteSchema = () => ({
   "@context": "https://schema.org",

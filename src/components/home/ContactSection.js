@@ -39,7 +39,6 @@ const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(t('common:form.form_submitted'));
-    console.log(formState);
   };
 
   return (

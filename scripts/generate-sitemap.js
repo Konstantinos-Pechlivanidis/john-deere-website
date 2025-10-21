@@ -1,30 +1,31 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://psomasst.gr';
-const BUILD_DIR = path.join(__dirname, '../build');
+const SITE_URL = process.env.SITE_URL || 'https://i-k-psoma.gr';
+const BUILD_DIR = path.join(__dirname, '..', 'build');
+const SITEMAP_PATH = path.join(BUILD_DIR, 'sitemap.xml');
 
-// Define all routes
+// Static routes from the app
 const routes = [
   { url: '/', priority: '1.0', changefreq: 'weekly' },
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
   { url: '/parts', priority: '0.9', changefreq: 'weekly' },
   { url: '/services', priority: '0.8', changefreq: 'monthly' },
-  { url: '/contact', priority: '0.7', changefreq: 'monthly' }
+  { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+  { url: '/terms', priority: '0.3', changefreq: 'yearly' },
+  { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
 ];
 
-// Generate sitemap.xml
 const generateSitemap = () => {
+  const lastmod = new Date().toISOString().split('T')[0];
+  
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${routes.map(route => `  <url>
-    <loc>${BASE_URL}${route.url}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <loc>${SITE_URL}${route.url}</loc>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
-    <xhtml:link rel="alternate" hreflang="el" href="${BASE_URL}${route.url}" />
-    <xhtml:link rel="alternate" hreflang="en" href="${BASE_URL}/en${route.url}" />
   </url>`).join('\n')}
 </urlset>`;
 
@@ -33,31 +34,9 @@ ${routes.map(route => `  <url>
     fs.mkdirSync(BUILD_DIR, { recursive: true });
   }
 
-  fs.writeFileSync(path.join(BUILD_DIR, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully');
+  fs.writeFileSync(SITEMAP_PATH, sitemap);
+  console.log(`✅ Sitemap generated at ${SITEMAP_PATH}`);
+  console.log(`📄 Generated ${routes.length} URLs`);
 };
 
-// Generate robots.txt
-const generateRobots = () => {
-  const robots = `User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: ${BASE_URL}/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Disallow admin or private areas (if any)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /api/`;
-
-  fs.writeFileSync(path.join(BUILD_DIR, 'robots.txt'), robots);
-  console.log('✅ Robots.txt generated successfully');
-};
-
-// Run generation
 generateSitemap();
-generateRobots();
