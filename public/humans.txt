@@ -1,0 +1,11 @@
+# TEAM
+
+    Developer: Ι. & Κ. ΨΩΜΑ Ο.Ε.
+    Contact: info@psomasst.gr
+    From: Θεσσαλονίκη, Ελλάδα
+
+# THANKS
+
+    John Deere for authentic parts
+    React team for the framework
+    Tailwind CSS for styling

@@ -1,0 +1,42 @@
+{
+  "engine": {
+    "title": "Engine Parts",
+    "description": "Genuine and compatible spare parts for all types of agricultural machinery engines. From maintenance to complete overhaul, supply with reliability and technical consistency."
+  },
+  "transmission": {
+    "title": "Transmission Parts",
+    "description": "Complete range of spare parts for power transmission systems. From gearboxes to differentials, we ensure reliable operation of your machinery."
+  },
+  "differential": {
+    "title": "Differential Parts",
+    "description": "Specialized spare parts for differential systems. From gears to housings, we have all the necessary components for efficient operation."
+  },
+  "filter": {
+    "title": "Filters & Filtration Devices",
+    "description": "Complete range of filters for all systems of your machinery. From engine filters to hydraulic filters, we ensure cleanliness and efficiency."
+  },
+  "clutch": {
+    "title": "Clutch Parts",
+    "description": "Spare parts for clutch and power transmission systems. From discs to cylinders, we ensure smooth operation of the transmission system."
+  },
+  "brake": {
+    "title": "Brake Parts",
+    "description": "Complete range of spare parts for brake systems. From pads to cylinders, we have all the necessary components for your machinery's safety."
+  },
+  "hydraulic": {
+    "title": "Hydraulic Parts",
+    "description": "Specialized spare parts for hydraulic systems. From pumps to valves, we ensure efficient operation of hydraulic systems."
+  },
+  "electrical": {
+    "title": "Electrical Parts",
+    "description": "Complete range of electrical spare parts. From sensors to fuel pumps, we have all the necessary components for electrical operation."
+  },
+  "cabin": {
+    "title": "Cabin & Frame Parts",
+    "description": "Spare parts for machine cabin and frame. From seats to frames, we ensure operator comfort and safety."
+  },
+  "general": {
+    "title": "General Parts",
+    "description": "Complete range of general spare parts for agricultural machinery. From bolts to seals, we have all the necessary components for maintenance."
+  }
+}

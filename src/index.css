@@ -2,6 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Accessibility improvements */
+@layer base {
+  /* Focus styles for better accessibility */
+  *:focus {
+    outline: 2px solid #F4D03F;
+    outline-offset: 2px;
+  }
+  
+  /* Skip to content link */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  .sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
+@layer components {
+  /* Enhanced focus states for interactive elements */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-jdyellow focus:ring-offset-2;
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .text-charcoal-dark {
+      color: #000000;
+    }
+    
+    .bg-jdgreen {
+      background-color: #1a3d0a;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    
+    /* Spinner fallback for reduced motion */
+    .animate-spin-smooth,
+    .animate-spin-slow,
+    .animate-spin-fast {
+      animation: none !important;
+    }
+  }
+  
+  /* iOS 18 inspired spinner enhancements */
+  .spinner-ios {
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent, currentColor);
+    mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 0);
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 0);
+  }
+  
+  /* Enhanced spinner styling */
+  .spinner-enhanced {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.05);
+  }
+  
+  .spinner-enhanced::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: inherit;
+    background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 2s infinite;
+    z-index: -1;
+  }
+  
+  @keyframes shimmer {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Smooth transitions for spinner states */
+  .spinner-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Enhanced focus states for spinner buttons */
+  .spinner-button:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

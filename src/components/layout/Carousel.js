@@ -1,27 +1,26 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import {
   Carousel,
   CarouselItem,
   CarouselContent,
   CarouselNext,
   CarouselPrevious,
-} from "../ui/carousel"; // Using ShadCN carousel
+} from "../ui/carousel";
 
 const CarouselComponent = ({ images }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
-  // Function to handle the image click to open the modal
-  const handleImageClick = (imageSrc) => {
+  // Optimize handlers with useCallback
+  const handleImageClick = useCallback((imageSrc) => {
     setModalImage(imageSrc);
     setIsModalOpen(true);
-  };
+  }, []);
 
-  // Function to close the modal
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setIsModalOpen(false);
     setModalImage("");
-  };
+  }, []);
 
   return (
     <div className="relative w-full max-w-6xl mx-auto">
@@ -38,6 +37,8 @@ const CarouselComponent = ({ images }) => {
                 alt={`Carousel-${index}`}
                 className="max-w-full max-h-full object-contain cursor-pointer transition-transform hover:scale-105"
                 onClick={() => handleImageClick(image)}
+                loading="lazy"
+                decoding="async"
               />
             </CarouselItem>
           ))}

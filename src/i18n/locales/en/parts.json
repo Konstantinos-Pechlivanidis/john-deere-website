@@ -1,0 +1,21 @@
+{
+  "title": "Parts",
+  "subtitle": "Discover our range of John Deere parts",
+  "category_selector": {
+    "label": "Select parts category:",
+    "placeholder": "Parts category"
+  },
+  "categories": {
+    "general": "General",
+    "engine": "Engine",
+    "transmission": "Transmission",
+    "differential": "Differential",
+    "filter": "Filters",
+    "clutch": "Clutch",
+    "brake": "Brakes",
+    "hydraulic": "Hydraulic",
+    "electrical": "Electrical Components",
+    "cabin": "Cabin - Frame"
+  },
+  "request_quote": "Request Quote"
+}

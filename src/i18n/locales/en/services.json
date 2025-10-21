@@ -1,0 +1,43 @@
+{
+  "title": "Services",
+  "subtitle": "Complete solutions for your needs",
+  "services": [
+    {
+      "title": "Parts Procurement",
+      "description": "Finding and procuring specialized parts from international suppliers."
+    },
+    {
+      "title": "Technical Support",
+      "description": "Specialized technical assistance for selecting the right parts."
+    },
+    {
+      "title": "Shipping & Delivery",
+      "description": "Fast and secure shipping throughout Greece and abroad."
+    },
+    {
+      "title": "Warranty & Support",
+      "description": "Full warranty and after-sales support for all our products."
+    }
+  ],
+  "whyUs": {
+    "title": "Why Choose Our Services",
+    "benefits": [
+      {
+        "title": "Authentic Products",
+        "description": "We guarantee that all machinery and spare parts we supply are authentic John Deere products."
+      },
+      {
+        "title": "Specialized Knowledge",
+        "description": "Our team has extensive technical knowledge of John Deere products and agricultural activities."
+      },
+      {
+        "title": "Reliable Delivery",
+        "description": "Our logistics experience ensures timely delivery of your orders throughout Greece."
+      },
+      {
+        "title": "Competitive Prices",
+        "description": "Our direct relationships with suppliers allow us to offer quality products at competitive prices."
+      }
+    ]
+  }
+}

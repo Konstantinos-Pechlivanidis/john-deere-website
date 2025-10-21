@@ -1,56 +1,64 @@
 import Layout from "../components/layout/Layout";
+import SEO from "../components/SEO";
+import { useTranslation } from "react-i18next";
+import { getBreadcrumbSchema } from "../lib/structuredData";
 
 const About = () => {
+  const { t } = useTranslation('about');
+  
+  const breadcrumbData = getBreadcrumbSchema([
+    { name: t('common:company_name'), url: 'https://psomasst.gr' },
+    { name: t('layout:navigation.about'), url: 'https://psomasst.gr/about' }
+  ]);
+  
   return (
     <Layout>
+      <SEO
+        title={t('intro.title')}
+        description={t('intro.subtitle')}
+        canonical="/about"
+        ogImage="/images/general/DSC_2509.webp"
+        structuredData={breadcrumbData}
+      />
+      {/* Intro Section */}
       <div className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-4 text-charcoal-dark">
-              Σχετικά Με Εμάς
+              {t('intro.title')}
             </h1>
             <div className="w-24 h-1 bg-jdyellow mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 mb-8">
-              Ο αξιόπιστος συνεργάτης σας για αυθεντικά μηχανήματα και
-              ανταλλακτικά John Deere στην Ελλάδα.
+              {t('intro.subtitle')}
             </p>
           </div>
         </div>
       </div>
 
+      {/* Η Ιστορία Μας */}
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <h2 className="text-3xl font-bold mb-4 text-charcoal-dark">
-                Η Ιστορία Μας
+                {t('history.title')}
               </h2>
               <div className="w-20 h-1 bg-jdyellow mb-6"></div>
               <p className="text-gray-600 mb-4">
-                Η εταιρεία μας, Ι. & Κ. Ψώμα OE, ιδρύθηκε το 1980 και από μια
-                μικρή οικογενειακή επιχείρηση έχει εξελιχθεί σε έναν από τους
-                κορυφαίους εισαγωγείς αγροτικών μηχανημάτων και ανταλλακτικών
-                για John Deere στην Ελλάδα.
+                {t('history.description_1')}
               </p>
               <p className="text-gray-600 mb-4">
-                Από την αρχή, στόχος μας ήταν η ικανοποίηση του Έλληνα αγρότη,
-                παρέχοντας υψηλής ποιότητας προϊόντα και επιλογές σε
-                ανταγωνιστικές τιμές. Με τα χρόνια έχουμε δημιουργήσει ισχυρές
-                σχέσεις με προμηθευτές παγκοσμίως, δίνοντάς μας τη δυνατότητα να
-                προσφέρουμε μια μεγάλη γκάμα ανταλλακτικών.
+                {t('history.description_2')}
               </p>
               <p className="text-gray-600">
-                Σήμερα εξυπηρετούμε πελάτες που κυμαίνονται από μικρές
-                οικογενειακές φάρμες μέχρι μεγάλες γεωργικές εταιρείες σε όλη
-                την Ελλάδα, αλλά και το εξωτερικό, διατηρώντας την δέσμευσή μας
-                στην ποιότητα, αξιοπιστία και στην εξαιρετική εξυπηρέτηση.
+                {t('history.description_3')}
               </p>
             </div>
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/images/general/webp5.webp"
-                  alt="Αγροτικό τοπίο"
+                  src="/images/general/DSC_2509.webp"
+                  alt={t('common:alt_texts.agricultural_landscape')}
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />
@@ -59,12 +67,13 @@ const About = () => {
             </div>
           </div>
 
+          {/* Αποστολή & Όραμα */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/images/general/img16.jpg"
-                  alt="Η ομάδα μας"
+                  src="/images/general/DSC_2523.webp"
+                  alt={t('common:alt_texts.our_team')}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -72,30 +81,63 @@ const About = () => {
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-bold mb-4 text-charcoal-dark">
-                Η Αποστολή & Το Όραμά Μας
+                {t('mission_vision.title')}
               </h2>
               <div className="w-20 h-1 bg-jdyellow mb-6"></div>
               <p className="text-gray-600 mb-4">
-                <strong>Αποστολή:</strong> Να γεφυρώσουμε το χάσμα μεταξύ
-                διεθνών προμηθευτών και ελληνικών γεωργικών επιχειρήσεων,
-                παρέχοντας αξιόπιστη πρόσβαση σε αυθεντικά μηχανήματα και
-                ανταλλακτικά John Deere που ενισχύουν την παραγωγικότητα και τη
-                βιωσιμότητα.
+                <strong>{t('mission_vision.mission.title')}</strong> {t('mission_vision.mission.description')}
               </p>
               <p className="text-gray-600 mb-4">
-                <strong>Όραμα:</strong> Να γίνουμε ο πιο αξιόπιστος συνεργάτης
-                για γεωργικά μηχανήματα στην Ελλάδα, αναγνωρισμένοι για την
-                τεχνική μας εξειδίκευση, τα ποιοτικά προϊόντα και τη δέσμευσή
-                μας στην επιτυχία των πελατών.
+                <strong>{t('mission_vision.vision.title')}</strong> {t('mission_vision.vision.description')}
               </p>
               <p className="text-gray-600">
-                Πιστεύουμε ότι παρέχοντας πρόσβαση στην καλύτερη γεωργική
-                τεχνολογία, συμβάλλουμε στην ανάπτυξη και βιωσιμότητα της
-                ελληνικής γεωργίας, βοηθώντας τους πελάτες μας να επιτύχουν
-                καλύτερες σοδειές, να μειώσουν τα κόστη τους και να βελτιώσουν
-                το περιβαλλοντικό τους αποτύπωμα.
+                {t('mission_vision.belief')}
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Τι μας ξεχωρίζει */}
+      <div className="bg-white py-20">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold text-charcoal-dark mb-4">{t('what_sets_us_apart.title')}</h2>
+            <div className="w-24 h-1 bg-jdyellow mx-auto mb-6 rounded"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {t('what_sets_us_apart.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {t('what_sets_us_apart.features', { returnObjects: true }).map((item, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition text-center">
+                <h3 className="text-xl font-semibold text-charcoal-dark mb-2">{item.title}</h3>
+                <p className="text-sm text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Οι Αξίες μας */}
+      <div className="bg-gray-100 py-20">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-extrabold text-charcoal-dark mb-4">{t('values.title')}</h2>
+            <div className="w-24 h-1 bg-jdyellow mx-auto mb-6 rounded"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {t('values.subtitle')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {t('values.value_items', { returnObjects: true }).map((value, i) => (
+              <div key={i} className="p-6 bg-white rounded-xl shadow-md">
+                <h3 className="text-jdgreen font-bold text-xl mb-2">{value.title}</h3>
+                <p className="text-gray-600 text-sm">{value.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

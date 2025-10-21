@@ -1,0 +1,35 @@
+{
+  "name": "Ι. & Κ. ΨΩΜΑ Ο.Ε. - Ανταλλακτικά Γεωργικών Μηχανημάτων",
+  "short_name": "ΨΩΜΑ Ο.Ε.",
+  "description": "Αξιόπιστα ανταλλακτικά για γεωργικά μηχανήματα John Deere. Πανελλαδική αποστολή, ποιότητα και εξυπηρέτηση από το 1980.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2D5016",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "el",
+  "icons": [
+    {
+      "src": "/images/logos/tractorLogo2.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logos/tractorLogo2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "agriculture", "machinery"],
+  "screenshots": [
+    {
+      "src": "/images/general/mobile4.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}

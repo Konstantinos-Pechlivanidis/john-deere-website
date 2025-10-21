@@ -1,0 +1,21 @@
+{
+  "title": "Ανταλλακτικά",
+  "subtitle": "Ανακαλύψτε την ποικιλία μας από ανταλλακτικά John Deere",
+  "category_selector": {
+    "label": "Επιλέξτε κατηγορία ανταλλακτικών:",
+    "placeholder": "Κατηγορία ανταλλακτικών"
+  },
+  "categories": {
+    "general": "Γενικά",
+    "engine": "Κινητήρας",
+    "transmission": "Σασμάν",
+    "differential": "Διαφορικό",
+    "filter": "Φίλτρα",
+    "clutch": "Συμπλέκτης",
+    "brake": "Φρένα",
+    "hydraulic": "Υδραυλικό",
+    "electrical": "Ηλεκτρολογικό Υλικό",
+    "cabin": "Καμπίνα - Πλαίσιο"
+  },
+  "request_quote": "Αίτημα Προσφοράς"
+}

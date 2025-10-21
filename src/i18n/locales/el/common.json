@@ -1,0 +1,37 @@
+{
+  "company_name": "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
+  "request_quote": "Αίτημα Προσφοράς",
+  "contact_us": "Επικοινωνήστε Μαζί Μας",
+  "learn_more": "Μάθετε Περισσότερα",
+  "view_details": "Δείτε Λεπτομέρειες",
+  "close": "Κλείσιμο",
+  "loading": "Φόρτωση...",
+  "error": "Σφάλμα",
+  "success": "Επιτυχία",
+  "phone": "Τηλέφωνο",
+  "email": "Email",
+  "address": "Διεύθυνση",
+  "alt_texts": {
+    "logo": "Λογότυπο",
+    "zoom": "Μεγέθυνση",
+    "preview": "Προεπισκόπηση",
+    "modal_view": "Προβολή Modal",
+    "company_location": "Εταιρική Τοποθεσία",
+    "agricultural_landscape": "Αγροτικό τοπίο",
+    "our_team": "Η ομάδα μας",
+    "agricultural_machinery": "Γεωργικά Μηχανήματα"
+  },
+          "form": {
+            "name": "Ονοματεπώνυμο",
+            "email": "Email",
+            "phone": "Τηλέφωνο",
+            "message": "Μήνυμα",
+            "send": "Αποστολή",
+            "select_inquiry_type": "Επιλέξτε τύπο ερώτησης",
+            "describe_how_we_can_help": "Πείτε μας πώς μπορούμε να σας βοηθήσουμε...",
+            "form_submitted": "Η φόρμα υποβλήθηκε!",
+            "name_placeholder": "Το ονοματεπώνυμό σας",
+            "email_placeholder": "your@email.com",
+            "phone_placeholder": "+30 69X XXX XXXX"
+          }
+}

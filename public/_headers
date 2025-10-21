@@ -1,0 +1,33 @@
+# Security Headers
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; connect-src 'self' https:; font-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
+
+# Cache static assets
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache images
+/images/*
+  Cache-Control: public, max-age=31536000
+
+# Cache favicon
+/favicon.ico
+  Cache-Control: public, max-age=86400
+
+# Cache manifest
+/site.webmanifest
+  Cache-Control: public, max-age=86400
+
+# Cache robots.txt
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+# Cache sitemap
+/sitemap.xml
+  Cache-Control: public, max-age=86400

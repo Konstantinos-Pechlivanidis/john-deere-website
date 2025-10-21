@@ -1,11 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Globe, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "../ui/button";
-import { Dialog, DialogTrigger, DialogContent, DialogTitle } from "../ui/dialog";
-import RequestQuoteButton from "../home/RequestQuoteButton"; // Import the RequestQuoteButton component
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+} from "../ui/dialog";
+import RequestQuoteButton from "../home/RequestQuoteButton";
+import LanguageToggle from "../i18n/LanguageToggle";
 
 const Header = () => {
+  const { t } = useTranslation(['common', 'layout']);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [open, setOpen] = useState(false); // State to manage the dialog (pop-up)
 
@@ -38,59 +45,61 @@ const Header = () => {
       {/* Main navigation */}
       <header className="bg-white shadow-sm py-4 px-4 sticky top-0 z-50">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="flex items-center flex-col sm:flex-row">
-            {/* <span className="font-bold text-2xl text-jdgreen">JOHN DEERE</span> */}
-            <span className="text-black font-bold text-2xl">Ι&Κ ΨΩΜΑ</span>
+          <Link to="/" className="flex items-center space-x-2">
+            <img
+              src="/images/logos/tractorLogo2.png"
+              alt={t('common:alt_texts.logo')}
+              className="h-10 w-auto object-contain"
+            />
+                    <span className="text-black font-bold text-2xl">{t('common:company_name')}</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <Link
               to="/"
-              className="font-medium text-charcoal hover:text-jdgreen"
+              className="font-medium text-charcoal hover:text-jdgreen transition-colors"
             >
-              Αρχική
+              {t('layout:navigation.home')}
             </Link>
             <Link
               to="/about"
-              className="font-medium text-charcoal hover:text-jdgreen"
+              className="font-medium text-charcoal hover:text-jdgreen transition-colors"
             >
-              Σχετικά με Εμάς
-            </Link>
-
-            <Link
-              to="/machinery"
-              className="font-medium text-charcoal hover:text-jdgreen"
-            >
-              Μηχανήματα
+              {t('layout:navigation.about')}
             </Link>
 
             <Link
               to="/parts"
-              className="font-medium text-charcoal hover:text-jdgreen"
+              className="font-medium text-charcoal hover:text-jdgreen transition-colors"
             >
-              Ανταλλακτικά
+              {t('layout:navigation.parts')}
             </Link>
 
             <Link
               to="/services"
-              className="font-medium text-charcoal hover:text-jdgreen"
+              className="font-medium text-charcoal hover:text-jdgreen transition-colors"
             >
-              Υπηρεσίες
+              {t('layout:navigation.services')}
             </Link>
             <Link
               to="/contact"
-              className="font-medium text-charcoal hover:text-jdgreen"
+              className="font-medium text-charcoal hover:text-jdgreen transition-colors"
             >
-              Επικοινωνία
+              {t('layout:navigation.contact')}
             </Link>
+
+            {/* Language Toggle - Integrated in Navbar */}
+            <div className="flex items-center border-l border-gray-200 pl-6">
+              <LanguageToggle />
+            </div>
 
             {/* Button to trigger the pop-up */}
             <Button
               className="bg-jdyellow hover:bg-jdyellow-dark text-charcoal-dark"
-              onClick={() => setOpen(true)} // Opens the dialog
+              onClick={() => setOpen(true)}
             >
-              Αίτημα Προσφοράς
+              {t('common:request_quote')}
             </Button>
           </nav>
 
@@ -119,50 +128,53 @@ const Header = () => {
                 className="font-medium text-charcoal hover:text-jdgreen"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Αρχική
+                {t('layout:navigation.home')}
               </Link>
               <Link
                 to="/about"
                 className="font-medium text-charcoal hover:text-jdgreen"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Σχετικά με εμάς
+                {t('layout:navigation.about')}
               </Link>
-              <Link
+              {/* <Link
                 to="/machinery"
                 className="font-medium text-charcoal hover:text-jdgreen"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Μηχανήματα
-              </Link>
+              </Link> */}
               <Link
                 to="/parts"
                 className="font-medium text-charcoal hover:text-jdgreen"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Ανταλλακτικά
+                {t('layout:navigation.parts')}
               </Link>
               <Link
                 to="/services"
                 className="font-medium text-charcoal hover:text-jdgreen"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Υπηρεσίες
+                {t('layout:navigation.services')}
               </Link>
               <Link
                 to="/contact"
                 className="font-medium text-charcoal hover:text-jdgreen"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Επικοινωνία
+                {t('layout:navigation.contact')}
               </Link>
+
+              {/* Language Toggle for Mobile */}
+              <LanguageToggle variant="mobile" />
 
               {/* Button to trigger the pop-up */}
               <Button
                 className="bg-jdyellow hover:bg-jdyellow-dark text-charcoal-dark w-full"
                 onClick={() => setOpen(true)} // Opens the dialog
               >
-                Αίτημα Προσφοράς
+                {t('common:request_quote')}
               </Button>
             </div>
           </nav>
@@ -172,8 +184,9 @@ const Header = () => {
       {/* ShadCN Dialog for "Αίτημα Προσφοράς" */}
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent>
-          <DialogTitle>Αίτημα Προσφοράς</DialogTitle>
-          <RequestQuoteButton /> {/* Display the RequestQuoteButton inside the dialog */}
+          <DialogTitle>{t('common:request_quote')}</DialogTitle>
+          <RequestQuoteButton />{" "}
+          {/* Display the RequestQuoteButton inside the dialog */}
         </DialogContent>
       </Dialog>
     </>

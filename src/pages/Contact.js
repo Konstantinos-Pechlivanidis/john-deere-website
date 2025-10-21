@@ -1,18 +1,33 @@
 import Layout from "../components/layout/Layout";
-import { Button } from "../components/ui/button";
-import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 import ContactSection from "../components/home/ContactSection";
+import { useTranslation } from "react-i18next";
+import { getBreadcrumbSchema } from "../lib/structuredData";
 
 const Contact = () => {
+  const { t } = useTranslation(['contact', 'common', 'layout']);
+  
+  const breadcrumbData = getBreadcrumbSchema([
+    { name: t('common:company_name'), url: 'https://psomasst.gr' },
+    { name: t('layout:navigation.contact'), url: 'https://psomasst.gr/contact' }
+  ]);
+  
   return (
     <Layout>
+      <SEO
+        title={t('title')}
+        description={t('subtitle')}
+        canonical="/contact"
+        ogImage="/images/general/DSC_2523.webp"
+        structuredData={breadcrumbData}
+      />
       <div className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-4 text-charcoal-dark">Επικοινωνήστε Μαζί Μας</h1>
+            <h1 className="text-4xl font-bold mb-4 text-charcoal-dark">{t('title')}</h1>
             <div className="w-24 h-1 bg-jdyellow mx-auto mb-8"></div>
             <p className="text-lg text-gray-600">
-              Έχετε ερωτήσεις για τα προϊόντα ή τις υπηρεσίες μας; Η ομάδα μας είναι εδώ για να σας βοηθήσει και να βρει την καλύτερη λύση για εσάς.
+              {t('subtitle')}
             </p>
           </div>
         </div>
@@ -33,14 +48,14 @@ const Contact = () => {
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="Εταιρική Τοποθεσία"
+              title={t('common:alt_texts.company_location')}
             ></iframe>
           </div>
         </div>
       </div>
       
       {/* Call to Action for contacting the company */}
-      <div className="py-12 bg-gray-50">
+      {/* <div className="py-12 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4 text-charcoal-dark">Μην Διστάσετε να Επικοινωνήσετε</h2>
           <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -50,7 +65,7 @@ const Contact = () => {
             <Link to="/contact">Στείλτε μας Μήνυμα</Link>
           </Button>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

@@ -1,0 +1,35 @@
+{
+  "navigation": {
+    "home": "Αρχική",
+    "about": "Σχετικά με Εμάς",
+    "parts": "Ανταλλακτικά",
+    "services": "Υπηρεσίες",
+    "contact": "Επικοινωνία"
+  },
+  "footer": {
+    "company_info": "Πληροφορίες Εταιρείας",
+    "quick_links": "Γρήγοροι Σύνδεσμοι",
+    "contact_info": "Στοιχεία Επικοινωνίας",
+    "all_rights_reserved": "Όλα τα δικαιώματα διατηρούνται",
+    "phone_label": "Τηλέφωνο",
+    "email_label": "Email",
+    "address_label": "Διεύθυνση",
+    "company_description": "Ο αξιόπιστος συνεργάτης σας για αυθεντικά ανταλλακτικά και γεωργικά μηχανήματα John Deere στην Ελλάδα.",
+    "categories": "Κατηγορίες",
+    "engine": "Κινητήρας",
+    "hydraulic": "Υδραυλικά",
+    "electrical": "Ηλεκτρικά",
+    "cabin_frame": "Καμπίνα / Πλαίσιο",
+    "brake_clutch": "Φρένα & Σασμάν",
+    "operating_hours": "Ώρες Λειτουργίας",
+    "monday_friday": "Δευτέρα - Παρασκευή:",
+    "saturday": "Σάββατο:",
+    "sunday": "Κυριακή:",
+    "closed": "Κλειστά",
+    "hours_weekdays": "09:00 - 17:00",
+    "hours_saturday": "09:00 - 14:00",
+    "business_description": "Εισαγωγέας Γεωργικών Ανταλλακτικών",
+    "terms_of_use": "Όροι Χρήσης",
+    "privacy_policy": "Πολιτική Απορρήτου"
+  }
+}

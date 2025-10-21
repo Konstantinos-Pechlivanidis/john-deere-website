@@ -1,55 +1,55 @@
-import { Check, Truck, Globe, Wrench } from "lucide-react";
+import { Check, Truck, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-jdgreen flex flex-col items-center">
-      <div className="text-jdgreen mb-4">
-        {icon}
+    <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition flex flex-col items-center text-center">
+      <div className="w-16 h-16 flex items-center justify-center bg-jdgreen/10 rounded-full mb-4">
+        <div className="text-jdgreen">{icon}</div>
       </div>
-      <h3 className="font-semibold text-xl mb-2 text-charcoal-dark text-center">{title}</h3>
-      <p className="text-gray-600 text-center">{description}</p>
+      <h3 className="text-xl font-semibold text-charcoal-dark mb-2">{title}</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
     </div>
   );
 };
 
 const ValueProposition = () => {
+  const { t } = useTranslation('home');
+  
   const features = [
     {
-      icon: <Globe className="h-12 w-12" />,
-      title: "Διεθνής Προμήθεια",
-      description: "Εκμεταλλευόμαστε τη δύναμη των άμεσων σχέσεων με κορυφαίους προμηθευτές παγκοσμίως για να προσφέρουμε αυθεντικά προϊόντα John Deere σε ανταγωνιστικές τιμές."
+      icon: <Globe className="w-8 h-8" />,
+      title: t('value_proposition.features.international_network.title'),
+      description: t('value_proposition.features.international_network.description'),
     },
     {
-      icon: <Check className="h-12 w-12" />,
-      title: "Εγγυημένη Αυθεντικότητα",
-      description: "Κάθε μηχάνημα και ανταλλακτικό που προσφέρουμε είναι αυθεντικό και πιστοποιημένο, διασφαλίζοντας υψηλή ποιότητα και αξιοπιστία."
+      icon: <Check className="w-8 h-8" />,
+      title: t('value_proposition.features.quality_parts.title'),
+      description: t('value_proposition.features.quality_parts.description'),
     },
     {
-      icon: <Truck className="h-12 w-12" />,
-      title: "Αποτελεσματική Λογιστική Διαχείριση",
-      description: "Αξιοποιούμε την εμπειρία μας στον τομέα της λογιστικής για να εξασφαλίσουμε την έγκαιρη παράδοση σε όλη την Ελλάδα, μειώνοντας τον χρόνο διακοπής λειτουργίας."
+      icon: <Truck className="w-8 h-8" />,
+      title: t('value_proposition.features.nationwide_shipping.title'),
+      description: t('value_proposition.features.nationwide_shipping.description'),
     },
-    {
-      icon: <Wrench className="h-12 w-12" />,
-      title: "Εξειδικευμένη Υποστήριξη",
-      description: "Η τεχνική μας υποστήριξη είναι διαθέσιμη για να σας βοηθήσει να επιλέξετε τα κατάλληλα μηχανήματα και ανταλλακτικά για τις συγκεκριμένες ανάγκες σας."
-    }
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-semibold mb-3 text-charcoal-dark">Γιατί να μας Επιλέξετε</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Γεφυρώνουμε το χάσμα μεταξύ διεθνών προμηθευτών και ελληνικών επιχειρήσεων,
-            προσφέροντας αξιόπιστη πρόσβαση σε προϊόντα υψηλής ποιότητας John Deere για κάθε ανάγκη.
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-extrabold mb-4 text-charcoal-dark tracking-tight">
+            {t('value_proposition.title')}
+          </h2>
+          <div className="w-24 h-1 bg-jdyellow mx-auto mb-6 rounded"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            {t('value_proposition.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard 
+            <FeatureCard
               key={index}
               icon={feature.icon}
               title={feature.title}

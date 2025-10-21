@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "Reliable Agricultural Machinery Parts",
+    "subtitle": "Specialized solutions for compatible equipment from John Deere & other manufacturers",
+    "cta": "View Products"
+  },
+  "value_proposition": {
+    "title": "Why Choose Us",
+    "subtitle": "We help agricultural businesses find the right parts quickly and reliably, leveraging international partnerships and direct service – without intermediaries.",
+    "features": {
+      "international_network": {
+        "title": "International Supplier Network",
+        "description": "We collaborate with trusted suppliers worldwide to locate and provide you with the parts you need, immediately and reliably."
+      },
+      "quality_parts": {
+        "title": "Quality Parts",
+        "description": "We offer a wide range of genuine and compatible parts for agricultural machinery, with emphasis on quality and reliability."
+      },
+      "nationwide_shipping": {
+        "title": "Nationwide Shipping",
+        "description": "We handle the delivery of parts to your location, anywhere in Greece, immediately and safely."
+      }
+    }
+  },
+  "about_preview": {
+    "title": "Your Trusted Partner in Agricultural Machinery Parts",
+    "description_1": "For more than four decades, we have stood by agricultural professionals, providing direct access to high-quality parts for every type of agricultural machinery.",
+    "description_2": "With a wide international supplier network and deep market knowledge, we locate even the most specialized components, ensuring speed, reliability, and personal service.",
+    "stats": {
+      "customers": "3,000+ Customers in Greece & Abroad",
+      "experience": "40+ Years of Experience",
+      "parts": "10,000+ Available Parts"
+    },
+    "cta": "Learn More About Us"
+  },
+  "contact_section": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help you",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "address_label": "Address"
+  },
+          "partsLink": {
+            "title": "Agricultural Machinery Parts",
+            "description": "We offer a wide variety of spare parts for tractors, strippers, cotton machines and harvesters. We take care of finding the right component and delivering it immediately throughout Greece.",
+            "categories": [
+              {
+                "title": "Tractors & Pullers",
+                "desc": "Complete range of spare parts: filters, transmissions, hydraulics, electrical and more."
+              },
+              {
+                "title": "Cotton Machines & Strippers",
+                "desc": "Spare parts for cotton harvesting machines and strippers with emphasis on reliability."
+              },
+              {
+                "title": "Harvester Machines",
+                "desc": "Components for combines, harvesters and grain harvesting machinery."
+              }
+            ],
+            "cta": {
+              "viewAll": "View All Parts",
+              "requestPart": "Request the Part You Need"
+            }
+          },
+          "requestQuote": {
+            "title": "Send us a Message",
+            "inquiry_type": "Type of Inquiry",
+            "inquiry_options": {
+              "machinery": "Machinery Inquiry",
+              "parts": "Parts Inquiry",
+              "partnership": "Partnership Opportunity",
+              "support": "Technical Support",
+              "other": "Other"
+            },
+            "submit_button": "Send Message",
+            "form_submitted_message": "Form submitted! In a real implementation, this would be sent to your server."
+          }
+}

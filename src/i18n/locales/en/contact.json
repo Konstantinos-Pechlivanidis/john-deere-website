@@ -1,0 +1,32 @@
+{
+  "title": "Contact Us",
+  "subtitle": "Do you have questions about our products or services? Our team is here to help you and find the best solution for you.",
+  "info": {
+    "title": "Contact Us",
+    "subtitle": "If you need spare parts, want to submit a query, or start a new collaboration, we are here to serve you with consistency and speed.",
+    "hours_title": "Operating Hours",
+    "monday_friday": "Monday - Friday:",
+    "saturday": "Saturday:",
+    "sunday": "Sunday:",
+    "closed": "Closed",
+    "address_title": "Head Office",
+    "address_line1": "Monastiriou 92",
+    "address_line2": "Thessaloniki, Greece",
+    "phone_label": "Phone",
+    "email_label": "Email"
+  },
+  "form": {
+    "send": "Send us a Message",
+    "name": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "inquiry_type": "Type of Inquiry",
+    "inquiry_placeholder": "Select inquiry type",
+    "parts": "Parts",
+    "partnership": "Partnership",
+    "other": "Other",
+    "message": "Message",
+    "message_placeholder": "Tell us how we can help...",
+    "submit": "Send Message"
+  }
+}
