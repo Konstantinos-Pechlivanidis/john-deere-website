@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import Layout from "../components/layout/Layout";
+import SEO from "../components/SEO";
 import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -16,6 +17,11 @@ const NotFound = () => {
 
   return (
     <Layout>
+      <SEO
+        title="Σελίδα Δεν Βρέθηκε - 404"
+        description="Η σελίδα που ψάχνετε δεν βρέθηκε. Επιστρέψτε στην αρχική σελίδα για να συνεχίσετε."
+        noindex={true}
+      />
       <div className="container mx-auto px-4 py-24 flex items-center justify-center">
         <div className="max-w-md text-center">
           <h1 className="text-9xl font-bold text-jdgreen">404</h1>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // const images = [
 //   "/images/parts/Hydraulic/hydraulic1.jpg",
@@ -7,6 +8,7 @@ import React, { useState } from "react";
 // ];
 
 const HydraulicParts = () => {
+  const { t } = useTranslation('common');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -56,7 +58,7 @@ const HydraulicParts = () => {
         {isModalOpen && (
           <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
             <div className="bg-white rounded-lg p-4 max-w-2xl w-full">
-              <img src={modalImage} alt="Μεγέθυνση" className="w-full h-auto rounded shadow" />
+              <img src={modalImage} alt={t('alt_texts.zoom')} className="w-full h-auto rounded shadow" />
               <div className="text-center mt-4">
                 <button
                   className="bg-jdyellow hover:bg-jdyellow-dark px-6 py-2 text-white rounded"

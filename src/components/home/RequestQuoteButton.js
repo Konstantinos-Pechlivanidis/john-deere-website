@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+import { useTranslation } from "react-i18next";
 import {
   Select,
   SelectContent,
@@ -11,6 +12,7 @@ import {
 } from "../ui/select";
 
 const RequestQuoteButton = () => {
+  const { t } = useTranslation(['home', 'common']);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -36,17 +38,14 @@ const RequestQuoteButton = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Στην πραγματική υλοποίηση, η φόρμα θα αποσταλεί στον διακομιστή
-    alert(
-      "Η φόρμα υποβλήθηκε! Στην πραγματική υλοποίηση, αυτή θα σταλθεί στον διακομιστή σας."
-    );
+    alert(t('home:requestQuote.form_submitted_message'));
     console.log(formState);
   };
 
   return (
     <div className="bg-gray-50 p-6 rounded-lg shadow-md">
       <h3 className="font-bold text-xl mb-4 text-jdgreen">
-        Στείλτε μας ένα Μήνυμα
+        {t('home:requestQuote.title')}
       </h3>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -55,14 +54,14 @@ const RequestQuoteButton = () => {
             htmlFor="name"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Ονοματεπώνυμο *
+            {t('common:form.name')} *
           </label>
           <Input
             id="name"
             name="name"
             value={formState.name}
             onChange={handleChange}
-            placeholder="Το ονοματεπώνυμό σας"
+            placeholder={t('common:form.name_placeholder')}
             required
             className="w-full"
           />
@@ -74,7 +73,7 @@ const RequestQuoteButton = () => {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              Διεύθυνση Ηλεκτρονικού Ταχυδρομείου *
+              {t('common:form.email')} *
             </label>
             <Input
               id="email"
@@ -82,7 +81,7 @@ const RequestQuoteButton = () => {
               type="email"
               value={formState.email}
               onChange={handleChange}
-              placeholder="your@email.com"
+              placeholder={t('common:form.email_placeholder')}
               required
               className="w-full"
             />
@@ -93,14 +92,14 @@ const RequestQuoteButton = () => {
               htmlFor="phone"
               className="block text-sm font-medium text-gray-700 mb-1"
             >
-              Αριθμός Τηλεφώνου
+              {t('common:form.phone')}
             </label>
             <Input
               id="phone"
               name="phone"
               value={formState.phone}
               onChange={handleChange}
-              placeholder="+30 123 4567890"
+              placeholder={t('common:form.phone_placeholder')}
               className="w-full"
             />
           </div>
@@ -111,7 +110,7 @@ const RequestQuoteButton = () => {
             htmlFor="inquiry"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Τύπος Ερώτησης *
+            {t('home:requestQuote.inquiry_type')} *
           </label>
           <Select
             onValueChange={handleSelectChange}
@@ -119,14 +118,14 @@ const RequestQuoteButton = () => {
             required
           >
             <SelectTrigger className="w-full">
-              <SelectValue placeholder="Επιλέξτε τύπο ερώτησης" />
+              <SelectValue placeholder={t('common:form.select_inquiry_type')} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="machinery">Ερώτηση για Μηχανήματα</SelectItem>
-              <SelectItem value="parts">Ερώτηση για Ανταλλακτικά</SelectItem>
-              <SelectItem value="partnership">Ευκαιρία Συνεργασίας</SelectItem>
-              <SelectItem value="support">Τεχνική Υποστήριξη</SelectItem>
-              <SelectItem value="other">Άλλο</SelectItem>
+              <SelectItem value="machinery">{t('home:requestQuote.inquiry_options.machinery')}</SelectItem>
+              <SelectItem value="parts">{t('home:requestQuote.inquiry_options.parts')}</SelectItem>
+              <SelectItem value="partnership">{t('home:requestQuote.inquiry_options.partnership')}</SelectItem>
+              <SelectItem value="support">{t('home:requestQuote.inquiry_options.support')}</SelectItem>
+              <SelectItem value="other">{t('home:requestQuote.inquiry_options.other')}</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -136,14 +135,14 @@ const RequestQuoteButton = () => {
             htmlFor="message"
             className="block text-sm font-medium text-gray-700 mb-1"
           >
-            Μήνυμα *
+            {t('common:form.message')} *
           </label>
           <Textarea
             id="message"
             name="message"
             value={formState.message}
             onChange={handleChange}
-            placeholder="Παρακαλώ περιγράψτε πώς μπορούμε να σας βοηθήσουμε..."
+            placeholder={t('common:form.describe_how_we_can_help')}
             required
             rows={5}
             className="w-full"
@@ -154,7 +153,7 @@ const RequestQuoteButton = () => {
           type="submit"
           className="w-full bg-jdgreen hover:bg-jdgreen-light"
         >
-          Αποστολή Μηνύματος
+          {t('home:requestQuote.submit_button')}
         </Button>
       </form>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const images = [
   "/images/parts/Engine/engine1.jpg",
@@ -7,6 +8,7 @@ const images = [
 ];
 
 const EngineParts = () => {
+  const { t } = useTranslation('categories');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -26,11 +28,11 @@ const EngineParts = () => {
         {/* Τίτλος & Περιγραφή */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
-            Ανταλλακτικά Κινητήρα
+            {t('engine.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
           <p className="text-lg text-gray-600">
-            Γνήσια και συμβατά ανταλλακτικά για όλους τους τύπους κινητήρων γεωργικών μηχανημάτων. Από τη συντήρηση έως την πλήρη ανακατασκευή, προμηθευτείτε με αξιοπιστία και τεχνική συνέπεια.
+            {t('engine.description')}
           </p>
         </div>
 

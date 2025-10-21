@@ -1,0 +1,37 @@
+{
+  "company_name": "I. & K. PSOMA O.E.",
+  "request_quote": "Request Quote",
+  "contact_us": "Contact Us",
+  "learn_more": "Learn More",
+  "view_details": "View Details",
+  "close": "Close",
+  "loading": "Loading...",
+  "error": "Error",
+  "success": "Success",
+  "phone": "Phone",
+  "email": "Email",
+  "address": "Address",
+  "alt_texts": {
+    "logo": "Logo",
+    "zoom": "Zoom",
+    "preview": "Preview",
+    "modal_view": "Modal View",
+    "company_location": "Company Location",
+    "agricultural_landscape": "Agricultural landscape",
+    "our_team": "Our team",
+    "agricultural_machinery": "Agricultural Machinery"
+  },
+          "form": {
+            "name": "Full Name",
+            "email": "Email",
+            "phone": "Phone",
+            "message": "Message",
+            "send": "Send",
+            "select_inquiry_type": "Select inquiry type",
+            "describe_how_we_can_help": "Please describe how we can help you...",
+            "form_submitted": "Form submitted!",
+            "name_placeholder": "Your full name",
+            "email_placeholder": "your@email.com",
+            "phone_placeholder": "+30 69X XXX XXXX"
+          }
+}

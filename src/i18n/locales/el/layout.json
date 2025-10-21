@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "Αρχική",
+    "about": "Σχετικά με Εμάς",
+    "parts": "Ανταλλακτικά",
+    "services": "Υπηρεσίες",
+    "contact": "Επικοινωνία"
+  },
+  "footer": {
+    "company_info": "Πληροφορίες Εταιρείας",
+    "quick_links": "Γρήγοροι Σύνδεσμοι",
+    "contact_info": "Στοιχεία Επικοινωνίας",
+    "all_rights_reserved": "Όλα τα δικαιώματα διατηρούνται",
+    "phone_label": "Τηλέφωνο",
+    "email_label": "Email",
+    "address_label": "Διεύθυνση"
+  }
+}

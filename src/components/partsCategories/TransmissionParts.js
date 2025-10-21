@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const images = [
   "/images/parts/Transmision/transmission1.webp",
@@ -7,6 +8,7 @@ const images = [
 ];
 
 const TransmissionParts = () => {
+  const { t } = useTranslation('categories');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -26,11 +28,11 @@ const TransmissionParts = () => {
         {/* Τίτλος & Περιγραφή */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
-            Ανταλλακτικά Συστήματος Μετάδοσης (Σασμάν)
+            {t('transmission.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
           <p className="text-lg text-gray-600">
-            Προσφέρουμε γνήσια και συμβατά ανταλλακτικά για κάθε τύπο συστήματος μετάδοσης — αυτόματα, μηχανικά ή υδροστατικά. Ιδανικά για κάθε τύπο γεωργικού μηχανήματος John Deere.
+            {t('transmission.description')}
           </p>
         </div>
 
@@ -58,7 +60,7 @@ const TransmissionParts = () => {
             <div className="bg-white p-4 rounded-lg max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt="Μεγέθυνση"
+                alt={t('alt_texts.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">

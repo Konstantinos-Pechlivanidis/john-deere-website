@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Carousel,
   CarouselItem,
@@ -35,6 +36,7 @@ const images = [
 ];
 
 const GeneralParts = () => {
+  const { t } = useTranslation('common');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -91,7 +93,7 @@ const GeneralParts = () => {
             <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl w-full">
               <img
                 src={modalImage}
-                alt="Προεπισκόπηση"
+                alt={t('common:alt_texts.preview')}
                 className="w-full h-auto rounded"
               />
               <div className="text-center mt-4">

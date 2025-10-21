@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "parts": "Parts",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "footer": {
+    "company_info": "Company Information",
+    "quick_links": "Quick Links",
+    "contact_info": "Contact Information",
+    "all_rights_reserved": "All rights reserved",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "address_label": "Address"
+  }
+}

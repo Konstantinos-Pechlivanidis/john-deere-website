@@ -1,8 +1,11 @@
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import HeroCarousel from "./HeroCarousel";
 
 const Hero = () => {
+  const { t } = useTranslation('home');
+  
   return (
     <section 
       className="relative bg-gradient-to-r from-charcoal/90 to-jdgreen/80 overflow-hidden"
@@ -19,11 +22,11 @@ const Hero = () => {
             id="hero-heading"
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            Αξιόπιστα Ανταλλακτικά για Γεωργικά Μηχανήματα
+            {t('hero.title')}
           </h1>
           {/* Adjust the paragraph font size */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8">
-            Εξειδικευμένες λύσεις για συμβατό εξοπλισμό τύπου John Deere & άλλων κατασκευαστών
+            {t('hero.subtitle')}
           </p>
           <div className="flex flex-wrap gap-4">
             <Button 
@@ -31,7 +34,7 @@ const Hero = () => {
               size="lg" 
               className="bg-jdyellow hover:bg-jdyellow-light text-charcoal-dark font-semibold px-8"
             >
-              <Link to="/parts">Δείτε Προϊόντα</Link>
+              <Link to="/parts">{t('hero.cta')}</Link>
             </Button>
             <Button 
               asChild
@@ -39,7 +42,7 @@ const Hero = () => {
               variant="outline" 
               className="bg-transparent text-white border-white hover:bg-white/10 font-semibold px-8"
             >
-              <Link to="/contact">Επικοινωνήστε Μαζί Μας</Link>
+              <Link to="/contact">{t('common:contact_us')}</Link>
             </Button>
           </div>
         </div>

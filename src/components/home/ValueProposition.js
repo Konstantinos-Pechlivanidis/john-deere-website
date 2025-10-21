@@ -1,4 +1,5 @@
 import { Check, Truck, Globe } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
@@ -13,24 +14,23 @@ const FeatureCard = ({ icon, title, description }) => {
 };
 
 const ValueProposition = () => {
+  const { t } = useTranslation('home');
+  
   const features = [
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Διεθνές Δίκτυο Προμηθευτών",
-      description:
-        "Συνεργαζόμαστε με αξιόπιστους προμηθευτές παγκοσμίως για να εντοπίζουμε και να σας παρέχουμε τα ανταλλακτικά που χρειάζεστε, άμεσα και αξιόπιστα.",
+      title: t('value_proposition.features.international_network.title'),
+      description: t('value_proposition.features.international_network.description'),
     },
     {
       icon: <Check className="w-8 h-8" />,
-      title: "Ανταλλακτικά Ποιότητας",
-      description:
-        "Διαθέτουμε μεγάλη γκάμα αυθεντικών και συμβατών ανταλλακτικών για γεωργικά μηχανήματα, με έμφαση στην ποιότητα και την αξιοπιστία.",
+      title: t('value_proposition.features.quality_parts.title'),
+      description: t('value_proposition.features.quality_parts.description'),
     },
     {
       icon: <Truck className="w-8 h-8" />,
-      title: "Αποστολή Πανελλαδικά",
-      description:
-        "Αναλαμβάνουμε την αποστολή των ανταλλακτικών στον χώρο σας, σε οποιοδήποτε σημείο της Ελλάδας, άμεσα και με ασφάλεια.",
+      title: t('value_proposition.features.nationwide_shipping.title'),
+      description: t('value_proposition.features.nationwide_shipping.description'),
     },
   ];
 
@@ -39,13 +39,11 @@ const ValueProposition = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold mb-4 text-charcoal-dark tracking-tight">
-            Γιατί να μας Επιλέξετε
+            {t('value_proposition.title')}
           </h2>
           <div className="w-24 h-1 bg-jdyellow mx-auto mb-6 rounded"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Βοηθάμε γεωργικές επιχειρήσεις να βρίσκουν τα κατάλληλα ανταλλακτικά
-            γρήγορα και αξιόπιστα, αξιοποιώντας διεθνείς συνεργασίες και άμεση
-            εξυπηρέτηση – χωρίς μεσάζοντες.
+            {t('value_proposition.subtitle')}
           </p>
         </div>
 

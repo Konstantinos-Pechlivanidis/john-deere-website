@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 // const images = [
 //   "/images/parts/Electrical/electrical1.jpg",
 //   "/images/parts/Electrical/electrical2.jpg",];
 
 const ElectricalParts = () => {
+  const { t } = useTranslation('common');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -56,7 +58,7 @@ const ElectricalParts = () => {
             <div className="bg-white rounded-lg p-4 max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt="Μεγέθυνση"
+                alt={t('alt_texts.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">

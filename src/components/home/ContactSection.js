@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
+import { useTranslation } from "react-i18next";
 import {
   Select,
   SelectContent,
@@ -11,6 +12,7 @@ import {
 } from "../ui/select";
 
 const ContactSection = () => {
+  const { t } = useTranslation(['home', 'contact']);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -36,7 +38,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Η φόρμα υποβλήθηκε!");
+    alert(t('common:form.form_submitted'));
     console.log(formState);
   };
 
@@ -47,43 +49,43 @@ const ContactSection = () => {
           {/* Left: Info */}
           <div>
             <h2 className="text-4xl font-extrabold mb-4 text-charcoal-dark tracking-tight leading-tight">
-              Επικοινωνήστε Μαζί μας
+              {t('home:contact_section.title')}
             </h2>
             <div className="w-24 h-1 bg-jdyellow mb-6 rounded"></div>
 
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              Αν χρειάζεστε ανταλλακτικά, θέλετε να υποβάλετε ερώτηση ή να ξεκινήσουμε μια νέα συνεργασία, είμαστε εδώ για να σας εξυπηρετήσουμε με συνέπεια και ταχύτητα.
+              {t('home:contact_section.subtitle')}
             </p>
 
             <div className="bg-gray-50 p-6 rounded-xl shadow-md mb-8">
-              <h3 className="text-xl font-bold text-jdgreen mb-4">Ώρες Λειτουργίας</h3>
+              <h3 className="text-xl font-bold text-jdgreen mb-4">{t('contact:info.hours_title')}</h3>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li className="flex justify-between">
-                  <span>Δευτέρα - Παρασκευή:</span>
+                  <span>{t('contact:info.monday_friday')}</span>
                   <span className="font-medium">9:00 - 17:00</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Σάββατο:</span>
+                  <span>{t('contact:info.saturday')}</span>
                   <span className="font-medium">9:00 - 14:00</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Κυριακή:</span>
-                  <span className="font-medium">Κλειστά</span>
+                  <span>{t('contact:info.sunday')}</span>
+                  <span className="font-medium">{t('contact:info.closed')}</span>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-jdgreen mb-4">Κεντρικά Γραφεία</h3>
+              <h3 className="text-xl font-bold text-jdgreen mb-4">{t('contact:info.address_title')}</h3>
               <address className="not-italic text-gray-600 text-sm leading-relaxed">
-                <p>Μοναστηρίου 92</p>
-                <p>Θεσσαλονίκη, Ελλάδα</p>
-                <p className="mt-4 font-semibold text-charcoal-dark">Τηλέφωνο:</p>
+                <p>{t('contact:info.address_line1')}</p>
+                <p>{t('contact:info.address_line2')}</p>
+                <p className="mt-4 font-semibold text-charcoal-dark">{t('contact:info.phone_label')}:</p>
                 <p>+30 2310 512239</p>
                 <p>+30 2310 552678</p>
                 <p>+30 6948506485</p>
                 <p>+30 6948506486</p>
-                <p className="mt-4 font-semibold text-charcoal-dark">Email:</p>
+                <p className="mt-4 font-semibold text-charcoal-dark">{t('contact:info.email_label')}:</p>
                 <p>info@psomasst.gr</p>
               </address>
             </div>
@@ -91,19 +93,19 @@ const ContactSection = () => {
 
           {/* Right: Form */}
           <div className="bg-gray-50 p-8 rounded-xl shadow-md">
-            <h3 className="text-xl font-bold text-jdgreen mb-6">Στείλτε μας ένα Μήνυμα</h3>
+            <h3 className="text-xl font-bold text-jdgreen mb-6">{t('contact:form.send')}</h3>
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Ονοματεπώνυμο *
+                  {t('contact:form.name')} *
                 </label>
                 <Input
                   id="name"
                   name="name"
                   value={formState.name}
                   onChange={handleChange}
-                  placeholder="Το ονοματεπώνυμό σας"
+                  placeholder={t('contact:form.name')}
                   required
                 />
               </div>
@@ -111,7 +113,7 @@ const ContactSection = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email *
+                    {t('contact:form.email')} *
                   </label>
                   <Input
                     id="email"
@@ -119,57 +121,57 @@ const ContactSection = () => {
                     type="email"
                     value={formState.email}
                     onChange={handleChange}
-                    placeholder="your@email.com"
+                    placeholder={t('common:form.email_placeholder')}
                     required
                   />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Τηλέφωνο
+                    {t('contact:form.phone')}
                   </label>
                   <Input
                     id="phone"
                     name="phone"
                     value={formState.phone}
                     onChange={handleChange}
-                    placeholder="+30 69X XXX XXXX"
+                    placeholder={t('common:form.phone_placeholder')}
                   />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="inquiry" className="block text-sm font-medium text-gray-700 mb-1">
-                  Τύπος Ερώτησης *
+                  {t('contact:form.inquiry_type')} *
                 </label>
                 <Select onValueChange={handleSelectChange} value={formState.inquiry} required>
                   <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Επιλέξτε τύπο ερώτησης" />
+                    <SelectValue placeholder={t('common:form.select_inquiry_type')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="parts">Ανταλλακτικά</SelectItem>
-                    <SelectItem value="partnership">Συνεργασία</SelectItem>
-                    <SelectItem value="other">Άλλο</SelectItem>
+                    <SelectItem value="parts">{t('contact:form.parts')}</SelectItem>
+                    <SelectItem value="partnership">{t('contact:form.partnership')}</SelectItem>
+                    <SelectItem value="other">{t('contact:form.other')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Μήνυμα *
+                  {t('contact:form.message')} *
                 </label>
                 <Textarea
                   id="message"
                   name="message"
                   value={formState.message}
                   onChange={handleChange}
-                  placeholder="Πείτε μας πώς μπορούμε να βοηθήσουμε..."
+                  placeholder={t('common:form.describe_how_we_can_help')}
                   required
                   rows={5}
                 />
               </div>
 
               <Button type="submit" className="w-full bg-jdgreen hover:bg-jdgreen-light text-white text-base font-medium rounded-full py-3">
-                Αποστολή Μηνύματος
+                {t('contact:form.send')}
               </Button>
             </form>
           </div>

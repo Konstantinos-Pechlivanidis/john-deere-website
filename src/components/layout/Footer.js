@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation(['common', 'layout']);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -13,10 +15,10 @@ const Footer = () => {
             <div className="flex items-center mb-4 space-x-2">
               <img
                 src="/images/logos/tractorLogo.png"
-                alt="Λογότυπο"
+                alt={t('common:alt_texts.logo')}
                 className="h-8 w-auto"
               />
-              <h3 className="text-xl font-bold text-jdyellow">Ι. & Κ. ΨΩΜΑ</h3>
+              <h3 className="text-xl font-bold text-jdyellow">{t('common:company_name')}</h3>
             </div>
             <p className="text-gray-300 mb-4 text-sm leading-relaxed">
               Ο αξιόπιστος συνεργάτης σας για αυθεντικά ανταλλακτικά και γεωργικά μηχανήματα John Deere στην Ελλάδα.
@@ -44,13 +46,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Γρήγοροι Σύνδεσμοι</h4>
+            <h4 className="font-semibold text-lg mb-4 text-white">{t('layout:footer.quick_links')}</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/" className="hover:text-jdyellow text-gray-300">Αρχική</Link></li>
-              <li><Link to="/about" className="hover:text-jdyellow text-gray-300">Σχετικά με Εμάς</Link></li>
-              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">Ανταλλακτικά</Link></li>
-              <li><Link to="/services" className="hover:text-jdyellow text-gray-300">Υπηρεσίες</Link></li>
-              <li><Link to="/contact" className="hover:text-jdyellow text-gray-300">Επικοινωνία</Link></li>
+              <li><Link to="/" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.home')}</Link></li>
+              <li><Link to="/about" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.about')}</Link></li>
+              <li><Link to="/parts" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.parts')}</Link></li>
+              <li><Link to="/services" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.services')}</Link></li>
+              <li><Link to="/contact" className="hover:text-jdyellow text-gray-300">{t('layout:navigation.contact')}</Link></li>
             </ul>
           </div>
 
@@ -85,7 +87,7 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="pt-8 mt-8 border-t border-gray-700 text-center text-sm text-gray-400">
-          <p>© {currentYear} Ι. & Κ. ΨΩΜΑ — All rights reserved.</p>
+          <p>© {currentYear} {t('common:company_name')} — {t('layout:footer.all_rights_reserved')}.</p>
           <p className="mt-1">
             Εισαγωγέας Γεωργικών Ανταλλακτικών
           </p>

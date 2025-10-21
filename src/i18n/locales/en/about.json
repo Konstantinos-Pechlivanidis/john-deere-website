@@ -1,0 +1,64 @@
+{
+  "intro": {
+    "title": "About Us",
+    "subtitle": "Your trusted partner for agricultural machinery parts throughout Greece."
+  },
+  "history": {
+    "title": "Our History",
+    "description_1": "Our company, I. & K. Psoma OE, was founded in 1980 and has evolved from a small family business into one of the leading importers of agricultural machinery parts in Greece.",
+    "description_2": "From the beginning, our goal was to satisfy the Greek farmer by providing high-quality products and options at competitive prices. Over the years, we have built strong relationships with suppliers worldwide, giving us the ability to offer a wide range of parts.",
+    "description_3": "Today we serve customers ranging from small family farms to large agricultural companies throughout Greece and abroad, maintaining our commitment to quality, reliability, and excellent service."
+  },
+  "mission_vision": {
+    "title": "Our Mission & Vision",
+    "mission": {
+      "title": "Mission:",
+      "description": "To bridge the gap between international suppliers and Greek agricultural businesses, providing reliable access to quality parts that enhance productivity and sustainability."
+    },
+    "vision": {
+      "title": "Vision:",
+      "description": "To become the most trusted partner for agricultural machinery parts in Greece, recognized for our experience, quality products, and commitment to customer success."
+    },
+    "belief": "We believe that by providing access to the best agricultural technology and components, we contribute to the development and sustainability of Greek agriculture."
+  },
+  "what_sets_us_apart": {
+    "title": "What Sets Us Apart",
+    "subtitle": "With emphasis on quality, service, and our long-standing experience, we serve the needs of every agricultural professional.",
+    "features": [
+      {
+        "title": "40+ Years of Experience",
+        "description": "Long-standing presence in the field of agricultural machinery."
+      },
+      {
+        "title": "10,000+ Parts",
+        "description": "Large availability of genuine and compatible components."
+      },
+      {
+        "title": "Immediate Shipping",
+        "description": "Deliveries throughout Greece and abroad."
+      },
+      {
+        "title": "Personalized Service",
+        "description": "We search and recommend the right part for every need."
+      }
+    ]
+  },
+  "values": {
+    "title": "Our Values",
+    "subtitle": "Our philosophy is based on trust, integrity, and commitment to customer service.",
+    "value_items": [
+      {
+        "title": "Reliability",
+        "description": "We deliver what we promise – without delays, without deviations."
+      },
+      {
+        "title": "Transparency",
+        "description": "Clear communication, without fine print. Trust is a core value."
+      },
+      {
+        "title": "Service",
+        "description": "Our team is always ready to help, finding solutions for every customer."
+      }
+    ]
+  }
+}

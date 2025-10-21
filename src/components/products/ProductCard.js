@@ -17,7 +17,13 @@ const ProductCard = ({
       }`}
     >
       <div className="relative">
-        <img src={image} alt={name} className="w-full h-56 object-cover" />
+        <img 
+          src={image} 
+          alt={name} 
+          className="w-full h-56 object-cover" 
+          loading="lazy"
+          decoding="async"
+        />
         {featured && (
           <div className="absolute top-0 right-0 bg-jdyellow text-charcoal-dark py-1 px-3 text-sm font-medium">
             Προτεινόμενο
@@ -31,16 +37,9 @@ const ProductCard = ({
         <p className="text-gray-600 text-sm mb-4 line-clamp-2">{description}</p>
 
         <div className="flex justify-between items-center">
-          {/* <Button
-            asChild
-            variant="ghost"
-            className="text-jdgreen hover:text-jdgreen-dark hover:bg-jdgreen-light/10"
-          >
-            <Link to={url}>Δείτε Λεπτομέρειες</Link>
-          </Button> */}
-          {/* <Button className="bg-jdgreen hover:bg-jdgreen-light">
+          <Button className="bg-jdgreen hover:bg-jdgreen-light w-full">
             Αίτημα Προσφοράς
-          </Button> */}
+          </Button>
         </div>
       </div>
     </div>

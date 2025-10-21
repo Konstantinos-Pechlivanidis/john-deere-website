@@ -1,8 +1,10 @@
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import Carousel from "../layout/Carousel";
 
 const PartsLinkSection = () => {
+  const { t } = useTranslation('home');
   const images = [
     "/images/parts/General/img2.jpg",
   "/images/parts/General/img3.jpg",
@@ -32,33 +34,18 @@ const PartsLinkSection = () => {
       <div className="container mx-auto px-6 lg:px-12 text-center">
         {/* Τίτλος */}
         <h2 className="text-4xl font-extrabold text-charcoal-dark mb-4 tracking-tight">
-          Ανταλλακτικά για Γεωργικά Μηχανήματα
+          {t('partsLink.title')}
         </h2>
         <div className="w-24 h-1 bg-jdyellow mx-auto mb-8 rounded"></div>
 
         {/* Περιγραφή */}
         <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed mb-12">
-          Προσφέρουμε μεγάλη ποικιλία ανταλλακτικών για <strong>τρακτέρ</strong>, <strong>στρίπερ</strong>, 
-          <strong> βαμβακομηχανές</strong> και <strong>θεριζοαλωνιστικές</strong>. 
-          Αναλαμβάνουμε τον εντοπισμό του κατάλληλου εξαρτήματος και την άμεση αποστολή του σε όλη την Ελλάδα.
+          {t('partsLink.description')}
         </p>
 
         {/* Κατηγορίες */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {[
-            {
-              title: "Τρακτέρ & Ελκυστήρες",
-              desc: "Πλήρης γκάμα ανταλλακτικών: φίλτρα, σασμάν, υδραυλικά, ηλεκτρικά και άλλα.",
-            },
-            {
-              title: "Βαμβακομηχανές & Στρίπερ",
-              desc: "Ανταλλακτικά για μηχανές συγκομιδής βάμβακος και στρίπερ με έμφαση στην αξιοπιστία.",
-            },
-            {
-              title: "Θεριζοαλωνιστικές Μηχανές",
-              desc: "Εξαρτήματα για κομπίνες, harvester και μηχανήματα συγκομιδής σιτηρών.",
-            },
-          ].map((card, i) => (
+          {t('partsLink.categories', { returnObjects: true }).map((card, i) => (
             <div
               key={i}
               className="bg-gray-50 hover:bg-white transition shadow-sm hover:shadow-lg border border-gray-200 rounded-xl p-6 text-left"
@@ -78,7 +65,7 @@ const PartsLinkSection = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
           <Link to="/parts">
             <Button className="px-6 py-3 bg-jdgreen hover:bg-jdgreen-light text-white text-base font-medium rounded-full shadow-md transition">
-              Δείτε Όλα τα Ανταλλακτικά
+              {t('partsLink.cta.viewAll')}
             </Button>
           </Link>
           <Link to="/contact">
@@ -86,7 +73,7 @@ const PartsLinkSection = () => {
               variant="outline"
               className="px-6 py-3 border-2 border-jdgreen text-jdgreen hover:bg-jdgreen-light hover:text-white font-medium rounded-full transition"
             >
-              Ζητήστε το Ανταλλακτικό που Χρειάζεστε
+              {t('partsLink.cta.requestPart')}
             </Button>
           </Link>
         </div>
