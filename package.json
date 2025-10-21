@@ -18,7 +18,7 @@
     "next-themes": "^0.4.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-helmet-async": "^2.0.4",
+    "react-helmet-async": "^2.0.6",
     "react-i18next": "^14.1.2",
     "react-router-dom": "^6.30.0",
     "react-scripts": "5.0.1",
@@ -71,5 +71,11 @@
     "serve": "^14.2.1",
     "source-map-explorer": "^2.0.1",
     "lighthouse": "^11.7.0"
+  },
+  "overrides": {
+    "react-helmet-async": {
+      "react": "^19.1.0",
+      "react-dom": "^19.1.0"
+    }
   }
 }
