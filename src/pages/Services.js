@@ -24,8 +24,8 @@ const Services = () => {
   const services = t('services', { returnObjects: true });
 
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://psomasst.gr' },
-    { name: t('layout:navigation.services'), url: 'https://psomasst.gr/services' }
+    { name: t('common:company_name'), url: 'https://www.i-k-psoma.gr' },
+    { name: t('layout:navigation.services'), url: 'https://www.i-k-psoma.gr/services' }
   ]);
 
   const serviceSchema = getServiceSchema({

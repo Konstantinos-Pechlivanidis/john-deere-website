@@ -4,7 +4,7 @@
 
 ## 1. Introduction
 
-Welcome to the website of I. & K. PSOMA O.E. (hereinafter "we," "us," "our," or "the Company"). These Terms and Conditions ("Terms") govern your use of our website located at https://psomasst.gr (the "Website") and the services we provide.
+Welcome to the website of I. & K. PSOMA O.E. (hereinafter "we," "us," "our," or "the Company"). These Terms and Conditions ("Terms") govern your use of our website located at https://www.i-k-psoma.gr (the "Website") and the services we provide.
 
 By accessing or using our Website, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Website.
 
@@ -16,7 +16,7 @@ I. & K. PSOMA O.E. is a Greek company specializing in the import and distributio
 - **Business Name:** I. & K. PSOMA O.E.
 - **Address:** Monastiriou 92, Thessaloniki, Greece
 - **Phone:** +30-2310-512239
-- **Website:** https://psomasst.gr
+- **Website:** https://www.i-k-psoma.gr
 
 ## 3. Website Purpose and Scope
 
@@ -163,7 +163,7 @@ For questions about these Terms, please contact us:
 - **Address:** Monastiriou 92, Thessaloniki, Greece
 - **Phone:** +30-2310-512239
 - **Email:** [Contact through website form]
-- **Website:** https://psomasst.gr
+- **Website:** https://www.i-k-psoma.gr
 
 ---
 

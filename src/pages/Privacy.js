@@ -48,7 +48,7 @@ const Privacy = () => {
                     <li><strong>{t('legal:privacy.section_2.business_name')}:</strong> I. & K. PSOMA O.E.</li>
                     <li><strong>{t('legal:privacy.section_2.address')}:</strong> Monastiriou 92, Thessaloniki, Greece</li>
                     <li><strong>{t('legal:privacy.section_2.phone')}:</strong> +30-2310-512239</li>
-                    <li><strong>{t('legal:privacy.section_2.website')}:</strong> https://psomasst.gr</li>
+                    <li><strong>{t('legal:privacy.section_2.website')}:</strong> https://www.i-k-psoma.gr</li>
                   </ul>
                 </div>
               </section>
@@ -383,7 +383,7 @@ const Privacy = () => {
                     <li><strong>{t('legal:privacy.section_15.company')}:</strong> I. & K. PSOMA O.E.</li>
                     <li><strong>{t('legal:privacy.section_15.address')}:</strong> Monastiriou 92, Thessaloniki, Greece</li>
                     <li><strong>{t('legal:privacy.section_15.phone')}:</strong> +30-2310-512239</li>
-                    <li><strong>{t('legal:privacy.section_15.website')}:</strong> https://psomasst.gr</li>
+                    <li><strong>{t('legal:privacy.section_15.website')}:</strong> https://www.i-k-psoma.gr</li>
                   </ul>
                 </div>
               </section>

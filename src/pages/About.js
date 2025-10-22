@@ -7,8 +7,8 @@ const About = () => {
   const { t } = useTranslation('about');
   
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://psomasst.gr' },
-    { name: t('layout:navigation.about'), url: 'https://psomasst.gr/about' }
+    { name: t('common:company_name'), url: 'https://www.i-k-psoma.gr' },
+    { name: t('layout:navigation.about'), url: 'https://www.i-k-psoma.gr/about' }
   ]);
   
   return (

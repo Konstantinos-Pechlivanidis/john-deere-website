@@ -48,7 +48,7 @@ const Terms = () => {
                     <li><strong>{t('legal:terms.section_2.business_name')}:</strong> I. & K. PSOMA O.E.</li>
                     <li><strong>{t('legal:terms.section_2.address')}:</strong> Monastiriou 92, Thessaloniki, Greece</li>
                     <li><strong>{t('legal:terms.section_2.phone')}:</strong> +30-2310-512239</li>
-                    <li><strong>{t('legal:terms.section_2.website')}:</strong> https://psomasst.gr</li>
+                    <li><strong>{t('legal:terms.section_2.website')}:</strong> https://www.i-k-psoma.gr</li>
                   </ul>
                 </div>
               </section>
@@ -218,7 +218,7 @@ const Terms = () => {
                     <li><strong>{t('legal:terms.section_17.company')}:</strong> I. & K. PSOMA O.E.</li>
                     <li><strong>{t('legal:terms.section_17.address')}:</strong> Monastiriou 92, Thessaloniki, Greece</li>
                     <li><strong>{t('legal:terms.section_17.phone')}:</strong> +30-2310-512239</li>
-                    <li><strong>{t('legal:terms.section_17.website')}:</strong> https://psomasst.gr</li>
+                    <li><strong>{t('legal:terms.section_17.website')}:</strong> https://www.i-k-psoma.gr</li>
                   </ul>
                 </div>
               </section>

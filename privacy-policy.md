@@ -4,7 +4,7 @@
 
 ## 1. Introduction
 
-I. & K. PSOMA O.E. ("we," "us," "our," or "the Company") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect your information when you visit our website at https://psomasst.gr (the "Website").
+I. & K. PSOMA O.E. ("we," "us," "our," or "the Company") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect your information when you visit our website at https://www.i-k-psoma.gr (the "Website").
 
 This Privacy Policy complies with the General Data Protection Regulation (GDPR) and Greek data protection laws.
 
@@ -13,7 +13,7 @@ This Privacy Policy complies with the General Data Protection Regulation (GDPR) 
 **I. & K. PSOMA O.E.**
 - **Address:** Monastiriou 92, Thessaloniki, Greece
 - **Phone:** +30-2310-512239
-- **Website:** https://psomasst.gr
+- **Website:** https://www.i-k-psoma.gr
 
 ## 3. Information We Collect
 
@@ -182,7 +182,7 @@ For questions about this Privacy Policy or your personal data, contact us:
 - **Address:** Monastiriou 92, Thessaloniki, Greece
 - **Phone:** +30-2310-512239
 - **Email:** [Contact through website form]
-- **Website:** https://psomasst.gr
+- **Website:** https://www.i-k-psoma.gr
 
 ## 16. Data Protection Authority
 

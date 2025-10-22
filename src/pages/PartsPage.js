@@ -44,8 +44,8 @@ const PartsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("γενικα");
 
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://psomasst.gr' },
-    { name: t('layout:navigation.parts'), url: 'https://psomasst.gr/parts' }
+    { name: t('common:company_name'), url: 'https://www.i-k-psoma.gr' },
+    { name: t('layout:navigation.parts'), url: 'https://www.i-k-psoma.gr/parts' }
   ]);
 
   const productSchema = getProductSchema({

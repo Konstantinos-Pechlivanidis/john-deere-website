@@ -8,8 +8,8 @@ const Contact = () => {
   const { t } = useTranslation(['contact', 'common', 'layout']);
   
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://psomasst.gr' },
-    { name: t('layout:navigation.contact'), url: 'https://psomasst.gr/contact' }
+    { name: t('common:company_name'), url: 'https://www.i-k-psoma.gr' },
+    { name: t('layout:navigation.contact'), url: 'https://www.i-k-psoma.gr/contact' }
   ]);
   
   return (
