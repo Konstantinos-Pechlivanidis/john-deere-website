@@ -1,21 +1,23 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-// const images = [
-//   "/images/parts/Cabin/cabin1.jpg",
-//   "/images/parts/Cabin/cabin2.jpg",
-//   "/images/parts/Cabin/cabin3.jpg",
-// ];
+const images = [
+  "/images/parts/General/webp1.webp",
+  "/images/parts/General/webp2.webp", 
+  "/images/parts/General/webp3.webp",
+  "/images/parts/General/avif1.avif",
+  "/images/parts/General/avif2.avif",
+];
 
-const CabinFrameParts = () => {
+const LubricantsParts = () => {
   const { t } = useTranslation('parts_components');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
-  // const handleImageClick = (src) => {
-  //   setModalImage(src);
-  //   setIsModalOpen(true);
-  // };
+  const handleImageClick = (src) => {
+    setModalImage(src);
+    setIsModalOpen(true);
+  };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -25,19 +27,19 @@ const CabinFrameParts = () => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        {/* Τίτλος */}
+        {/* Τίτλος & Περιγραφή */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
-            Ανταλλακτικά Καμπίνας & Πλαισίου
+          <h2 className='text-3xl font-bold text-charcoal-dark mb-4'>
+            {t('lubricants.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
-          <p className="text-lg text-gray-600">
-            Εξασφαλίστε την άνεση και την ασφάλεια του χειριστή, καθώς και τη δομική ακεραιότητα του μηχανήματός σας, με ανταλλακτικά κορυφαίας ποιότητας.
+          <p className='text-lg text-gray-600'>
+            {t('lubricants.description')}
           </p>
         </div>
 
         {/* Εικόνες */}
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
           {images.map((src, i) => (
             <div
               key={i}
@@ -46,13 +48,13 @@ const CabinFrameParts = () => {
             >
               <img
                 src={src}
-                alt={`Cabin ${i + 1}`}
+                alt={`Lubricant ${i + 1}`}
                 className="w-full h-60 object-cover hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
             </div>
           ))}
-        </div> */}
+        </div>
 
         {/* Modal */}
         {isModalOpen && (
@@ -60,7 +62,7 @@ const CabinFrameParts = () => {
             <div className="bg-white rounded-lg p-4 max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt={t('alt_texts.zoom')}
+                alt={t('common.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">
@@ -68,7 +70,7 @@ const CabinFrameParts = () => {
                   onClick={handleCloseModal}
                   className="bg-jdyellow hover:bg-jdyellow-dark px-6 py-2 text-white rounded"
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -78,17 +80,27 @@ const CabinFrameParts = () => {
         {/* Περιεχόμενο */}
         <div className="max-w-3xl mx-auto text-gray-700 space-y-4 text-left">
           <h3 className="text-xl font-semibold text-charcoal-dark">
-            Ενδεικτικά Ανταλλακτικά:
+            {t('lubricants.parts_list_title')}
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Πόρτες, καθρέπτες & παράθυρα:</strong> για μέγιστη ορατότητα και προστασία.</li>
-            <li><strong>Καθίσματα & αξεσουάρ καμπίνας:</strong> για άνεση και εργονομία.</li>
-            <li><strong>Καπό, φτερά & πάνελ:</strong> για προστασία και ανανέωση εμφάνισης.</li>
-            <li><strong>Πλαίσια & βάσεις:</strong> για δομική σταθερότητα.</li>
-            <li><strong>Συστήματα θέρμανσης – εξαερισμού:</strong> για ιδανικές συνθήκες εργασίας.</li>
+            {t('lubricants.parts', { returnObjects: true }).map((part, index) => (
+              <li key={index}>{part}</li>
+            ))}
           </ul>
-          <p>
-            Έχετε υποστεί φθορά ή ατύχημα; Επικοινωνήστε μαζί μας για να εντοπίσουμε το σωστό εξάρτημα και να σας εξυπηρετήσουμε άμεσα.
+          
+          <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+            <h4 className="text-lg font-semibold text-charcoal-dark mb-2">
+              {t('lubricants.why_choose_title')}
+            </h4>
+            <ul className="list-disc list-inside space-y-1 text-sm">
+              {t('lubricants.why_choose', { returnObjects: true }).map((reason, index) => (
+                <li key={index}>{reason}</li>
+              ))}
+            </ul>
+          </div>
+
+          <p className='mt-4'>
+            {t('lubricants.contact_text')}
           </p>
         </div>
       </div>
@@ -96,4 +108,4 @@ const CabinFrameParts = () => {
   );
 };
 
-export default CabinFrameParts;
+export default LubricantsParts;

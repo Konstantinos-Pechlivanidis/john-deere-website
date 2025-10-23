@@ -8,7 +8,7 @@ const images = [
 ];
 
 const EngineParts = () => {
-  const { t } = useTranslation('categories');
+  const { t } = useTranslation('parts_components');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -60,7 +60,7 @@ const EngineParts = () => {
             <div className="bg-white p-4 rounded-lg max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt="Μεγέθυνση"
+                alt={t('common.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">
@@ -68,7 +68,7 @@ const EngineParts = () => {
                   className="bg-jdyellow hover:bg-jdyellow-dark text-white px-6 py-2 rounded"
                   onClick={handleCloseModal}
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -77,16 +77,14 @@ const EngineParts = () => {
 
         {/* Κείμενο Περιγραφής */}
         <div className="max-w-3xl mx-auto text-gray-700 space-y-4 text-left">
-          <h3 className="text-xl font-semibold text-charcoal-dark">Κύριες Κατηγορίες Ανταλλακτικών:</h3>
+          <h3 className="text-xl font-semibold text-charcoal-dark">{t('engine.parts_list_title')}</h3>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Κυλινδροκεφαλές:</strong> για σωστή συμπίεση και καύση</li>
-            <li><strong>Έμβολα & Μπιέλες:</strong> για ανακατασκευή με ακρίβεια</li>
-            <li><strong>Αντλίες λαδιού & καυσίμου:</strong> για κυκλοφορία και λίπανση</li>
-            <li><strong>Στεγανοποιήσεις & Φλάντζες:</strong> για αποφυγή διαρροών</li>
-            <li><strong>Ιμάντες, ρουλεμάν & αισθητήρες:</strong> για υποστήριξη των μηχανικών μερών</li>
+            {t('engine.parts', { returnObjects: true }).map((part, index) => (
+              <li key={index}>{part}</li>
+            ))}
           </ul>
           <p>
-            Αν δεν γνωρίζετε ποιο εξάρτημα χρειάζεστε, η έμπειρη ομάδα μας είναι εδώ για να σας καθοδηγήσει. Συμπληρώστε το αίτημα προσφοράς και θα επικοινωνήσουμε άμεσα μαζί σας.
+            {t('engine.contact_text')}
           </p>
         </div>
       </div>

@@ -8,7 +8,7 @@ const images = [
 ];
 
 const ClutchParts = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('parts_components');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -27,13 +27,12 @@ const ClutchParts = () => {
       <div className="container mx-auto px-4">
         {/* Title & Intro */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
-            Ανταλλακτικά Συμπλέκτη
+          <h2 className='text-3xl font-bold text-charcoal-dark mb-4'>
+            {t('clutch.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
-          <p className="text-lg text-gray-600">
-            Εξασφαλίστε τη μέγιστη απόδοση και αξιοπιστία του συμπλέκτη με
-            ανταλλακτικά κατασκευασμένα για αντοχή, ακρίβεια και συμβατότητα με κάθε τύπο γεωργικού μηχανήματος.
+          <p className='text-lg text-gray-600'>
+            {t('clutch.description')}
           </p>
         </div>
 
@@ -61,7 +60,7 @@ const ClutchParts = () => {
             <div className="bg-white rounded-lg p-4 max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt={t('alt_texts.zoom')}
+                alt={t('common.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">
@@ -69,7 +68,7 @@ const ClutchParts = () => {
                   onClick={handleCloseModal}
                   className="bg-jdyellow hover:bg-jdyellow-dark px-6 py-2 text-white rounded"
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -79,16 +78,15 @@ const ClutchParts = () => {
         {/* Περιεχόμενο */}
         <div className="max-w-3xl mx-auto text-gray-700 space-y-4 text-left">
           <h3 className="text-xl font-semibold text-charcoal-dark">
-            Διαθέσιμα Ανταλλακτικά:
+            {t('clutch.parts_list_title')}
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Δίσκοι Συμπλέκτη:</strong> υλικά υψηλής αντοχής για βέλτιστη μετάδοση ροπής.</li>
-            <li><strong>Πλατώ:</strong> αντοχή σε υπερφόρτωση και σταθερότητα.</li>
-            <li><strong>Ρουλεμάν Αποσύμπλεξης:</strong> ομαλή λειτουργία χωρίς κραδασμούς.</li>
-            <li><strong>Σετ Συμπλέκτη:</strong> πλήρη κιτ με εγγυημένη συμβατότητα.</li>
+            {t('clutch.parts', { returnObjects: true }).map((part, index) => (
+              <li key={index}>{part}</li>
+            ))}
           </ul>
           <p>
-            Δεν είστε βέβαιοι για τον τύπο εξαρτήματος; Η ομάδα μας μπορεί να σας καθοδηγήσει — συμπληρώστε τη φόρμα προσφοράς και θα επικοινωνήσουμε άμεσα μαζί σας.
+            {t('clutch.contact_text')}
           </p>
         </div>
       </div>

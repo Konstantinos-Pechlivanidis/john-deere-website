@@ -8,7 +8,7 @@ const images = [
 ];
 
 const DifferentialParts = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('parts_components');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 

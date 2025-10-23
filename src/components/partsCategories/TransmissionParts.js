@@ -8,7 +8,7 @@ const images = [
 ];
 
 const TransmissionParts = () => {
-  const { t } = useTranslation('categories');
+  const { t } = useTranslation('parts_components');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -60,7 +60,7 @@ const TransmissionParts = () => {
             <div className="bg-white p-4 rounded-lg max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt={t('alt_texts.zoom')}
+                alt={t('common.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">
@@ -68,7 +68,7 @@ const TransmissionParts = () => {
                   className="bg-jdyellow hover:bg-jdyellow-dark text-white px-6 py-2 rounded"
                   onClick={handleCloseModal}
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -78,17 +78,15 @@ const TransmissionParts = () => {
         {/* Περιεχόμενο */}
         <div className="max-w-3xl mx-auto text-gray-700 space-y-4 text-left">
           <h3 className="text-xl font-semibold text-charcoal-dark">
-            Τύποι Ανταλλακτικών:
+            {t('transmission.parts_list_title')}
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Γρανάζια:</strong> για ομαλή και ακριβή εναλλαγή ταχυτήτων</li>
-            <li><strong>Δίσκοι – Συμπλέκτης:</strong> για μετάδοση ροπής με αντοχή στη φθορά</li>
-            <li><strong>Άξονες & ρουλεμάν:</strong> για σταθερή λειτουργία χωρίς κραδασμούς</li>
-            <li><strong>Καμπάνες & κάσες:</strong> ενισχυμένες για βαριά χρήση</li>
-            <li><strong>Σετ στεγανοποιήσεων:</strong> για αποτροπή διαρροών και μεγαλύτερη διάρκεια</li>
+            {t('transmission.parts', { returnObjects: true }).map((part, index) => (
+              <li key={index}>{part}</li>
+            ))}
           </ul>
           <p>
-            Δεν γνωρίζετε ακριβώς τι χρειάζεστε; Η ομάδα μας είναι στη διάθεσή σας για να σας καθοδηγήσει με βάση το μοντέλο και τη χρήση του μηχανήματός σας.
+            {t('transmission.contact_text')}
           </p>
         </div>
       </div>

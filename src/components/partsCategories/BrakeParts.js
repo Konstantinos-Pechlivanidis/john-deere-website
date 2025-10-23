@@ -8,7 +8,7 @@ const images = [
 ];
 
 const BrakeParts = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('parts_components');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -28,11 +28,11 @@ const BrakeParts = () => {
         {/* Τίτλος & Περιγραφή */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
-            Ανταλλακτικά Φρένων
+            {t('brake.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
           <p className="text-lg text-gray-600">
-            Τα φρένα είναι κρίσιμο στοιχείο ασφαλείας. Προσφέρουμε ανταλλακτικά υψηλής ποιότητας που εξασφαλίζουν άμεση και σταθερή πέδηση σε κάθε συνθήκη.
+            {t('brake.description')}
           </p>
         </div>
 
@@ -60,7 +60,7 @@ const BrakeParts = () => {
             <div className="bg-white rounded-lg p-4 max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt={t('alt_texts.zoom')}
+                alt={t('common.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">
@@ -68,7 +68,7 @@ const BrakeParts = () => {
                   onClick={handleCloseModal}
                   className="bg-jdyellow hover:bg-jdyellow-dark px-6 py-2 text-white rounded"
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -78,17 +78,15 @@ const BrakeParts = () => {
         {/* Περιεχόμενο */}
         <div className="max-w-3xl mx-auto text-gray-700 space-y-4 text-left">
           <h3 className="text-xl font-semibold text-charcoal-dark">
-            Ενδεικτικά Ανταλλακτικά:
+            {t('brake.parts_list_title')}
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Δίσκοι φρένων:</strong> για μέγιστη δύναμη πέδησης και θερμική αντοχή.</li>
-            <li><strong>Σιαγόνες & τακάκια:</strong> για αθόρυβη και αξιόπιστη πέδηση.</li>
-            <li><strong>Αντλίες & κυλινδράκια:</strong> για σωστή πίεση στο υδραυλικό κύκλωμα.</li>
-            <li><strong>Σωληνώσεις & υγρά φρένων:</strong> για σταθερή απόδοση χωρίς απώλειες.</li>
-            <li><strong>Σετ επισκευής:</strong> για πλήρη ανακατασκευή του συστήματος φρένων.</li>
+            {t('brake.parts', { returnObjects: true }).map((part, index) => (
+              <li key={index}>{part}</li>
+            ))}
           </ul>
           <p>
-            Αν δεν γνωρίζετε το ακριβές ανταλλακτικό, η ομάδα μας είναι εδώ για να σας καθοδηγήσει. Απλώς συμπληρώστε τη φόρμα προσφοράς.
+            {t('brake.contact_text')}
           </p>
         </div>
       </div>

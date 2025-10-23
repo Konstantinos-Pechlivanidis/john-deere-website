@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 //   "/images/parts/Electrical/electrical2.jpg",];
 
 const ElectricalParts = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('parts_components');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -25,12 +25,12 @@ const ElectricalParts = () => {
       <div className="container mx-auto px-4">
         {/* Τίτλος και Εισαγωγή */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
-            Ανταλλακτικά Ηλεκτρολογικού Υλικού
+          <h2 className='text-3xl font-bold text-charcoal-dark mb-4'>
+            {t('electrical.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
-          <p className="text-lg text-gray-600">
-            Εξασφαλίστε την αξιόπιστη λειτουργία του ηλεκτρικού συστήματος με γνήσια ή συμβατά ανταλλακτικά για γεωργικά και βιομηχανικά μηχανήματα John Deere.
+          <p className='text-lg text-gray-600'>
+            {t('electrical.description')}
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const ElectricalParts = () => {
             <div className="bg-white rounded-lg p-4 max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt={t('alt_texts.zoom')}
+                alt={t('common.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">
@@ -66,7 +66,7 @@ const ElectricalParts = () => {
                   onClick={handleCloseModal}
                   className="bg-jdyellow hover:bg-jdyellow-dark px-6 py-2 text-white rounded"
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -76,17 +76,15 @@ const ElectricalParts = () => {
         {/* Περιεχόμενο */}
         <div className="max-w-3xl mx-auto text-gray-700 space-y-4 text-left">
           <h3 className="text-xl font-semibold text-charcoal-dark">
-            Διαθέσιμα Ανταλλακτικά:
+            {t('electrical.parts_list_title')}
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Μίζες & Δυναμό:</strong> για αξιόπιστη εκκίνηση και συνεχή φόρτιση</li>
-            <li><strong>Πίνακες ελέγχου & αισθητήρες:</strong> για ακριβή παρακολούθηση λειτουργιών</li>
-            <li><strong>Πλεξούδες & καλωδιώσεις:</strong> για ασφαλή και σταθερή συνδεσιμότητα</li>
-            <li><strong>Διακόπτες, ρελέ & ασφαλειοθήκες:</strong> για προστασία και διανομή ρεύματος</li>
-            <li><strong>Προβολείς & φώτα:</strong> για βελτιωμένη ορατότητα και ασφάλεια</li>
+            {t('electrical.parts', { returnObjects: true }).map((part, index) => (
+              <li key={index}>{part}</li>
+            ))}
           </ul>
           <p>
-            Δεν είστε σίγουροι για τον τύπο ή τη συμβατότητα του εξαρτήματος; Η ομάδα μας μπορεί να σας καθοδηγήσει. Απλώς συμπληρώστε τη φόρμα προσφοράς και θα επικοινωνήσουμε άμεσα μαζί σας.
+            {t('electrical.contact_text')}
           </p>
         </div>
       </div>

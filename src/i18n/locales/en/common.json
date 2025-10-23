@@ -12,6 +12,8 @@
   "email": "Email",
   "address": "Address",
   "follow_us": "Follow Us",
+  "choose_what_suits_you": "choose what suits you",
+  "if_unsure_start_with": "If you're not sure, start with",
   "alt_texts": {
     "logo": "Logo",
     "zoom": "Zoom",

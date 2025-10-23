@@ -35,7 +35,7 @@ const images = [
 ];
 
 const GeneralParts = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('parts_components');
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState("");
 
@@ -54,12 +54,12 @@ const GeneralParts = () => {
       <div className="container mx-auto px-4">
         {/* Τίτλος */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-charcoal-dark mb-3">
-            Ανταλλακτικά για Κάθε Εφαρμογή
+          <h2 className='text-4xl font-extrabold text-charcoal-dark mb-3'>
+            {t('general.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Ανακαλύψτε αυθεντικά ανταλλακτικά για κάθε κατηγορία γεωργικού εξοπλισμού – από κινητήρες και σασμάν μέχρι φρένα, υδραυλικά, καμπίνα και ηλεκτρικά συστήματα.
+          <p className='text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed'>
+            {t('general.description')}
           </p>
         </div>
 
@@ -92,7 +92,7 @@ const GeneralParts = () => {
             <div className="bg-white rounded-lg shadow-lg p-6 max-w-4xl w-full">
               <img
                 src={modalImage}
-                alt={t('common:alt_texts.preview')}
+                alt={t('common.preview')}
                 className="w-full h-auto rounded"
               />
               <div className="text-center mt-4">
@@ -100,7 +100,7 @@ const GeneralParts = () => {
                   onClick={handleCloseModal}
                   className="bg-jdyellow hover:bg-jdyellow-dark text-white px-6 py-2 rounded"
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -110,10 +110,10 @@ const GeneralParts = () => {
         {/* Επιπλέον πληροφορίες */}
         <div className="max-w-3xl mx-auto text-center text-gray-700 space-y-4 mt-16">
           <p>
-            Όλα τα ανταλλακτικά που βλέπετε είναι κατάλληλα για μηχανήματα John Deere και άλλες συμβατές μάρκες. Επιλέγουμε προσεκτικά εξαρτήματα που εγγυώνται αντοχή, αξιοπιστία και υψηλή απόδοση.
+            {t('general.additional_info')}
           </p>
           <p>
-            Αν ψάχνετε κάτι συγκεκριμένο, μη διστάσετε να επικοινωνήσετε μαζί μας ή να συμπληρώσετε το αίτημα προσφοράς.
+            {t('general.contact_text')}
           </p>
         </div>
       </div>

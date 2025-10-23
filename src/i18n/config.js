@@ -11,6 +11,7 @@ import elParts from './locales/el/parts.json';
 import elServices from './locales/el/services.json';
 import elContact from './locales/el/contact.json';
 import elCategories from './locales/el/categories.json';
+import elPartsComponents from './locales/el/parts_components.json';
 import elLegal from './locales/el/legal.json';
 
 import enCommon from './locales/en/common.json';
@@ -21,6 +22,7 @@ import enParts from './locales/en/parts.json';
 import enServices from './locales/en/services.json';
 import enContact from './locales/en/contact.json';
 import enCategories from './locales/en/categories.json';
+import enPartsComponents from './locales/en/parts_components.json';
 import enLegal from './locales/en/legal.json';
 
 const resources = {
@@ -33,6 +35,7 @@ const resources = {
     services: elServices,
     contact: elContact,
     categories: elCategories,
+    parts_components: elPartsComponents,
     legal: elLegal,
   },
   en: {
@@ -44,6 +47,7 @@ const resources = {
     services: enServices,
     contact: enContact,
     categories: enCategories,
+    parts_components: enPartsComponents,
     legal: enLegal,
   },
 };
@@ -70,7 +74,7 @@ i18n
 
     // Namespace configuration
     defaultNS: 'common',
-    ns: ['common', 'layout', 'home', 'about', 'parts', 'services', 'contact', 'categories', 'legal'],
+    ns: ['common', 'layout', 'home', 'about', 'parts', 'services', 'contact', 'categories', 'parts_components', 'legal'],
 
     // React i18next options
     react: {

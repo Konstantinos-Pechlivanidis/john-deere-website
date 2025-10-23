@@ -12,6 +12,8 @@
   "email": "Email",
   "address": "Διεύθυνση",
   "follow_us": "Ακολουθήστε μας",
+  "choose_what_suits_you": "επιλέξετε αυτό που σας ταιριάζει",
+  "if_unsure_start_with": "Αν δεν είστε σίγουροι, ξεκινήστε",
   "alt_texts": {
     "logo": "Λογότυπο",
     "zoom": "Μεγέθυνση",

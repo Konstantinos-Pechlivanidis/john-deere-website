@@ -15,7 +15,8 @@
     "brake": "Brakes",
     "hydraulic": "Hydraulic",
     "electrical": "Electrical Components",
-    "cabin": "Cabin - Frame"
+    "cabin": "Cabin - Frame",
+    "lubricants": "Lubricants & Fluids"
   },
   "request_quote": "Request Quote"
 }

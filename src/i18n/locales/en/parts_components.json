@@ -1,0 +1,150 @@
+{
+  "brake": {
+    "title": "Brake Parts",
+    "description": "Brakes are a critical safety element. We offer high-quality spare parts that ensure immediate and stable braking in any condition.",
+    "parts_list_title": "Sample Parts:",
+    "parts": [
+      "Brake discs: for maximum braking force and thermal resistance",
+      "Pads & linings: for quiet and reliable braking",
+      "Pumps & cylinders: for proper pressure in the hydraulic circuit",
+      "Pipes & brake fluids: for stable performance without losses",
+      "Repair sets: for complete brake system overhaul"
+    ],
+    "contact_text": "If you don't know the exact spare part, our team is here to guide you. Just fill out the quote request form."
+  },
+  "engine": {
+    "title": "Engine Parts",
+    "description": "Genuine and compatible spare parts for all types of agricultural machinery engines. From maintenance to complete overhaul, supply with reliability and technical consistency.",
+    "parts_list_title": "Main Parts Categories:",
+    "parts": [
+      "Cylinder heads: for proper compression and combustion",
+      "Pistons & connecting rods: for precise reconstruction",
+      "Oil & fuel pumps: for circulation and lubrication",
+      "Seals & flanges: to prevent leaks",
+      "Belts, bearings & sensors: for support of mechanical parts"
+    ],
+    "contact_text": "If you don't know which part you need, our experienced team is here to guide you. Fill out the quote request and we will contact you immediately."
+  },
+  "transmission": {
+    "title": "Transmission Parts",
+    "description": "Complete range of spare parts for power transmission systems. From gearboxes to differentials, we ensure reliable operation of your machinery.",
+    "parts_list_title": "Types of Parts:",
+    "parts": [
+      "Gears: for smooth and precise gear shifting",
+      "Clutch discs: for torque transmission with wear resistance",
+      "Shafts & bearings: for stable operation without vibrations",
+      "Bell housings & cases: reinforced for heavy use",
+      "Seal sets: to prevent leaks and extend life"
+    ],
+    "contact_text": "Don't know exactly what you need? Our team is at your disposal to guide you based on the model and use of your machine."
+  },
+  "filter": {
+    "title": "Filter Parts",
+    "description": "Filters are vital for the protection and long-term performance of agricultural machinery. We supply you with all types of filters, compatible and genuine.",
+    "parts_list_title": "Available Types:",
+    "parts": [
+      "Oil filters: for clean lubricant circulation in the engine",
+      "Air filters: for clean intake and efficient combustion",
+      "Fuel filters: protection from impurities & water in diesel",
+      "Hydraulic filters: for stable pressure and circuit protection",
+      "Cabin filters: clean and healthy environment for the operator"
+    ],
+    "contact_text": "Not sure about the model or dimension? Contact us and we will suggest the right choice based on machine type and application."
+  },
+  "clutch": {
+    "title": "Clutch Parts",
+    "description": "Ensure maximum clutch performance and reliability with spare parts built for durability, precision and compatibility with every type of agricultural machine.",
+    "parts_list_title": "Available Parts:",
+    "parts": [
+      "Clutch discs: high-strength materials for optimal torque transmission",
+      "Pressure plates: resistance to overload and stability",
+      "Release bearings: smooth operation without vibrations",
+      "Clutch sets: complete kit with guaranteed compatibility"
+    ],
+    "contact_text": "Not sure about the part type? Our team can guide you - fill out the quote form and we will contact you immediately."
+  },
+  "hydraulic": {
+    "title": "Hydraulic System Parts",
+    "description": "The hydraulic system is vital for the efficiency, safety and durability of agricultural machinery. We provide genuine and compatible spare parts that meet the most stringent requirements.",
+    "parts_list_title": "Available Parts:",
+    "parts": [
+      "Hydraulic pumps: high efficiency and pressure",
+      "Pipes & flexible hoses: pressure and leak resistance",
+      "Valves & pressure regulators: for precise flow control",
+      "Hydraulic cylinders: for smooth and reliable operation",
+      "Seal sets: for absolute tightness"
+    ],
+    "contact_text": "Not sure which part you need? Our team can guide you based on machine type and your needs."
+  },
+  "electrical": {
+    "title": "Electrical Parts",
+    "description": "Ensure reliable electrical system operation with genuine or compatible spare parts for John Deere agricultural and industrial machinery.",
+    "parts_list_title": "Available Parts:",
+    "parts": [
+      "Alternators & dynamos: for reliable starting and continuous charging",
+      "Control panels & sensors: for accurate operation monitoring",
+      "Connectors & wiring: for safe and stable connectivity",
+      "Switches, relays & fuses: for protection and power distribution",
+      "Headlights & lights: for improved visibility and safety"
+    ],
+    "contact_text": "Not sure about the part type or compatibility? Our team can guide you. Just fill out the quote form and we will contact you immediately."
+  },
+  "differential": {
+    "title": "Differential Parts",
+    "description": "Specialized spare parts for differential systems. From gears to housings, we have all the necessary components for efficient operation.",
+    "parts_list_title": "Available Parts:",
+    "parts": [
+      "Differential gears: for smooth power distribution",
+      "Axle shafts: for reliable torque transmission",
+      "Bearings & seals: for smooth operation and leak prevention",
+      "Housing components: for protection and structural integrity",
+      "Repair kits: for complete differential overhaul"
+    ],
+    "contact_text": "Need help choosing the right differential parts? Our technical team can guide you based on your machine specifications."
+  },
+  "cabin": {
+    "title": "Cabin & Frame Parts",
+    "description": "Spare parts for machine cabin and frame. From seats to frames, we ensure operator comfort and safety.",
+    "parts_list_title": "Available Parts:",
+    "parts": [
+      "Seats & seat belts: for operator comfort and safety",
+      "Windows & doors: for visibility and access",
+      "Frame components: for structural integrity",
+      "Interior panels: for protection and aesthetics",
+      "Safety equipment: for operator protection"
+    ],
+    "contact_text": "Looking for specific cabin or frame parts? Our team can help you find the right components for your machine."
+  },
+  "lubricants": {
+    "title": "Lubricants & Fluids",
+    "description": "High-quality lubricants and fluids for all agricultural machinery systems. From engine oils to hydraulic fluids, we ensure optimal performance and protection.",
+    "parts_list_title": "Main Lubricant Categories:",
+    "parts": [
+      "Engine oils: for engine protection and lubrication in all operating conditions",
+      "Hydraulic fluids: for efficient operation of hydraulic systems",
+      "Transmission oils: for smooth operation of gearboxes and differentials",
+      "Greases: for lubrication of high pressure and temperature points",
+      "Coolants: for protection of the cooling system from frost and corrosion",
+      "Brake fluids: for reliable and safe braking"
+    ],
+    "why_choose_title": "Why choose our lubricants?",
+    "why_choose": [
+      "Compatibility with all agricultural machinery brands",
+      "High quality and long service life",
+      "Optimal protection in extreme conditions",
+      "Compliance with environmental standards"
+    ],
+    "contact_text": "If you're not sure about the right lubricant for your machine, our technical team is here to guide you. Fill out the quote request and we will contact you immediately."
+  },
+  "general": {
+    "title": "Parts for Every Application",
+    "description": "Discover genuine spare parts for every category of agricultural equipment - from engines and transmissions to brakes, hydraulics, cabin and electrical systems.",
+    "additional_info": "All the parts you see are suitable for John Deere machines and other compatible brands. We carefully choose components that guarantee durability, reliability and high performance.",
+    "contact_text": "If you're looking for something specific, don't hesitate to contact us or fill out the quote request."
+  },
+  "common": {
+    "close": "Close",
+    "zoom": "Zoom",
+    "preview": "Preview"
+  }
+}

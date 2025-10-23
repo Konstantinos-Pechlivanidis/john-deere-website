@@ -24,6 +24,7 @@ import HydraulicParts from "../components/partsCategories/HydraulicParts";
 import BrakeParts from "../components/partsCategories/BrakeParts";
 import ElectricalParts from "../components/partsCategories/ElectricalParts";
 import CabinFrameParts from "../components/partsCategories/CabinFrameParts";
+import LubricantsParts from "../components/partsCategories/LubricantsParts";
 
 // Mapping κατηγοριών -> Component
 const categoryComponents = {
@@ -37,6 +38,7 @@ const categoryComponents = {
   φρενα: <BrakeParts />,
   ηλεκτρολογικο: <ElectricalParts />,
   καμπινα: <CabinFrameParts />,
+  λιπαντικα: <LubricantsParts />,
 };
 
 const PartsPage = () => {
@@ -74,9 +76,7 @@ const PartsPage = () => {
 
           {/* Περιγραφή */}
           <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-            {t('subtitle')}
-            επιλέξετε αυτό που σας ταιριάζει. Αν δεν είστε σίγουροι, ξεκινήστε
-            από την επιλογή <strong>Γενικά</strong>.
+            {t('subtitle')} {t('common:choose_what_suits_you')}. {t('common:if_unsure_start_with')} <strong>{t('categories.general')}</strong>.
           </p>
 
           {/* Επιλογή Κατηγορίας */}
@@ -101,6 +101,7 @@ const PartsPage = () => {
                   {t('categories.electrical')}
                 </SelectItem>
                 <SelectItem value="καμπινα">{t('categories.cabin')}</SelectItem>
+                <SelectItem value="λιπαντικα">{t('categories.lubricants')}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -114,7 +115,7 @@ const PartsPage = () => {
             asChild
             className="bg-jdgreen hover:bg-jdgreen-light text-white px-6 rounded-full shadow-md text-base font-medium"
           >
-            <Link to="/contact">Επικοινωνήστε μαζί μας</Link>
+            <Link to="/contact">{t('common:contact_us')}</Link>
           </Button>
         </div>
       </section>

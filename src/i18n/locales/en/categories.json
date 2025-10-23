@@ -38,5 +38,9 @@
   "general": {
     "title": "General Parts",
     "description": "Complete range of general spare parts for agricultural machinery. From bolts to seals, we have all the necessary components for maintenance."
+  },
+  "lubricants": {
+    "title": "Lubricants & Fluids",
+    "description": "High-quality lubricants and fluids for all agricultural machinery systems. From engine oils to hydraulic fluids, we ensure optimal performance and protection."
   }
 }
