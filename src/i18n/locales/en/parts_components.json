@@ -104,16 +104,16 @@
   },
   "cabin": {
     "title": "Cabin & Frame Parts",
-    "description": "Spare parts for machine cabin and frame. From seats to frames, we ensure operator comfort and safety.",
-    "parts_list_title": "Available Parts:",
+    "description": "Ensure operator comfort and safety, as well as the structural integrity of your machine, with top-quality spare parts.",
+    "parts_list_title": "Sample Parts:",
     "parts": [
-      "Seats & seat belts: for operator comfort and safety",
-      "Windows & doors: for visibility and access",
-      "Frame components: for structural integrity",
-      "Interior panels: for protection and aesthetics",
-      "Safety equipment: for operator protection"
+      "Doors, mirrors & windows: for maximum visibility and protection",
+      "Seats & cabin accessories: for comfort and ergonomics",
+      "Hood, fenders & panels: for protection and appearance renewal",
+      "Frames & bases: for structural stability",
+      "Heating & ventilation systems: for ideal working conditions"
     ],
-    "contact_text": "Looking for specific cabin or frame parts? Our team can help you find the right components for your machine."
+    "contact_text": "Have you suffered wear or damage? Contact us to identify the right part and serve you immediately."
   },
   "lubricants": {
     "title": "Lubricants & Fluids",

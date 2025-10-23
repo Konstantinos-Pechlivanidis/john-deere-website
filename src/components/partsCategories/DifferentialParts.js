@@ -27,12 +27,12 @@ const DifferentialParts = () => {
       <div className="container mx-auto px-4">
         {/* Τίτλος και Περιγραφή */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
-            Ανταλλακτικά Διαφορικού
+          <h2 className='text-3xl font-bold text-charcoal-dark mb-4'>
+            {t('differential.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
-          <p className="text-lg text-gray-600">
-            Το διαφορικό αποτελεί κρίσιμο κομμάτι για την ευστάθεια, την κίνηση και την αξιοπιστία των γεωργικών μηχανημάτων. Ανακαλύψτε ανταλλακτικά υψηλής ακρίβειας για κάθε τύπο εφαρμογής.
+          <p className='text-lg text-gray-600'>
+            {t('differential.description')}
           </p>
         </div>
 
@@ -60,7 +60,7 @@ const DifferentialParts = () => {
             <div className="bg-white rounded-lg p-4 max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt={t('alt_texts.zoom')}
+                alt={t('common.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">
@@ -68,7 +68,7 @@ const DifferentialParts = () => {
                   onClick={handleCloseModal}
                   className="bg-jdyellow hover:bg-jdyellow-dark px-6 py-2 text-white rounded"
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -78,17 +78,15 @@ const DifferentialParts = () => {
         {/* Περιεχόμενο */}
         <div className="max-w-3xl mx-auto text-gray-700 space-y-4 text-left">
           <h3 className="text-xl font-semibold text-charcoal-dark">
-            Τύποι Ανταλλακτικών:
+            {t('differential.parts_list_title')}
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Κορώνα & Πηνίο:</strong> για μετάδοση κίνησης με ακρίβεια</li>
-            <li><strong>Άξονες & Πλανητικά Γρανάζια:</strong> για πλήρη σταθερότητα</li>
-            <li><strong>Ρουλεμάν & Τσιμούχες:</strong> για αποφυγή διαρροών και κραδασμών</li>
-            <li><strong>Μειωτήρες:</strong> για βαρέως τύπου μηχανήματα</li>
-            <li><strong>Συστήματα Κλειδώματος:</strong> για αυξημένη πρόσφυση σε δύσκολες συνθήκες</li>
+            {t('differential.parts', { returnObjects: true }).map((part, index) => (
+              <li key={index}>{part}</li>
+            ))}
           </ul>
           <p>
-            Αν δεν είστε βέβαιοι για το κατάλληλο εξάρτημα, η ομάδα μας είναι στη διάθεσή σας. Συμπληρώστε τη φόρμα προσφοράς και θα σας προτείνουμε την ιδανική λύση.
+            {t('differential.contact_text')}
           </p>
         </div>
       </div>

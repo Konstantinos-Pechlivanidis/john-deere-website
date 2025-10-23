@@ -27,12 +27,12 @@ const CabinFrameParts = () => {
       <div className="container mx-auto px-4">
         {/* Τίτλος */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-charcoal-dark mb-4">
-            Ανταλλακτικά Καμπίνας & Πλαισίου
+          <h2 className='text-3xl font-bold text-charcoal-dark mb-4'>
+            {t('cabin.title')}
           </h2>
           <div className="w-20 h-1 bg-jdyellow mx-auto mb-6 rounded" />
-          <p className="text-lg text-gray-600">
-            Εξασφαλίστε την άνεση και την ασφάλεια του χειριστή, καθώς και τη δομική ακεραιότητα του μηχανήματός σας, με ανταλλακτικά κορυφαίας ποιότητας.
+          <p className='text-lg text-gray-600'>
+            {t('cabin.description')}
           </p>
         </div>
 
@@ -60,7 +60,7 @@ const CabinFrameParts = () => {
             <div className="bg-white rounded-lg p-4 max-w-2xl w-full">
               <img
                 src={modalImage}
-                alt={t('alt_texts.zoom')}
+                alt={t('common.zoom')}
                 className="w-full h-auto rounded shadow"
               />
               <div className="text-center mt-4">
@@ -68,7 +68,7 @@ const CabinFrameParts = () => {
                   onClick={handleCloseModal}
                   className="bg-jdyellow hover:bg-jdyellow-dark px-6 py-2 text-white rounded"
                 >
-                  Κλείσιμο
+                  {t('common.close')}
                 </button>
               </div>
             </div>
@@ -78,17 +78,15 @@ const CabinFrameParts = () => {
         {/* Περιεχόμενο */}
         <div className="max-w-3xl mx-auto text-gray-700 space-y-4 text-left">
           <h3 className="text-xl font-semibold text-charcoal-dark">
-            Ενδεικτικά Ανταλλακτικά:
+            {t('cabin.parts_list_title')}
           </h3>
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Πόρτες, καθρέπτες & παράθυρα:</strong> για μέγιστη ορατότητα και προστασία.</li>
-            <li><strong>Καθίσματα & αξεσουάρ καμπίνας:</strong> για άνεση και εργονομία.</li>
-            <li><strong>Καπό, φτερά & πάνελ:</strong> για προστασία και ανανέωση εμφάνισης.</li>
-            <li><strong>Πλαίσια & βάσεις:</strong> για δομική σταθερότητα.</li>
-            <li><strong>Συστήματα θέρμανσης – εξαερισμού:</strong> για ιδανικές συνθήκες εργασίας.</li>
+            {t('cabin.parts', { returnObjects: true }).map((part, index) => (
+              <li key={index}>{part}</li>
+            ))}
           </ul>
           <p>
-            Έχετε υποστεί φθορά ή ατύχημα; Επικοινωνήστε μαζί μας για να εντοπίσουμε το σωστό εξάρτημα και να σας εξυπηρετήσουμε άμεσα.
+            {t('cabin.contact_text')}
           </p>
         </div>
       </div>
