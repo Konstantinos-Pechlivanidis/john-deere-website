@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = process.env.SITE_URL || 'https://i-k-psoma.gr';
+const SITE_URL = process.env.SITE_URL || 'https://www.i-k-psoma.gr';
 const BUILD_DIR = path.join(__dirname, '..', 'build');
 const SITEMAP_PATH = path.join(BUILD_DIR, 'sitemap.xml');
 
