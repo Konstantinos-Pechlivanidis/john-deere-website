@@ -17,7 +17,7 @@ const About = () => {
         title={t('intro.title')}
         description={t('intro.subtitle')}
         canonical="/about"
-        ogImage="/images/general/DSC_2509.webp"
+        ogImage="/images/general/DSC_2509.JPG"
         structuredData={breadcrumbData}
       />
       {/* Intro Section */}
@@ -57,7 +57,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/images/general/DSC_2509.webp"
+                  src="/images/general/DSC_2509.JPG"
                   alt={t('common:alt_texts.agricultural_landscape')}
                   loading="lazy"
                   className="w-full h-full object-cover"
@@ -72,7 +72,7 @@ const About = () => {
             <div className="order-2 lg:order-1 relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/images/general/DSC_2523.webp"
+                  src="/images/general/DSC_2516.JPG"
                   alt={t('common:alt_texts.our_team')}
                   className="w-full h-full object-cover"
                 />

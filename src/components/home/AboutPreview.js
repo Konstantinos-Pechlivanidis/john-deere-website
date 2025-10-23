@@ -60,7 +60,7 @@ const AboutPreview = () => {
           <div className="order-1 lg:order-2 relative">
             <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
               <img
-                src="/images/general/DSC_2519.webp"
+                src="/images/general/DSC_2519.JPG"
                 alt={t('common:alt_texts.our_team')}
                 className="w-full h-full object-cover"
                 loading="lazy"

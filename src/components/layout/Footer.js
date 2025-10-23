@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import SocialMediaLinks from "../ui/social-media-links";
 
 const Footer = () => {
-  const { t } = useTranslation('layout');
+  const { t } = useTranslation(['layout', 'common']);
   const currentYear = new Date().getFullYear();
 
   return (
@@ -41,6 +42,12 @@ const Footer = () => {
                 <Mail className="inline-block h-4 w-4 text-jdyellow mr-2" />
                 info@psomasst.gr
               </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold text-white mb-3">{t('common:follow_us')}</h4>
+              <SocialMediaLinks variant="footer" />
             </div>
           </div>
 

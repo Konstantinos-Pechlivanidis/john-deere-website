@@ -23,7 +23,7 @@ const Index = () => {
         title={t('home:hero.title')}
         description={t('home:hero.subtitle')}
         canonical="/"
-        ogImage="/images/general/DSC_2519.webp"
+        ogImage="/images/general/DSC_2519.JPG"
         structuredData={structuredData}
       />
       <div role="region" aria-label="Homepage content">

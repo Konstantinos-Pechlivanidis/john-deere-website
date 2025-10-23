@@ -10,7 +10,6 @@ import {
 
 const images = [
   "/images/parts/General/img2.jpg",
-  "/images/parts/General/img3.jpg",
   "/images/parts/General/avif1.avif",
   "/images/parts/General/avif2.avif",
   "/images/parts/Engine/engine1.jpg",
@@ -26,8 +25,8 @@ const images = [
   "/images/parts/Hydraulic/hydraulic1.jpg",
   "/images/parts/Hydraulic/hydraulic2.jpg",
   "/images/parts/Hydraulic/hydraulic3.png",
-  "/images/General/DSC_2525.webp",
-  "/images/General/DSC_2526.webp",
+  "/images/general/DSC_2525.webp",
+  "/images/general/DSC_2526.webp",
   "/images/parts/Brake/brake2.png",
   "/images/parts/Electrical/electrical1.jpg",
   "/images/parts/Electrical/electrical2.jpg",

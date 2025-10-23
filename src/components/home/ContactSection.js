@@ -10,6 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import SocialMediaLinks from "../ui/social-media-links";
 
 const ContactSection = () => {
   const { t } = useTranslation(['home', 'contact']);
@@ -87,6 +88,12 @@ const ContactSection = () => {
                 <p className="mt-4 font-semibold text-charcoal-dark">{t('contact:info.email_label')}:</p>
                 <p>info@psomasst.gr</p>
               </address>
+              
+              {/* Social Media Links */}
+              <div className="mt-6">
+                <h4 className="text-lg font-semibold text-jdgreen mb-3">{t('common:follow_us')}</h4>
+                <SocialMediaLinks variant="contact" />
+              </div>
             </div>
           </div>
 
