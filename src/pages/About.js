@@ -72,7 +72,7 @@ const About = () => {
             <div className="order-2 lg:order-1 relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/images/general/DSC_2516.JPG"
+                  src="/images/general/DSC_2521.webp"
                   alt={t('common:alt_texts.our_team')}
                   className="w-full h-full object-cover"
                 />
