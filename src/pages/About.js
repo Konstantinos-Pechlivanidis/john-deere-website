@@ -17,7 +17,7 @@ const About = () => {
         title={t('intro.title')}
         description={t('intro.subtitle')}
         canonical="/about"
-        ogImage="/images/general/DSC_2509.JPG"
+        ogImage="/images/general/Store.JPG"
         structuredData={breadcrumbData}
       />
       {/* Intro Section */}
@@ -57,7 +57,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
                 <img
-                  src="/images/general/DSC_2509.JPG"
+                  src="/images/general/Store.JPG"
                   alt={t('common:alt_texts.agricultural_landscape')}
                   loading="lazy"
                   className="w-full h-full object-cover"
