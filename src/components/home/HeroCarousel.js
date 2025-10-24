@@ -7,24 +7,24 @@ import {
 
 const images = [
   {
-    url: "/images/general/img4.jpg", 
+    url: "/images/general/img4.webp", 
     alt: "General",
-    mobileUrl: "/images/general/mobile1.jpg", 
+    mobileUrl: "/images/general/mobile1.webp", 
   },
   {
-    url: "/images/general/img28.webp",
+    url: "/images/general/img28_1.webp",
     alt: "General",
-    mobileUrl: "/images/general/mobile3.jpg",
+    mobileUrl: "/images/general/mobile3.webp",
   },
   {
-    url: "/images/general/img29.jpg",
+    url: "/images/general/img29.webp",
     alt: "General",
-    mobileUrl: "/images/general/mobile9.jpg",
+    mobileUrl: "/images/general/mobile9.webp",
   },
   {
-    url: "/images/general/img20.jpg",
+    url: "/images/general/img20_1.webp",
     alt: "General",
-    mobileUrl: "/images/general/mobile10.jpg",
+    mobileUrl: "/images/general/mobile10.webp",
   },
 ];
 
