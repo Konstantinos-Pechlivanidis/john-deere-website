@@ -55,7 +55,7 @@ const About = () => {
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-xl">
+              <div className="aspect-[4/4] rounded-lg overflow-hidden shadow-xl">
                 <img
                   src="/images/general/Store.JPG"
                   alt={t('common:alt_texts.agricultural_landscape')}
