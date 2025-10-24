@@ -22,8 +22,6 @@ const PartsLinkSection = () => {
     "/images/parts/Hydraulic/hydraulic1.jpg",
     "/images/parts/Hydraulic/hydraulic2.jpg",
     "/images/parts/Hydraulic/hydraulic3.png",
-    "/images/general/DSC_2525.webp",
-    "/images/general/DSC_2526.webp",
     "/images/parts/Brake/brake2.png",
     "/images/parts/Electrical/electrical1.jpg",
     "/images/parts/Electrical/electrical2.jpg",
