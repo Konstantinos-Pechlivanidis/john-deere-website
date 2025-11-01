@@ -7,7 +7,7 @@ export const getWebsiteSchema = () => ({
   "@type": "WebSite",
   "name": "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
   "url": BASE_URL,
-  "description": "Αξιόπιστα ανταλλακτικά για γεωργικά μηχανήματα John Deere. Πανελλαδική αποστολή, ποιότητα και εξυπηρέτηση από το 1980.",
+  "description": "Αξιόπιστα συμβατά ανταλλακτικά για γεωργικά μηχανήματα τύπου John Deere. Δεν είμαστε επίσημος αντιπρόσωπος John Deere. Πανελλαδική αποστολή, ποιότητα και εξυπηρέτηση από το 1980.",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
@@ -23,7 +23,12 @@ export const getOrganizationSchema = () => ({
   "@type": "Organization",
   "name": "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
   "url": BASE_URL,
-  "logo": `${BASE_URL}/images/logos/tractorLogo2.png`,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${BASE_URL}/images/logos/tractorLogo2.png`,
+    "width": 512,
+    "height": 512
+  },
   "description": "Εισαγωγέας γεωργικών ανταλλακτικών με 40+ χρόνια εμπειρίας",
   "foundingDate": "1980",
   "address": {

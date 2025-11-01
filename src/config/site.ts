@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
   title: "Ι. & Κ. ΨΩΜΑ Ο.Ε. - Ανταλλακτικά John Deere",
-  description: "Ο αξιόπιστος συνεργάτης σας για αυθεντικά ανταλλακτικά και γεωργικά μηχανήματα John Deere στην Ελλάδα.",
+  description: "Ο αξιόπιστος συνεργάτης σας για συμβατά ανταλλακτικά και εξαρτήματα για γεωργικά μηχανήματα τύπου John Deere στην Ελλάδα. Δεν είμαστε επίσημος αντιπρόσωπος John Deere.",
   url: process.env.SITE_URL || "https://i-k-psoma.gr",
   ogImage: "/og-default.jpg",
   company: {

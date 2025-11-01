@@ -19,7 +19,7 @@ const SEO = ({
   
   // Default values
   const defaultTitle = 'Ι. & Κ. ΨΩΜΑ Ο.Ε. - Ανταλλακτικά Γεωργικών Μηχανημάτων';
-  const defaultDescription = 'Αξιόπιστα ανταλλακτικά για γεωργικά μηχανήματα John Deere. Πανελλαδική αποστολή, ποιότητα και εξυπηρέτηση από το 1980.';
+  const defaultDescription = 'Αξιόπιστα συμβατά ανταλλακτικά για γεωργικά μηχανήματα τύπου John Deere. Δεν είμαστε επίσημος αντιπρόσωπος John Deere. Πανελλαδική αποστολή, ποιότητα και εξυπηρέτηση από το 1980.';
   const defaultOgImage = `${BASE_URL}/images/logos/tractorLogo2.png`;
   
   const finalTitle = title ? `${title} | Ι. & Κ. ΨΩΜΑ Ο.Ε.` : defaultTitle;
@@ -39,6 +39,8 @@ const SEO = ({
     { lang: 'en', url: `${BASE_URL}/en${canonical || ''}` }
   ];
 
+  const logoUrl = `${BASE_URL}/images/logos/tractorLogo2.png`;
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -46,6 +48,15 @@ const SEO = ({
       <title>{finalTitle}</title>
       <meta name="description" content={finalDescription} />
       <meta name="robots" content={robots.join(', ')} />
+      
+      {/* Favicons for Google and browsers */}
+      <link rel="icon" type="image/png" sizes="16x16" href={logoUrl} />
+      <link rel="icon" type="image/png" sizes="32x32" href={logoUrl} />
+      <link rel="icon" type="image/png" sizes="96x96" href={logoUrl} />
+      <link rel="icon" type="image/png" sizes="192x192" href={logoUrl} />
+      <link rel="icon" type="image/png" sizes="512x512" href={logoUrl} />
+      <link rel="shortcut icon" href={logoUrl} />
+      <link rel="apple-touch-icon" href={logoUrl} />
       
       {/* Canonical URL */}
       <link rel="canonical" href={finalCanonical} />
@@ -60,9 +71,14 @@ const SEO = ({
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:image" content={finalOgImage} />
+      <meta property="og:image:width" content="512" />
+      <meta property="og:image:height" content="512" />
       <meta property="og:url" content={finalCanonical} />
       <meta property="og:site_name" content="Ι. & Κ. ΨΩΜΑ Ο.Ε." />
       <meta property="og:locale" content={currentLang === 'el' ? 'el_GR' : 'en_US'} />
+      
+      {/* Additional logo for Google */}
+      <link rel="icon" type="image/png" href={logoUrl} />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
