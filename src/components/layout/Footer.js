@@ -22,7 +22,7 @@ const Footer = () => {
               <h3 className="text-xl font-bold text-jdyellow">Ι. & Κ. ΨΩΜΑ Ο.Ε.</h3>
             </div>
             <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-              {t('footer.company_description') || 'Ο αξιόπιστος συνεργάτης σας για συμβατά ανταλλακτικά και εξαρτήματα για γεωργικά μηχανήματα τύπου John Deere στην Ελλάδα. Δεν είμαστε επίσημος αντιπρόσωπος John Deere.'}
+              {t('footer.company_description') || 'Εισαγωγέας και διανομέας ανταλλακτικών γεωργικών μηχανημάτων στην Ελλάδα από το 1980. Προσφέρουμε συμβατά ανταλλακτικά για τρακτέρ, στρίπερ, θεριζοαλωνιστικές και βαμβακομηχανές με πανελλαδική αποστολή και τεχνική υποστήριξη.'}
             </p>
 
             <div className="space-y-3 text-sm text-gray-300">

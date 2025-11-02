@@ -19,7 +19,7 @@ const SEO = ({
   
   // Default values
   const defaultTitle = 'Ι. & Κ. ΨΩΜΑ Ο.Ε. - Ανταλλακτικά Γεωργικών Μηχανημάτων';
-  const defaultDescription = 'Αξιόπιστα συμβατά ανταλλακτικά για γεωργικά μηχανήματα τύπου John Deere. Δεν είμαστε επίσημος αντιπρόσωπος John Deere. Πανελλαδική αποστολή, ποιότητα και εξυπηρέτηση από το 1980.';
+  const defaultDescription = 'Προσφέρουμε ανταλλακτικά γεωργικών μηχανημάτων για τρακτέρ, στρίπερ, θεριζοαλωνιστικές και βαμβακομηχανές. 40+ χρόνια εμπειρίας, πανελλαδική αποστολή, γρήγορη παράδοση και τεχνική υποστήριξη.';
   const defaultOgImage = `${BASE_URL}/images/logos/tractorLogo2.png`;
   
   const finalTitle = title ? `${title} | Ι. & Κ. ΨΩΜΑ Ο.Ε.` : defaultTitle;

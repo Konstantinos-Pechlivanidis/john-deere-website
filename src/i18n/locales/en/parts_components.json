@@ -78,7 +78,7 @@
   },
   "electrical": {
     "title": "Electrical Parts",
-    "description": "Ensure reliable electrical system operation with genuine or compatible spare parts for John Deere agricultural and industrial machinery.",
+    "description": "Ensure reliable electrical system operation with high-quality compatible spare parts for agricultural and industrial machinery.",
     "parts_list_title": "Available Parts:",
     "parts": [
       "Alternators & dynamos: for reliable starting and continuous charging",
@@ -138,8 +138,8 @@
   },
   "general": {
     "title": "Parts for Every Application",
-    "description": "Discover genuine spare parts for every category of agricultural equipment - from engines and transmissions to brakes, hydraulics, cabin and electrical systems.",
-    "additional_info": "All the parts you see are suitable for John Deere machines and other compatible brands. We carefully choose components that guarantee durability, reliability and high performance.",
+    "description": "Discover high-quality compatible spare parts for every category of agricultural equipment - from engines and transmissions to brakes, hydraulics, cabin and electrical systems.",
+    "additional_info": "All the parts you see are compatible with all leading agricultural machinery brands. We carefully choose components that guarantee durability, reliability and high performance.",
     "contact_text": "If you're looking for something specific, don't hesitate to contact us or fill out the quote request."
   },
   "common": {
