@@ -16,6 +16,8 @@ const Error500 = () => {
         title="Σφάλμα Διακομιστή - 500"
         description="Προσωρινό πρόβλημα με τον διακομιστή. Παρακαλώ δοκιμάστε ξανά σε λίγο."
         noindex={true}
+        nofollow={true}
+        canonical={false}
       />
       <div className="container mx-auto px-4 py-24 flex items-center justify-center">
         <div className="max-w-md text-center">
@@ -52,3 +54,4 @@ const Error500 = () => {
 };
 
 export default Error500;
+

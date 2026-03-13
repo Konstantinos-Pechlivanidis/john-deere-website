@@ -6,7 +6,7 @@ try {
   // Set environment variables
   process.env.NODE_ENV = 'production';
   process.env.GENERATE_SOURCEMAP = 'false';
-  process.env.SITE_URL = 'https://i-k-psoma.gr';
+  process.env.SITE_URL = 'https://www.i-k-psoma.gr';
 
   console.log('🔨 Building application with legacy peer deps...');
   

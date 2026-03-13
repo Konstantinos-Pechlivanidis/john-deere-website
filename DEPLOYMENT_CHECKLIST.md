@@ -5,7 +5,7 @@
 ### 1. Environment & Configuration
 - [x] Created `src/config/site.ts` with site metadata
 - [x] Updated environment variables for production
-- [x] Configured SITE_URL for https://i-k-psoma.gr
+- [x] Configured SITE_URL for https://www.i-k-psoma.gr
 
 ### 2. SEO & Meta Optimization
 - [x] Updated `public/robots.txt` with sitemap reference
@@ -58,7 +58,7 @@
 - [x] Added Prettier configuration
 
 ### 10. Domain-Specific Updates
-- [x] Updated all hardcoded URLs to i-k-psoma.gr
+- [x] Updated all hardcoded URLs to www.i-k-psoma.gr
 - [x] Added canonical link to index.html
 - [x] Updated structured data with new domain
 - [x] Created comprehensive README
@@ -68,12 +68,12 @@
 ### DNS Configuration
 1. **A Record**: Point `i-k-psoma.gr` to hosting provider IP
 2. **CNAME Record**: Point `www.i-k-psoma.gr` to `i-k-psoma.gr`
-3. **Redirect**: Configure www → root redirect (no trailing slash)
+3. **Redirect**: Configure root -> www redirect (preserve path/query)
 
 ### Hosting Setup
 1. **Environment Variables**:
    ```env
-   SITE_URL=https://i-k-psoma.gr
+   SITE_URL=https://www.i-k-psoma.gr
    NODE_ENV=production
    GENERATE_SOURCEMAP=false
    ```
@@ -181,3 +181,5 @@ For deployment issues or questions:
 - **Email**: info@psomasst.gr
 - **Phone**: +30 2310 512239
 - **Address**: Μοναστηρίου 92, Θεσσαλονίκη
+
+

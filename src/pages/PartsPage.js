@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
-import { getBreadcrumbSchema, getProductSchema } from "../lib/structuredData";
+import { getBreadcrumbSchema, getProductSchema, getWebPageSchema } from "../lib/structuredData";
+import { getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
 import {
   Select,
   SelectContent,
@@ -42,17 +43,18 @@ const categoryComponents = {
 };
 
 const PartsPage = () => {
-  const { t } = useTranslation(['parts', 'common', 'layout']);
+  const { t, i18n } = useTranslation(["parts", "common", "layout"]);
+  const seo = getPageSeo("/parts", i18n.language);
   const [selectedCategory, setSelectedCategory] = useState("γενικα");
 
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://www.i-k-psoma.gr' },
-    { name: t('layout:navigation.parts'), url: 'https://www.i-k-psoma.gr/parts' }
+    { name: t("common:company_name"), url: getCanonicalUrl("/") },
+    { name: t("layout:navigation.parts"), url: getCanonicalUrl("/parts") }
   ]);
 
   const productSchema = getProductSchema({
-    name: t('title'),
-    description: t('subtitle'),
+    name: seo.title,
+    description: seo.description,
     category: "Agricultural Machinery Parts",
     brand: "John Deere"
   });
@@ -60,11 +62,20 @@ const PartsPage = () => {
   return (
     <Layout>
       <SEO
-        title={t('title')}
-        description={t('subtitle')}
+        title={seo.title}
+        description={seo.description}
         canonical="/parts"
-        ogImage="/images/general/DSC_2519.JPG"
-        structuredData={[breadcrumbData, productSchema]}
+        ogImage={seo.ogImage}
+        structuredData={[
+          getWebPageSchema({
+            path: "/parts",
+            name: seo.title,
+            description: seo.description,
+            type: "CollectionPage",
+          }),
+          breadcrumbData,
+          productSchema,
+        ]}
       />
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 text-center">
@@ -124,3 +135,5 @@ const PartsPage = () => {
 };
 
 export default PartsPage;
+
+

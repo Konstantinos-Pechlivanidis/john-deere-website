@@ -1,24 +1,34 @@
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
-import { getBreadcrumbSchema } from "../lib/structuredData";
+import { getBreadcrumbSchema, getWebPageSchema } from "../lib/structuredData";
+import { getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
 
 const About = () => {
-  const { t } = useTranslation('about');
+  const { t, i18n } = useTranslation("about");
+  const seo = getPageSeo("/about", i18n.language);
   
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://www.i-k-psoma.gr' },
-    { name: t('layout:navigation.about'), url: 'https://www.i-k-psoma.gr/about' }
+    { name: t("common:company_name"), url: getCanonicalUrl("/") },
+    { name: t("layout:navigation.about"), url: getCanonicalUrl("/about") },
   ]);
   
   return (
     <Layout>
       <SEO
-        title={t('intro.title')}
-        description={t('intro.subtitle')}
+        title={seo.title}
+        description={seo.description}
         canonical="/about"
-        ogImage="/images/general/Store.JPG"
-        structuredData={breadcrumbData}
+        ogImage={seo.ogImage}
+        structuredData={[
+          getWebPageSchema({
+            path: "/about",
+            name: seo.title,
+            description: seo.description,
+            type: "AboutPage",
+          }),
+          breadcrumbData,
+        ]}
       />
       {/* Intro Section */}
       <div className="py-12 bg-gray-100">

@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
   title: "Ι. & Κ. ΨΩΜΑ Ο.Ε. - Ανταλλακτικά John Deere",
   description: "Εισαγωγέας και διανομέας ανταλλακτικών γεωργικών μηχανημάτων στην Ελλάδα από το 1980. Προσφέρουμε συμβατά ανταλλακτικά για τρακτέρ, στρίπερ, θεριζοαλωνιστικές και βαμβακομηχανές με πανελλαδική αποστολή και τεχνική υποστήριξη.",
-  url: process.env.SITE_URL || "https://i-k-psoma.gr",
+  url: "https://www.i-k-psoma.gr",
   ogImage: "/og-default.jpg",
   company: {
     name: "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
@@ -26,6 +26,6 @@ export const siteConfig = {
   ],
   author: {
     name: "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
-    url: "https://i-k-psoma.gr",
+    url: "https://www.i-k-psoma.gr",
   },
 } as const;

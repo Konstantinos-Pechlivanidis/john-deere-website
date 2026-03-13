@@ -31,7 +31,7 @@ jobs:
     - name: Build application
       run: npm run build
       env:
-        SITE_URL: https://i-k-psoma.gr
+        SITE_URL: https://www.i-k-psoma.gr
         NODE_ENV: production
         GENERATE_SOURCEMAP: false
     

@@ -1,102 +1,90 @@
-import { Helmet } from 'react-helmet-async';
-import { useTranslation } from 'react-i18next';
+import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+import {
+  BRAND_NAME,
+  DEFAULT_OG_IMAGE,
+  buildAbsoluteUrl,
+  getCanonicalUrl,
+} from "../lib/seoConfig";
 
-const BASE_URL = process.env.SITE_URL || 'https://i-k-psoma.gr';
+const DEFAULT_TITLE = `${BRAND_NAME} | John Deere Agricultural Machinery Parts in Greece`;
+const DEFAULT_DESCRIPTION =
+  "I. & K. PSOMA O.E. supplies spare parts for tractors, strippers, harvesters, and cotton machinery with nationwide shipping and technical support.";
+
+const normalizeHreflang = (hreflang) => {
+  if (!Array.isArray(hreflang)) {
+    return [];
+  }
+
+  return hreflang
+    .filter((entry) => entry?.lang && entry?.url)
+    .map((entry) => ({
+      lang: entry.lang,
+      url: buildAbsoluteUrl(entry.url),
+    }));
+};
 
 const SEO = ({
   title,
   description,
-  canonical,
+  canonical = "/",
   ogImage,
-  ogType = 'website',
+  ogType = "website",
   structuredData,
   noindex = false,
   nofollow = false,
-  hreflang = null
+  hreflang = [],
 }) => {
   const { i18n } = useTranslation();
-  const currentLang = i18n.language || 'el';
-  
-  // Default values
-  const defaultTitle = 'Ι. & Κ. ΨΩΜΑ Ο.Ε. - Ανταλλακτικά Γεωργικών Μηχανημάτων';
-  const defaultDescription = 'Προσφέρουμε ανταλλακτικά γεωργικών μηχανημάτων για τρακτέρ, στρίπερ, θεριζοαλωνιστικές και βαμβακομηχανές. 40+ χρόνια εμπειρίας, πανελλαδική αποστολή, γρήγορη παράδοση και τεχνική υποστήριξη.';
-  const defaultOgImage = `${BASE_URL}/images/logos/tractorLogo2.png`;
-  
-  const finalTitle = title ? `${title} | Ι. & Κ. ΨΩΜΑ Ο.Ε.` : defaultTitle;
-  const finalDescription = description || defaultDescription;
-  const finalCanonical = canonical ? `${BASE_URL}${canonical}` : BASE_URL;
-  const finalOgImage = ogImage ? `${BASE_URL}${ogImage}` : defaultOgImage;
-  
-  // Robots directive
-  const robots = [];
-  if (noindex) robots.push('noindex');
-  if (nofollow) robots.push('nofollow');
-  if (robots.length === 0) robots.push('index', 'follow');
-  
-  // Hreflang structure for i18n
-  const hreflangLinks = hreflang || [
-    { lang: 'el', url: `${BASE_URL}${canonical || ''}` },
-    { lang: 'en', url: `${BASE_URL}/en${canonical || ''}` }
-  ];
+  const language = i18n.language?.toLowerCase().startsWith("en") ? "en" : "el";
 
-  const logoUrl = `${BASE_URL}/images/logos/tractorLogo2.png`;
+  const finalTitle = title || DEFAULT_TITLE;
+  const finalDescription = description || DEFAULT_DESCRIPTION;
+  const finalCanonical = canonical === false ? null : getCanonicalUrl(canonical);
+  const finalOgImage = buildAbsoluteUrl(ogImage || DEFAULT_OG_IMAGE);
+  const robots = `${noindex ? "noindex" : "index"},${nofollow ? "nofollow" : "follow"}`;
+  const hreflangLinks = normalizeHreflang(hreflang);
+
+  const structuredDataBlocks = Array.isArray(structuredData)
+    ? structuredData.filter(Boolean)
+    : structuredData
+      ? [structuredData]
+      : [];
+
+  const fallbackCanonical = getCanonicalUrl("/");
+  const socialUrl = finalCanonical || fallbackCanonical;
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <html lang={currentLang} />
+      <html lang={language} />
       <title>{finalTitle}</title>
       <meta name="description" content={finalDescription} />
-      <meta name="robots" content={robots.join(', ')} />
-      
-      {/* Favicons for Google and browsers */}
-      <link rel="icon" type="image/png" sizes="16x16" href={logoUrl} />
-      <link rel="icon" type="image/png" sizes="32x32" href={logoUrl} />
-      <link rel="icon" type="image/png" sizes="96x96" href={logoUrl} />
-      <link rel="icon" type="image/png" sizes="192x192" href={logoUrl} />
-      <link rel="icon" type="image/png" sizes="512x512" href={logoUrl} />
-      <link rel="shortcut icon" href={logoUrl} />
-      <link rel="apple-touch-icon" href={logoUrl} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={finalCanonical} />
-      
-      {/* Hreflang for i18n */}
+      <meta name="robots" content={robots} />
+
+      {finalCanonical && <link rel="canonical" href={finalCanonical} />}
+
       {hreflangLinks.map(({ lang, url }) => (
-        <link key={lang} rel="alternate" hrefLang={lang} href={url} />
+        <link key={`${lang}-${url}`} rel="alternate" hrefLang={lang} href={url} />
       ))}
-      
-      {/* Open Graph */}
+
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:image" content={finalOgImage} />
-      <meta property="og:image:width" content="512" />
-      <meta property="og:image:height" content="512" />
-      <meta property="og:url" content={finalCanonical} />
-      <meta property="og:site_name" content="Ι. & Κ. ΨΩΜΑ Ο.Ε." />
-      <meta property="og:locale" content={currentLang === 'el' ? 'el_GR' : 'en_US'} />
-      
-      {/* Additional logo for Google */}
-      <link rel="icon" type="image/png" href={logoUrl} />
-      
-      {/* Twitter Card */}
+      <meta property="og:url" content={socialUrl} />
+      <meta property="og:site_name" content={BRAND_NAME} />
+      <meta property="og:locale" content={language === "el" ? "el_GR" : "en_US"} />
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={finalTitle} />
       <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={finalOgImage} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content="#2D5016" />
-      <meta name="msapplication-TileColor" content="#2D5016" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+
+      {structuredDataBlocks.map((schema, index) => (
+        <script key={`schema-${index}`} type="application/ld+json">
+          {JSON.stringify(schema)}
         </script>
-      )}
+      ))}
     </Helmet>
   );
 };

@@ -2,24 +2,34 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import ContactSection from "../components/home/ContactSection";
 import { useTranslation } from "react-i18next";
-import { getBreadcrumbSchema } from "../lib/structuredData";
+import { getBreadcrumbSchema, getWebPageSchema } from "../lib/structuredData";
+import { getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
 
 const Contact = () => {
-  const { t } = useTranslation(['contact', 'common', 'layout']);
+  const { t, i18n } = useTranslation(["contact", "common", "layout"]);
+  const seo = getPageSeo("/contact", i18n.language);
   
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://www.i-k-psoma.gr' },
-    { name: t('layout:navigation.contact'), url: 'https://www.i-k-psoma.gr/contact' }
+    { name: t("common:company_name"), url: getCanonicalUrl("/") },
+    { name: t("layout:navigation.contact"), url: getCanonicalUrl("/contact") },
   ]);
   
   return (
     <Layout>
       <SEO
-        title={t('title')}
-        description={t('subtitle')}
+        title={seo.title}
+        description={seo.description}
         canonical="/contact"
-        ogImage="/images/general/DSC_2523.webp"
-        structuredData={breadcrumbData}
+        ogImage={seo.ogImage}
+        structuredData={[
+          getWebPageSchema({
+            path: "/contact",
+            name: seo.title,
+            description: seo.description,
+            type: "ContactPage",
+          }),
+          breadcrumbData,
+        ]}
       />
       <div className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">

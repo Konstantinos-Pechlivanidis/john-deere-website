@@ -1,16 +1,20 @@
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
+import { getPageSeo } from "../lib/seoConfig";
 
 const Privacy = () => {
-  const { t } = useTranslation(['legal', 'common']);
+  const { t, i18n } = useTranslation(["legal", "common"]);
+  const seo = getPageSeo("/privacy", i18n.language);
 
   return (
     <Layout>
       <SEO
-        title={t('legal:privacy.title')}
-        description={t('legal:privacy.description')}
+        title={seo.title}
+        description={seo.description}
         canonical="/privacy"
+        ogImage={seo.ogImage}
+        noindex={true}
       />
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="container mx-auto px-4 max-w-4xl">

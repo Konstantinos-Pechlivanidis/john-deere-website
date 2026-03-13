@@ -20,6 +20,8 @@ const NotFound = () => {
         title="Σελίδα Δεν Βρέθηκε - 404"
         description="Η σελίδα που ψάχνετε δεν βρέθηκε. Επιστρέψτε στην αρχική σελίδα για να συνεχίσετε."
         noindex={true}
+        nofollow={true}
+        canonical={false}
       />
       <div className="container mx-auto px-4 py-24 flex items-center justify-center">
         <div className="max-w-md text-center">
@@ -41,3 +43,4 @@ const NotFound = () => {
 };
 
 export default NotFound;
+

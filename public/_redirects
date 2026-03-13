@@ -1,0 +1,16 @@
+# Canonical host and protocol
+http://i-k-psoma.gr/* https://www.i-k-psoma.gr/:splat 301!
+https://i-k-psoma.gr/* https://www.i-k-psoma.gr/:splat 301!
+http://www.i-k-psoma.gr/* https://www.i-k-psoma.gr/:splat 301!
+
+# Canonical path style
+/index.html / 301
+/about/ /about 301
+/parts/ /parts 301
+/services/ /services 301
+/contact/ /contact 301
+/terms/ /terms 301
+/privacy/ /privacy 301
+
+# SPA fallback
+/* /index.html 200

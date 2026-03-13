@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://i-k-psoma.gr/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
+Sitemap: https://www.i-k-psoma.gr/sitemap.xml

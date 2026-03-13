@@ -8,6 +8,19 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
 
+# Keep legal URLs crawlable for links, but out of the index
+/terms
+  X-Robots-Tag: noindex, follow
+
+/privacy
+  X-Robots-Tag: noindex, follow
+
+/terms/*
+  X-Robots-Tag: noindex, follow
+
+/privacy/*
+  X-Robots-Tag: noindex, follow
+
 # Cache static assets
 /static/*
   Cache-Control: public, max-age=31536000, immutable

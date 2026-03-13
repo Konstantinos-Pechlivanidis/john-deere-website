@@ -1,7 +1,8 @@
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
-import { getBreadcrumbSchema, getServiceSchema } from "../lib/structuredData";
+import { getBreadcrumbSchema, getServiceSchema, getWebPageSchema } from "../lib/structuredData";
+import { getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
 
 
 const ServiceCard = ({ icon, title, description }) => {
@@ -20,28 +21,38 @@ const ServiceCard = ({ icon, title, description }) => {
 };
 
 const Services = () => {
-  const { t } = useTranslation(['services', 'common', 'layout']);
-  const services = t('services', { returnObjects: true });
+  const { t, i18n } = useTranslation(["services", "common", "layout"]);
+  const seo = getPageSeo("/services", i18n.language);
+  const services = t("services", { returnObjects: true });
 
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://www.i-k-psoma.gr' },
-    { name: t('layout:navigation.services'), url: 'https://www.i-k-psoma.gr/services' }
+    { name: t("common:company_name"), url: getCanonicalUrl("/") },
+    { name: t("layout:navigation.services"), url: getCanonicalUrl("/services") },
   ]);
 
   const serviceSchema = getServiceSchema({
-    name: t('title'),
-    description: t('subtitle'),
-    type: "Agricultural Machinery Parts Supply"
+    name: seo.title,
+    description: seo.description,
+    type: "Agricultural Machinery Parts Supply",
   });
 
   return (
     <Layout>
       <SEO
-        title={t('title')}
-        description={t('subtitle')}
+        title={seo.title}
+        description={seo.description}
         canonical="/services"
-        ogImage="/images/general/DSC_2523.webp"
-        structuredData={[breadcrumbData, serviceSchema]}
+        ogImage={seo.ogImage}
+        structuredData={[
+          getWebPageSchema({
+            path: "/services",
+            name: seo.title,
+            description: seo.description,
+            type: "WebPage",
+          }),
+          breadcrumbData,
+          serviceSchema,
+        ]}
       />
       <div className="py-12 bg-gray-100">
         <div className="container mx-auto px-4">

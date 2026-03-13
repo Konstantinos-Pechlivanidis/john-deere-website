@@ -22,7 +22,7 @@ const Hero = () => {
             id="hero-heading"
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
           >
-            {t('hero.title')}
+            {t("common:company_name")} - {t("hero.title")}
           </h1>
           {/* Adjust the paragraph font size */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8">

@@ -49,7 +49,7 @@ npm run format
 Create a `.env.production` file:
 
 ```env
-SITE_URL=https://i-k-psoma.gr
+SITE_URL=https://www.i-k-psoma.gr
 NODE_ENV=production
 GENERATE_SOURCEMAP=false
 ```
@@ -70,7 +70,7 @@ Value: i-k-psoma.gr
 
 ### Redirect Configuration
 
-Set up a redirect from `www.i-k-psoma.gr` to `i-k-psoma.gr` (no trailing slash) to avoid duplicate content issues.
+Set up a redirect from `i-k-psoma.gr` to `www.i-k-psoma.gr` (no trailing slash) to avoid duplicate content issues.
 
 ### Hosting Providers
 
@@ -280,3 +280,4 @@ npm test
 
 ---
 master
+

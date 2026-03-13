@@ -6,24 +6,37 @@ import ValueProposition from "../components/home/ValueProposition";
 import AboutPreview from "../components/home/AboutPreview";
 import ContactSection from "../components/home/ContactSection";
 import PartsLinkSection from "../components/home/PartsLinkSection";
-import { getWebsiteSchema, getOrganizationSchema } from "../lib/structuredData";
+import {
+  getLocalBusinessSchema,
+  getOrganizationSchema,
+  getWebPageSchema,
+  getWebsiteSchema,
+} from "../lib/structuredData";
+import { getPageSeo } from "../lib/seoConfig";
 import { useTranslation } from "react-i18next";
 
 const Index = () => {
-  const { t } = useTranslation(['home', 'common']);
+  const { i18n } = useTranslation(["home", "common"]);
+  const seo = getPageSeo("/", i18n.language);
   
   const structuredData = [
     getWebsiteSchema(),
-    getOrganizationSchema()
+    getOrganizationSchema(),
+    getLocalBusinessSchema(),
+    getWebPageSchema({
+      path: "/",
+      name: seo.title,
+      description: seo.description,
+    }),
   ];
 
   return (
     <Layout>
       <SEO
-        title={t('home:hero.title')}
-        description={t('home:hero.subtitle')}
+        title={seo.title}
+        description={seo.description}
         canonical="/"
-        ogImage="/images/general/DSC_2519.JPG"
+        ogImage={seo.ogImage}
         structuredData={structuredData}
       />
       <div role="region" aria-label="Homepage content">
