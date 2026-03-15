@@ -2,6 +2,7 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
 import { getBreadcrumbSchema, getServiceSchema } from "../lib/structuredData";
+import { ROUTE_SEO, SEO_BRAND_NAME, getAbsoluteUrl } from "../config/seo";
 
 
 const ServiceCard = ({ icon, title, description }) => {
@@ -24,8 +25,8 @@ const Services = () => {
   const services = t('services', { returnObjects: true });
 
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://psomasst.gr' },
-    { name: t('layout:navigation.services'), url: 'https://psomasst.gr/services' }
+    { name: SEO_BRAND_NAME, url: getAbsoluteUrl('/') },
+    { name: t('layout:navigation.services'), url: getAbsoluteUrl('/services') }
   ]);
 
   const serviceSchema = getServiceSchema({
@@ -37,10 +38,10 @@ const Services = () => {
   return (
     <Layout>
       <SEO
-        title={t('title')}
-        description={t('subtitle')}
-        canonical="/services"
-        ogImage="/images/general/DSC_2523.webp"
+        title={ROUTE_SEO.services.title}
+        description={ROUTE_SEO.services.description}
+        canonical={ROUTE_SEO.services.canonical}
+        ogImage={ROUTE_SEO.services.ogImage}
         structuredData={[breadcrumbData, serviceSchema]}
       />
       <div className="py-12 bg-gray-100">

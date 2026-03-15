@@ -3,22 +3,23 @@ import SEO from "../components/SEO";
 import ContactSection from "../components/home/ContactSection";
 import { useTranslation } from "react-i18next";
 import { getBreadcrumbSchema } from "../lib/structuredData";
+import { ROUTE_SEO, SEO_BRAND_NAME, getAbsoluteUrl } from "../config/seo";
 
 const Contact = () => {
   const { t } = useTranslation(['contact', 'common', 'layout']);
   
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://psomasst.gr' },
-    { name: t('layout:navigation.contact'), url: 'https://psomasst.gr/contact' }
+    { name: SEO_BRAND_NAME, url: getAbsoluteUrl('/') },
+    { name: t('layout:navigation.contact'), url: getAbsoluteUrl('/contact') }
   ]);
   
   return (
     <Layout>
       <SEO
-        title={t('title')}
-        description={t('subtitle')}
-        canonical="/contact"
-        ogImage="/images/general/DSC_2523.webp"
+        title={ROUTE_SEO.contact.title}
+        description={ROUTE_SEO.contact.description}
+        canonical={ROUTE_SEO.contact.canonical}
+        ogImage={ROUTE_SEO.contact.ogImage}
         structuredData={breadcrumbData}
       />
       <div className="py-12 bg-gray-100">

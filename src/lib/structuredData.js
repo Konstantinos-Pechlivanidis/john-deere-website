@@ -1,30 +1,24 @@
 // Structured Data (JSON-LD) utilities for SEO
 
-const BASE_URL = process.env.SITE_URL || 'https://i-k-psoma.gr';
+import { LEGAL_COMPANY_NAME, SEO_BRAND_NAME, SEO_DEFAULTS, getAbsoluteUrl } from '../config/seo';
 
 export const getWebsiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
-  "url": BASE_URL,
-  "description": "Αξιόπιστα ανταλλακτικά για γεωργικά μηχανήματα John Deere. Πανελλαδική αποστολή, ποιότητα και εξυπηρέτηση από το 1980.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": `${BASE_URL}/search?q={search_term_string}`
-    },
-    "query-input": "required name=search_term_string"
-  }
+  "name": SEO_BRAND_NAME,
+  "alternateName": LEGAL_COMPANY_NAME,
+  "url": SEO_DEFAULTS.baseUrl,
+  "description": SEO_DEFAULTS.description
 });
 
 export const getOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Ι. & Κ. ΨΩΜΑ Ο.Ε.",
-  "url": BASE_URL,
-  "logo": `${BASE_URL}/images/logos/tractorLogo2.png`,
-  "description": "Εισαγωγέας γεωργικών ανταλλακτικών με 40+ χρόνια εμπειρίας",
+  "name": SEO_BRAND_NAME,
+  "legalName": LEGAL_COMPANY_NAME,
+  "url": SEO_DEFAULTS.baseUrl,
+  "logo": getAbsoluteUrl('/images/logos/tractorLogo2.png'),
+  "description": "Εισαγωγέας ανταλλακτικών γεωργικών μηχανημάτων με έδρα τη Θεσσαλονίκη και πανελλαδική εξυπηρέτηση.",
   "foundingDate": "1980",
   "address": {
     "@type": "PostalAddress",
@@ -36,11 +30,9 @@ export const getOrganizationSchema = () => ({
     "@type": "ContactPoint",
     "telephone": "+30-2310-512239",
     "contactType": "customer service",
-    "availableLanguage": ["Greek", "English"]
+    "availableLanguage": ["Greek"]
   },
-  "sameAs": [
-    // Add social media URLs when available
-  ]
+  "sameAs": []
 });
 
 export const getBreadcrumbSchema = (items) => ({
@@ -61,7 +53,7 @@ export const getServiceSchema = (service) => ({
   "description": service.description,
   "provider": {
     "@type": "Organization",
-    "name": "Ι. & Κ. ΨΩΜΑ Ο.Ε."
+    "name": SEO_BRAND_NAME
   },
   "serviceType": service.type,
   "areaServed": {
@@ -77,7 +69,7 @@ export const getProductSchema = (product) => ({
   "description": product.description,
   "brand": {
     "@type": "Brand",
-    "name": product.brand || "John Deere"
+    "name": product.brand || SEO_BRAND_NAME
   },
   "category": product.category,
   "offers": {
@@ -85,7 +77,7 @@ export const getProductSchema = (product) => ({
     "availability": "https://schema.org/InStock",
     "seller": {
       "@type": "Organization",
-      "name": "Ι. & Κ. ΨΩΜΑ Ο.Ε."
+      "name": SEO_BRAND_NAME
     }
   }
 });

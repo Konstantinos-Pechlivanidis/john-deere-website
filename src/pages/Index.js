@@ -7,11 +7,9 @@ import AboutPreview from "../components/home/AboutPreview";
 import ContactSection from "../components/home/ContactSection";
 import PartsLinkSection from "../components/home/PartsLinkSection";
 import { getWebsiteSchema, getOrganizationSchema } from "../lib/structuredData";
-import { useTranslation } from "react-i18next";
+import { ROUTE_SEO } from "../config/seo";
 
 const Index = () => {
-  const { t } = useTranslation(['home', 'common']);
-  
   const structuredData = [
     getWebsiteSchema(),
     getOrganizationSchema()
@@ -20,10 +18,10 @@ const Index = () => {
   return (
     <Layout>
       <SEO
-        title={t('home:hero.title')}
-        description={t('home:hero.subtitle')}
-        canonical="/"
-        ogImage="/images/general/DSC_2519.webp"
+        title={ROUTE_SEO.home.title}
+        description={ROUTE_SEO.home.description}
+        canonical={ROUTE_SEO.home.canonical}
+        ogImage={ROUTE_SEO.home.ogImage}
         structuredData={structuredData}
       />
       <div role="region" aria-label="Homepage content">

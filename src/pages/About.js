@@ -2,22 +2,23 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
 import { getBreadcrumbSchema } from "../lib/structuredData";
+import { ROUTE_SEO, SEO_BRAND_NAME, getAbsoluteUrl } from "../config/seo";
 
 const About = () => {
   const { t } = useTranslation('about');
   
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://psomasst.gr' },
-    { name: t('layout:navigation.about'), url: 'https://psomasst.gr/about' }
+    { name: SEO_BRAND_NAME, url: getAbsoluteUrl('/') },
+    { name: t('layout:navigation.about'), url: getAbsoluteUrl('/about') }
   ]);
   
   return (
     <Layout>
       <SEO
-        title={t('intro.title')}
-        description={t('intro.subtitle')}
-        canonical="/about"
-        ogImage="/images/general/DSC_2509.webp"
+        title={ROUTE_SEO.about.title}
+        description={ROUTE_SEO.about.description}
+        canonical={ROUTE_SEO.about.canonical}
+        ogImage={ROUTE_SEO.about.ogImage}
         structuredData={breadcrumbData}
       />
       {/* Intro Section */}

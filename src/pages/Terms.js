@@ -1,6 +1,7 @@
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
+import { ROUTE_SEO } from "../config/seo";
 
 const Terms = () => {
   const { t } = useTranslation(['legal', 'common']);
@@ -8,9 +9,9 @@ const Terms = () => {
   return (
     <Layout>
       <SEO
-        title={t('legal:terms.title')}
-        description={t('legal:terms.description')}
-        canonical="/terms"
+        title={ROUTE_SEO.terms.title}
+        description={ROUTE_SEO.terms.description}
+        canonical={ROUTE_SEO.terms.canonical}
       />
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="container mx-auto px-4 max-w-4xl">

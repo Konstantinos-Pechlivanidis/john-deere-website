@@ -4,6 +4,7 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
 import { getBreadcrumbSchema, getProductSchema } from "../lib/structuredData";
+import { ROUTE_SEO, SEO_BRAND_NAME, getAbsoluteUrl } from "../config/seo";
 import {
   Select,
   SelectContent,
@@ -44,24 +45,24 @@ const PartsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("γενικα");
 
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t('common:company_name'), url: 'https://psomasst.gr' },
-    { name: t('layout:navigation.parts'), url: 'https://psomasst.gr/parts' }
+    { name: SEO_BRAND_NAME, url: getAbsoluteUrl('/') },
+    { name: t('layout:navigation.parts'), url: getAbsoluteUrl('/parts') }
   ]);
 
   const productSchema = getProductSchema({
     name: t('title'),
     description: t('subtitle'),
     category: "Agricultural Machinery Parts",
-    brand: "John Deere"
+    brand: SEO_BRAND_NAME
   });
 
   return (
     <Layout>
       <SEO
-        title={t('title')}
-        description={t('subtitle')}
-        canonical="/parts"
-        ogImage="/images/general/DSC_2519.webp"
+        title={ROUTE_SEO.parts.title}
+        description={ROUTE_SEO.parts.description}
+        canonical={ROUTE_SEO.parts.canonical}
+        ogImage={ROUTE_SEO.parts.ogImage}
         structuredData={[breadcrumbData, productSchema]}
       />
       <section className="py-20 bg-white">

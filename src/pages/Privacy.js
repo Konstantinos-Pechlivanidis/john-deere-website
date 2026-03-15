@@ -1,6 +1,7 @@
 import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
+import { ROUTE_SEO } from "../config/seo";
 
 const Privacy = () => {
   const { t } = useTranslation(['legal', 'common']);
@@ -8,9 +9,9 @@ const Privacy = () => {
   return (
     <Layout>
       <SEO
-        title={t('legal:privacy.title')}
-        description={t('legal:privacy.description')}
-        canonical="/privacy"
+        title={ROUTE_SEO.privacy.title}
+        description={ROUTE_SEO.privacy.description}
+        canonical={ROUTE_SEO.privacy.canonical}
       />
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="container mx-auto px-4 max-w-4xl">

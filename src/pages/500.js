@@ -4,6 +4,7 @@ import SEO from '../components/SEO';
 import { Button } from '../components/ui/button';
 import { Link } from 'react-router-dom';
 import { AlertTriangle, Home, RefreshCw } from 'lucide-react';
+import { ROUTE_SEO } from '../config/seo';
 
 const Error500 = () => {
   const handleReload = () => {
@@ -13,8 +14,9 @@ const Error500 = () => {
   return (
     <Layout>
       <SEO
-        title="Σφάλμα Διακομιστή - 500"
-        description="Προσωρινό πρόβλημα με τον διακομιστή. Παρακαλώ δοκιμάστε ξανά σε λίγο."
+        title={ROUTE_SEO.error500.title}
+        description={ROUTE_SEO.error500.description}
+        canonical={ROUTE_SEO.error500.canonical}
         noindex={true}
       />
       <div className="container mx-auto px-4 py-24 flex items-center justify-center">
