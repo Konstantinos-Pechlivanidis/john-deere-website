@@ -1,89 +1,8 @@
-export const CANONICAL_ORIGIN = "https://www.i-k-psoma.gr";
-export const CANONICAL_HOME_URL = `${CANONICAL_ORIGIN}/`;
-export const BRAND_NAME = "I. & K. PSOMA O.E.";
-export const DEFAULT_OG_IMAGE = "/images/logos/tractorLogo2.png";
+import seoPages from "../config/seoPages.json";
 
-export const CORE_INDEXABLE_PATHS = ["/", "/about", "/parts", "/services", "/contact"];
-export const LEGAL_NOINDEX_PATHS = ["/terms", "/privacy"];
-
-const PAGE_SEO = {
-  "/": {
-    title: {
-      el: "I. & K. PSOMA O.E. | John Deere Agricultural Machinery Parts in Greece",
-      en: "I. & K. PSOMA O.E. | John Deere Agricultural Machinery Parts in Greece",
-    },
-    description: {
-      el: "I. & K. PSOMA O.E. supplies spare parts for tractors, strippers, harvesters, and cotton machinery from Thessaloniki with nationwide shipping and technical support.",
-      en: "I. & K. PSOMA O.E. supplies spare parts for tractors, strippers, harvesters, and cotton machinery from Thessaloniki with nationwide shipping and technical support.",
-    },
-    ogImage: "/images/general/DSC_2519.JPG",
-  },
-  "/about": {
-    title: {
-      el: "About I. & K. PSOMA O.E. | 40+ Years of Agricultural Parts Experience",
-      en: "About I. & K. PSOMA O.E. | 40+ Years of Agricultural Parts Experience",
-    },
-    description: {
-      el: "Learn how I. & K. PSOMA O.E. has served agricultural professionals since 1980 with trusted parts sourcing, logistics, and customer support.",
-      en: "Learn how I. & K. PSOMA O.E. has served agricultural professionals since 1980 with trusted parts sourcing, logistics, and customer support.",
-    },
-    ogImage: "/images/general/Store.JPG",
-  },
-  "/parts": {
-    title: {
-      el: "Agricultural Machinery Parts | I. & K. PSOMA O.E.",
-      en: "Agricultural Machinery Parts | I. & K. PSOMA O.E.",
-    },
-    description: {
-      el: "Browse major categories of agricultural spare parts for tractors, harvesters, and cotton machinery with quick availability and expert guidance.",
-      en: "Browse major categories of agricultural spare parts for tractors, harvesters, and cotton machinery with quick availability and expert guidance.",
-    },
-    ogImage: "/images/general/DSC_2519.JPG",
-  },
-  "/services": {
-    title: {
-      el: "Services | I. & K. PSOMA O.E. Agricultural Parts Supply",
-      en: "Services | I. & K. PSOMA O.E. Agricultural Parts Supply",
-    },
-    description: {
-      el: "Explore sourcing, technical support, and delivery services from I. & K. PSOMA O.E. for agricultural machinery spare parts across Greece.",
-      en: "Explore sourcing, technical support, and delivery services from I. & K. PSOMA O.E. for agricultural machinery spare parts across Greece.",
-    },
-    ogImage: "/images/general/DSC_2523.webp",
-  },
-  "/contact": {
-    title: {
-      el: "Contact I. & K. PSOMA O.E. | Agricultural Parts Support",
-      en: "Contact I. & K. PSOMA O.E. | Agricultural Parts Support",
-    },
-    description: {
-      el: "Contact I. & K. PSOMA O.E. in Thessaloniki for spare part requests, quotes, and technical support for agricultural machinery.",
-      en: "Contact I. & K. PSOMA O.E. in Thessaloniki for spare part requests, quotes, and technical support for agricultural machinery.",
-    },
-    ogImage: "/images/general/DSC_2523.webp",
-  },
-  "/terms": {
-    title: {
-      el: "Terms and Conditions | I. & K. PSOMA O.E.",
-      en: "Terms and Conditions | I. & K. PSOMA O.E.",
-    },
-    description: {
-      el: "Terms and Conditions for the website and services of I. & K. PSOMA O.E.",
-      en: "Terms and Conditions for the website and services of I. & K. PSOMA O.E.",
-    },
-    ogImage: DEFAULT_OG_IMAGE,
-  },
-  "/privacy": {
-    title: {
-      el: "Privacy Policy | I. & K. PSOMA O.E.",
-      en: "Privacy Policy | I. & K. PSOMA O.E.",
-    },
-    description: {
-      el: "Privacy Policy and data handling practices for I. & K. PSOMA O.E.",
-      en: "Privacy Policy and data handling practices for I. & K. PSOMA O.E.",
-    },
-    ogImage: DEFAULT_OG_IMAGE,
-  },
+const normalizeCanonicalOrigin = (origin = "") => {
+  const normalized = String(origin || "").trim().replace(/\/+$/, "");
+  return normalized || "https://www.i-k-psoma.gr";
 };
 
 export const normalizePathname = (pathname = "/") => {
@@ -98,6 +17,50 @@ export const normalizePathname = (pathname = "/") => {
   return trimmed || "/";
 };
 
+export const CANONICAL_ORIGIN = normalizeCanonicalOrigin(seoPages.canonicalOrigin);
+export const CANONICAL_HOME_URL = `${CANONICAL_ORIGIN}/`;
+export const BRAND_NAME = seoPages.brandName || "i.k psoma";
+export const LEGAL_BUSINESS_NAME = seoPages.legalBusinessName || BRAND_NAME;
+export const DEFAULT_OG_IMAGE = seoPages.defaultOgImage || "/images/logos/tractorLogo2.png";
+
+const rawPages = Array.isArray(seoPages.pages) ? seoPages.pages : [];
+
+export const PAGE_SEO = rawPages.reduce((acc, page) => {
+  const path = normalizePathname(page.path);
+  acc[path] = {
+    ...page,
+    path,
+  };
+  return acc;
+}, {});
+
+const HOME_PAGE_FALLBACK = {
+  path: "/",
+  title: `Ανταλλακτικά Γεωργικών Μηχανημάτων | ${BRAND_NAME}`,
+  description:
+    "Η i.k psoma προσφέρει ανταλλακτικά γεωργικών μηχανημάτων, τεχνική υποστήριξη και άμεση εξυπηρέτηση σε όλη την Ελλάδα.",
+  ogImage: DEFAULT_OG_IMAGE,
+  indexable: true,
+  robots: "index,follow",
+  changefreq: "weekly",
+  priority: "1.0",
+};
+
+const HOME_PAGE = PAGE_SEO["/"] || HOME_PAGE_FALLBACK;
+
+if (!PAGE_SEO["/"]) {
+  PAGE_SEO["/"] = HOME_PAGE;
+}
+
+const PAGE_SEO_LIST = Object.values(PAGE_SEO);
+
+export const CORE_INDEXABLE_PATHS = PAGE_SEO_LIST.filter((page) => page.indexable !== false).map(
+  (page) => page.path
+);
+export const LEGAL_NOINDEX_PATHS = PAGE_SEO_LIST.filter((page) => page.indexable === false).map(
+  (page) => page.path
+);
+
 export const getCanonicalUrl = (pathname = "/") => {
   const normalized = normalizePathname(pathname);
   return normalized === "/" ? CANONICAL_HOME_URL : `${CANONICAL_ORIGIN}${normalized}`;
@@ -111,15 +74,32 @@ export const buildAbsoluteUrl = (pathOrUrl = "/") => {
   return getCanonicalUrl(pathOrUrl);
 };
 
-export const getPageSeo = (pathname = "/", language = "el") => {
+export const getPageSeo = (pathname = "/", _language = "el") => {
   const normalizedPath = normalizePathname(pathname);
-  const page = PAGE_SEO[normalizedPath] || PAGE_SEO["/"];
-  const locale = language && language.toLowerCase().startsWith("en") ? "en" : "el";
+  const page = PAGE_SEO[normalizedPath] || HOME_PAGE;
+  const indexable = page.indexable !== false;
 
   return {
     canonical: normalizedPath,
-    title: page.title[locale],
-    description: page.description[locale],
+    title: page.title || HOME_PAGE.title,
+    description: page.description || HOME_PAGE.description,
     ogImage: page.ogImage || DEFAULT_OG_IMAGE,
+    robots: page.robots || (indexable ? "index,follow" : "noindex,follow"),
+    indexable,
+    changefreq: page.changefreq,
+    priority: page.priority,
   };
 };
+
+export const getSeoRoutes = () =>
+  PAGE_SEO_LIST.map((page) => {
+    const indexable = page.indexable !== false;
+
+    return {
+      ...page,
+      path: normalizePathname(page.path),
+      ogImage: page.ogImage || DEFAULT_OG_IMAGE,
+      robots: page.robots || (indexable ? "index,follow" : "noindex,follow"),
+      indexable,
+    };
+  });

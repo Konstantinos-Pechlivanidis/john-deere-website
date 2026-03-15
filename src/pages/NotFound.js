@@ -17,8 +17,8 @@ const NotFound = () => {
   return (
     <Layout>
       <SEO
-        title="Σελίδα Δεν Βρέθηκε - 404"
-        description="Η σελίδα που ψάχνετε δεν βρέθηκε. Επιστρέψτε στην αρχική σελίδα για να συνεχίσετε."
+        title="Σελίδα Δεν Βρέθηκε - 404 | i.k psoma"
+        description="Η σελίδα που αναζητάτε δεν είναι διαθέσιμη. Επιστρέψτε στην αρχική της i.k psoma για να συνεχίσετε την πλοήγηση."
         noindex={true}
         nofollow={true}
         canonical={false}
@@ -43,4 +43,3 @@ const NotFound = () => {
 };
 
 export default NotFound;
-

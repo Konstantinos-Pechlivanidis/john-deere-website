@@ -1,0 +1,78 @@
+{
+  "brandName": "i.k psoma",
+  "legalBusinessName": "I. & K. PSOMA O.E.",
+  "canonicalOrigin": "https://www.i-k-psoma.gr",
+  "defaultOgImage": "/images/logos/tractorLogo2.png",
+  "pages": [
+    {
+      "path": "/",
+      "title": "Ανταλλακτικά Γεωργικών Μηχανημάτων Θεσσαλονίκη | i.k psoma",
+      "description": "Η i.k psoma στη Θεσσαλονίκη προσφέρει ανταλλακτικά γεωργικών μηχανημάτων, τεχνική υποστήριξη και άμεση εξυπηρέτηση πελατών σε όλη την Ελλάδα.",
+      "ogImage": "/images/general/DSC_2519.JPG",
+      "changefreq": "weekly",
+      "priority": "1.0",
+      "indexable": true,
+      "robots": "index,follow"
+    },
+    {
+      "path": "/about",
+      "title": "Σχετικά με εμάς και την εμπειρία μας | i.k psoma",
+      "description": "Γνωρίστε την i.k psoma, με εμπειρία από το 1980 στην προμήθεια ανταλλακτικών γεωργικών μηχανημάτων και αξιόπιστη εξυπηρέτηση σε όλη την Ελλάδα.",
+      "ogImage": "/images/general/Store.JPG",
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "indexable": true,
+      "robots": "index,follow"
+    },
+    {
+      "path": "/parts",
+      "title": "Ανταλλακτικά Γεωργικών Μηχανημάτων | i.k psoma",
+      "description": "Μεγάλη γκάμα ανταλλακτικών για τρακτέρ, θεριζοαλωνιστικές, στρίπερ και βαμβακομηχανές, με τεχνική καθοδήγηση και αποστολή σε όλη την Ελλάδα.",
+      "ogImage": "/images/general/DSC_2519.JPG",
+      "changefreq": "weekly",
+      "priority": "0.9",
+      "indexable": true,
+      "robots": "index,follow"
+    },
+    {
+      "path": "/services",
+      "title": "Υπηρεσίες και Τεχνική Υποστήριξη | i.k psoma",
+      "description": "Η i.k psoma παρέχει προμήθεια ανταλλακτικών, τεχνική υποστήριξη και ασφαλή αποστολή με συνέπεια για επαγγελματίες του αγροτικού τομέα σε όλη την Ελλάδα.",
+      "ogImage": "/images/general/DSC_2523.webp",
+      "changefreq": "monthly",
+      "priority": "0.8",
+      "indexable": true,
+      "robots": "index,follow"
+    },
+    {
+      "path": "/contact",
+      "title": "Επικοινωνία για Ανταλλακτικά & Υποστήριξη | i.k psoma",
+      "description": "Επικοινωνήστε με την i.k psoma στη Θεσσαλονίκη για διαθεσιμότητα ανταλλακτικών, τεχνικές συμβουλές και άμεση εξυπηρέτηση σε όλη την Ελλάδα, για κάθε ανάγκη.",
+      "ogImage": "/images/general/DSC_2523.webp",
+      "changefreq": "monthly",
+      "priority": "0.7",
+      "indexable": true,
+      "robots": "index,follow"
+    },
+    {
+      "path": "/terms",
+      "title": "Όροι Χρήσης Ιστότοπου | i.k psoma",
+      "description": "Διαβάστε τους όρους χρήσης του ιστότοπου της i.k psoma για υπηρεσίες ενημέρωσης και υποστήριξης γύρω από ανταλλακτικά γεωργικών μηχανημάτων.",
+      "ogImage": "/images/logos/tractorLogo2.png",
+      "changefreq": "yearly",
+      "priority": "0.1",
+      "indexable": false,
+      "robots": "noindex,follow"
+    },
+    {
+      "path": "/privacy",
+      "title": "Πολιτική Απορρήτου | i.k psoma",
+      "description": "Ενημερωθείτε για την πολιτική απορρήτου της i.k psoma και τον τρόπο συλλογής, χρήσης και προστασίας προσωπικών δεδομένων σύμφωνα με τον GDPR.",
+      "ogImage": "/images/logos/tractorLogo2.png",
+      "changefreq": "yearly",
+      "priority": "0.1",
+      "indexable": false,
+      "robots": "noindex,follow"
+    }
+  ]
+}

@@ -1,4 +1,10 @@
-import { BRAND_NAME, CANONICAL_HOME_URL, CANONICAL_ORIGIN, getCanonicalUrl } from "./seoConfig";
+import {
+  BRAND_NAME,
+  CANONICAL_HOME_URL,
+  CANONICAL_ORIGIN,
+  LEGAL_BUSINESS_NAME,
+  getCanonicalUrl,
+} from "./seoConfig";
 
 const ORGANIZATION_ID = `${CANONICAL_HOME_URL}#organization`;
 const WEBSITE_ID = `${CANONICAL_HOME_URL}#website`;
@@ -22,6 +28,8 @@ export const getOrganizationSchema = () => ({
   "@type": "Organization",
   "@id": ORGANIZATION_ID,
   name: BRAND_NAME,
+  legalName: LEGAL_BUSINESS_NAME,
+  alternateName: LEGAL_BUSINESS_NAME,
   url: CANONICAL_HOME_URL,
   logo: {
     "@type": "ImageObject",
@@ -31,13 +39,13 @@ export const getOrganizationSchema = () => ({
   },
   image: LOGO_URL,
   description:
-    "Agricultural machinery spare parts supplier in Greece with 40+ years of sourcing and support experience.",
+    "Η i.k psoma εξειδικεύεται σε ανταλλακτικά γεωργικών μηχανημάτων, τεχνική υποστήριξη και άμεση εξυπηρέτηση σε όλη την Ελλάδα.",
   foundingDate: "1980",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+30-2310-512239",
-    contactType: "customer service",
-    availableLanguage: ["el", "en"],
+    contactType: "customer support",
+    availableLanguage: ["el-GR"],
   },
   sameAs: [
     "https://www.facebook.com/profile.php?id=100009717723166",
@@ -50,6 +58,7 @@ export const getLocalBusinessSchema = () => ({
   "@type": ["LocalBusiness", "Store"],
   "@id": LOCAL_BUSINESS_ID,
   name: BRAND_NAME,
+  legalName: LEGAL_BUSINESS_NAME,
   url: CANONICAL_HOME_URL,
   image: LOGO_URL,
   logo: LOGO_URL,
@@ -64,7 +73,7 @@ export const getLocalBusinessSchema = () => ({
   },
   areaServed: {
     "@type": "Country",
-    name: "Greece",
+    name: "Ελλάδα",
   },
   openingHoursSpecification: [
     {
@@ -125,7 +134,7 @@ export const getServiceSchema = (service) => ({
   serviceType: service.type,
   areaServed: {
     "@type": "Country",
-    name: "Greece",
+    name: "Ελλάδα",
   },
   url: getCanonicalUrl("/services"),
 });
@@ -138,7 +147,7 @@ export const getProductSchema = (product) => ({
   description: product.description,
   brand: {
     "@type": "Brand",
-    name: product.brand || "John Deere",
+    name: product.brand || BRAND_NAME,
   },
   category: product.category,
   offers: {

@@ -5,11 +5,12 @@ import {
   DEFAULT_OG_IMAGE,
   buildAbsoluteUrl,
   getCanonicalUrl,
+  getPageSeo,
 } from "../lib/seoConfig";
 
-const DEFAULT_TITLE = `${BRAND_NAME} | John Deere Agricultural Machinery Parts in Greece`;
-const DEFAULT_DESCRIPTION =
-  "I. & K. PSOMA O.E. supplies spare parts for tractors, strippers, harvesters, and cotton machinery with nationwide shipping and technical support.";
+const defaultSeo = getPageSeo("/");
+const DEFAULT_TITLE = defaultSeo.title;
+const DEFAULT_DESCRIPTION = defaultSeo.description;
 
 const normalizeHreflang = (hreflang) => {
   if (!Array.isArray(hreflang)) {
@@ -51,8 +52,7 @@ const SEO = ({
       ? [structuredData]
       : [];
 
-  const fallbackCanonical = getCanonicalUrl("/");
-  const socialUrl = finalCanonical || fallbackCanonical;
+  const socialUrl = finalCanonical || null;
 
   return (
     <Helmet>
@@ -71,9 +71,9 @@ const SEO = ({
       <meta property="og:title" content={finalTitle} />
       <meta property="og:description" content={finalDescription} />
       <meta property="og:image" content={finalOgImage} />
-      <meta property="og:url" content={socialUrl} />
+      {socialUrl && <meta property="og:url" content={socialUrl} />}
       <meta property="og:site_name" content={BRAND_NAME} />
-      <meta property="og:locale" content={language === "el" ? "el_GR" : "en_US"} />
+      <meta property="og:locale" content="el_GR" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={finalTitle} />

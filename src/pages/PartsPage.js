@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
 import { getBreadcrumbSchema, getProductSchema, getWebPageSchema } from "../lib/structuredData";
-import { getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
+import { BRAND_NAME, getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
 import {
   Select,
   SelectContent,
@@ -48,15 +48,15 @@ const PartsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("γενικα");
 
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t("common:company_name"), url: getCanonicalUrl("/") },
+    { name: BRAND_NAME, url: getCanonicalUrl("/") },
     { name: t("layout:navigation.parts"), url: getCanonicalUrl("/parts") }
   ]);
 
   const productSchema = getProductSchema({
     name: seo.title,
     description: seo.description,
-    category: "Agricultural Machinery Parts",
-    brand: "John Deere"
+    category: "Ανταλλακτικά γεωργικών μηχανημάτων",
+    brand: BRAND_NAME,
   });
 
   return (
@@ -135,5 +135,4 @@ const PartsPage = () => {
 };
 
 export default PartsPage;
-
 

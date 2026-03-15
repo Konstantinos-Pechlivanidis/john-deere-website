@@ -2,7 +2,7 @@ import Layout from "../components/layout/Layout";
 import SEO from "../components/SEO";
 import { useTranslation } from "react-i18next";
 import { getBreadcrumbSchema, getServiceSchema, getWebPageSchema } from "../lib/structuredData";
-import { getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
+import { BRAND_NAME, getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
 
 
 const ServiceCard = ({ icon, title, description }) => {
@@ -26,14 +26,14 @@ const Services = () => {
   const services = t("services", { returnObjects: true });
 
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t("common:company_name"), url: getCanonicalUrl("/") },
+    { name: BRAND_NAME, url: getCanonicalUrl("/") },
     { name: t("layout:navigation.services"), url: getCanonicalUrl("/services") },
   ]);
 
   const serviceSchema = getServiceSchema({
     name: seo.title,
     description: seo.description,
-    type: "Agricultural Machinery Parts Supply",
+    type: "Προμήθεια ανταλλακτικών γεωργικών μηχανημάτων",
   });
 
   return (

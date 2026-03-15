@@ -1,6 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-const { BRAND_NAME, CANONICAL_ORIGIN, getCanonicalUrl, routes } = require("./seo-routes");
+const {
+  BRAND_NAME,
+  LEGAL_BUSINESS_NAME,
+  CANONICAL_ORIGIN,
+  getCanonicalUrl,
+  routes,
+} = require("./seo-routes");
 
 const BUILD_DIR = path.join(__dirname, "..", "build");
 const INDEX_PATH = path.join(BUILD_DIR, "index.html");
@@ -64,6 +70,8 @@ const buildStructuredData = (route) => {
     "@type": "Organization",
     "@id": `${CANONICAL_ORIGIN}/#organization`,
     name: BRAND_NAME,
+    legalName: LEGAL_BUSINESS_NAME,
+    alternateName: LEGAL_BUSINESS_NAME,
     url: `${CANONICAL_ORIGIN}/`,
     logo: {
       "@type": "ImageObject",
@@ -80,6 +88,7 @@ const buildStructuredData = (route) => {
     "@type": ["LocalBusiness", "Store"],
     "@id": `${CANONICAL_ORIGIN}/#localbusiness`,
     name: BRAND_NAME,
+    legalName: LEGAL_BUSINESS_NAME,
     url: `${CANONICAL_ORIGIN}/`,
     image: logoUrl,
     telephone: "+30-2310-512239",
@@ -104,11 +113,11 @@ const buildNoScriptContent = (route) => {
     <p>${escapeHtml(route.description)}</p>
     <p>Canonical URL: <a href="${canonical}">${canonical}</a></p>
     <p>
-      <a href="${getCanonicalUrl("/")}">Home</a> |
-      <a href="${getCanonicalUrl("/about")}">About</a> |
-      <a href="${getCanonicalUrl("/parts")}">Parts</a> |
-      <a href="${getCanonicalUrl("/services")}">Services</a> |
-      <a href="${getCanonicalUrl("/contact")}">Contact</a>
+      <a href="${getCanonicalUrl("/")}">Αρχική</a> |
+      <a href="${getCanonicalUrl("/about")}">Σχετικά</a> |
+      <a href="${getCanonicalUrl("/parts")}">Ανταλλακτικά</a> |
+      <a href="${getCanonicalUrl("/services")}">Υπηρεσίες</a> |
+      <a href="${getCanonicalUrl("/contact")}">Επικοινωνία</a>
     </p>
   </main>
 </noscript>`;

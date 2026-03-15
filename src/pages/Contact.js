@@ -3,14 +3,14 @@ import SEO from "../components/SEO";
 import ContactSection from "../components/home/ContactSection";
 import { useTranslation } from "react-i18next";
 import { getBreadcrumbSchema, getWebPageSchema } from "../lib/structuredData";
-import { getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
+import { BRAND_NAME, getCanonicalUrl, getPageSeo } from "../lib/seoConfig";
 
 const Contact = () => {
   const { t, i18n } = useTranslation(["contact", "common", "layout"]);
   const seo = getPageSeo("/contact", i18n.language);
   
   const breadcrumbData = getBreadcrumbSchema([
-    { name: t("common:company_name"), url: getCanonicalUrl("/") },
+    { name: BRAND_NAME, url: getCanonicalUrl("/") },
     { name: t("layout:navigation.contact"), url: getCanonicalUrl("/contact") },
   ]);
   

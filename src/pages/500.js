@@ -13,8 +13,8 @@ const Error500 = () => {
   return (
     <Layout>
       <SEO
-        title="Σφάλμα Διακομιστή - 500"
-        description="Προσωρινό πρόβλημα με τον διακομιστή. Παρακαλώ δοκιμάστε ξανά σε λίγο."
+        title="Σφάλμα Διακομιστή - 500 | i.k psoma"
+        description="Προσωρινό πρόβλημα διακομιστή. Η i.k psoma εργάζεται για την αποκατάσταση, δοκιμάστε ξανά σε λίγο."
         noindex={true}
         nofollow={true}
         canonical={false}
@@ -54,4 +54,3 @@ const Error500 = () => {
 };
 
 export default Error500;
-
