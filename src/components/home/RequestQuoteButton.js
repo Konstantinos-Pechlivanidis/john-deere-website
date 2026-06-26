@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
@@ -10,6 +11,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
+import { toast } from "../../hooks/use-toast";
+
+const INQUIRY_LABELS = {
+  machinery: "Machinery",
+  parts: "Spare Parts",
+  partnership: "Partnership",
+  support: "Support",
+  other: "Other",
+};
 
 const RequestQuoteButton = () => {
   const { t } = useTranslation(['home', 'common']);
@@ -20,6 +30,7 @@ const RequestQuoteButton = () => {
     inquiry: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,9 +47,46 @@ const RequestQuoteButton = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(t('home:requestQuote.form_submitted_message'));
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          name: formState.name,
+          email: formState.email,
+          phone: formState.phone || "Not provided",
+          inquiry: formState.inquiry,
+          inquiry_label: INQUIRY_LABELS[formState.inquiry] || formState.inquiry,
+          message: formState.message,
+          form_source: "Quote",
+        },
+        { publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY }
+      );
+
+      toast({
+        title: t('common:form.success_title'),
+        description: t('common:form.success_description'),
+      });
+      setFormState({
+        name: "",
+        email: "",
+        phone: "",
+        inquiry: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: t('common:form.error_title'),
+        description: t('common:form.error_description'),
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -150,9 +198,10 @@ const RequestQuoteButton = () => {
 
         <Button
           type="submit"
+          disabled={isSubmitting}
           className="w-full bg-jdgreen hover:bg-jdgreen-light"
         >
-          {t('home:requestQuote.submit_button')}
+          {isSubmitting ? t('common:form.sending') : t('home:requestQuote.submit_button')}
         </Button>
       </form>
     </div>

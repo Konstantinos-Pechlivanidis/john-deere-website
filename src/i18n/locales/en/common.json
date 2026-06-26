@@ -33,6 +33,11 @@
             "select_inquiry_type": "Select inquiry type",
             "describe_how_we_can_help": "Please describe how we can help you...",
             "form_submitted": "Form submitted!",
+            "sending": "Sending...",
+            "success_title": "Message sent",
+            "success_description": "Thank you — we'll get back to you shortly.",
+            "error_title": "Something went wrong",
+            "error_description": "Your message could not be sent. Please try again or contact us directly.",
             "name_placeholder": "Your full name",
             "email_placeholder": "your@email.com",
             "phone_placeholder": "+30 69X XXX XXXX"
