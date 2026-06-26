@@ -3,6 +3,8 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { useTranslation } from "react-i18next";
+import emailjs from "@emailjs/browser";
+import { toast } from "../ui/sonner";
 import {
   Select,
   SelectContent,
@@ -11,8 +13,17 @@ import {
   SelectValue,
 } from "../ui/select";
 
+const INQUIRY_LABELS = {
+  machinery: "Machinery",
+  parts: "Spare Parts",
+  partnership: "Partnership",
+  support: "Support",
+  other: "Other",
+};
+
 const ContactSection = () => {
   const { t } = useTranslation(['home', 'contact']);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -36,9 +47,39 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(t('common:form.form_submitted'));
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          name: formState.name,
+          email: formState.email,
+          phone: formState.phone,
+          inquiry: formState.inquiry,
+          inquiry_label: INQUIRY_LABELS[formState.inquiry] || formState.inquiry,
+          message: formState.message,
+          form_source: "Contact",
+        },
+        { publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY }
+      );
+
+      toast.success(t('common:form.form_submitted'));
+      setFormState({
+        name: "",
+        email: "",
+        phone: "",
+        inquiry: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error(t('common:form.send_error'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -169,8 +210,8 @@ const ContactSection = () => {
                 />
               </div>
 
-              <Button type="submit" className="w-full bg-jdgreen hover:bg-jdgreen-light text-white text-base font-medium rounded-full py-3">
-                {t('contact:form.send')}
+              <Button type="submit" disabled={isSubmitting} className="w-full bg-jdgreen hover:bg-jdgreen-light text-white text-base font-medium rounded-full py-3 disabled:opacity-70">
+                {isSubmitting ? t('common:form.sending') : t('contact:form.send')}
               </Button>
             </form>
           </div>

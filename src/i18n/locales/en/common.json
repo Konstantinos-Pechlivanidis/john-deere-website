@@ -32,6 +32,8 @@
             "form_submitted": "Form submitted!",
             "name_placeholder": "Your full name",
             "email_placeholder": "your@email.com",
-            "phone_placeholder": "+30 69X XXX XXXX"
+            "phone_placeholder": "+30 69X XXX XXXX",
+            "sending": "Sending...",
+            "send_error": "Something went wrong. Please try again."
           }
 }
